@@ -1,0 +1,1930 @@
+[
+    {
+        "id": ".323",
+        "type": "text/h323"
+    },
+    {
+        "id": ".3gp",
+        "type": "video/3gpp"
+    },
+    {
+        "id": ".aab",
+        "type": "application/x-authoware-bin"
+    },
+    {
+        "id": ".aam",
+        "type": "application/x-authoware-map"
+    },
+    {
+        "id": ".aas",
+        "type": "application/x-authoware-seg"
+    },
+    {
+        "id": ".acx",
+        "type": "application/internet-property-stream"
+    },
+    {
+        "id": ".ai",
+        "type": "application/postscript"
+    },
+    {
+        "id": ".aif",
+        "type": "audio/x-aiff"
+    },
+    {
+        "id": ".aifc",
+        "type": "audio/x-aiff"
+    },
+    {
+        "id": ".aiff",
+        "type": "audio/x-aiff"
+    },
+    {
+        "id": ".als",
+        "type": "audio/X-Alpha5"
+    },
+    {
+        "id": ".amc",
+        "type": "application/x-mpeg"
+    },
+    {
+        "id": ".ani",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".apk",
+        "type": "application/vnd.android.package-archive"
+    },
+    {
+        "id": ".asc",
+        "type": "text/plain"
+    },
+    {
+        "id": ".asd",
+        "type": "application/astound"
+    },
+    {
+        "id": ".asf",
+        "type": "video/x-ms-asf"
+    },
+    {
+        "id": ".asn",
+        "type": "application/astound"
+    },
+    {
+        "id": ".asp",
+        "type": "application/x-asap"
+    },
+    {
+        "id": ".asr",
+        "type": "video/x-ms-asf"
+    },
+    {
+        "id": ".asx",
+        "type": "video/x-ms-asf"
+    },
+    {
+        "id": ".au",
+        "type": "audio/basic"
+    },
+    {
+        "id": ".avb",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".avi",
+        "type": "video/x-msvideo"
+    },
+    {
+        "id": ".awb",
+        "type": "audio/amr-wb"
+    },
+    {
+        "id": ".axs",
+        "type": "application/olescript"
+    },
+    {
+        "id": ".bas",
+        "type": "text/plain"
+    },
+    {
+        "id": ".bcpio",
+        "type": "application/x-bcpio"
+    },
+    {
+        "id": ".bin",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".bld",
+        "type": "application/bld"
+    },
+    {
+        "id": ".bld2",
+        "type": "application/bld2"
+    },
+    {
+        "id": ".bmp",
+        "type": "image/bmp"
+    },
+    {
+        "id": ".bpk",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".bz2",
+        "type": "application/x-bzip2"
+    },
+    {
+        "id": ".c",
+        "type": "text/plain"
+    },
+    {
+        "id": ".cal",
+        "type": "image/x-cals"
+    },
+    {
+        "id": ".cat",
+        "type": "application/vnd.ms-pkiseccat"
+    },
+    {
+        "id": ".ccn",
+        "type": "application/x-cnc"
+    },
+    {
+        "id": ".cco",
+        "type": "application/x-cocoa"
+    },
+    {
+        "id": ".cdf",
+        "type": "application/x-cdf"
+    },
+    {
+        "id": ".cer",
+        "type": "application/x-x509-ca-cert"
+    },
+    {
+        "id": ".cgi",
+        "type": "magnus-internal/cgi"
+    },
+    {
+        "id": ".chat",
+        "type": "application/x-chat"
+    },
+    {
+        "id": ".class",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".clp",
+        "type": "application/x-msclip"
+    },
+    {
+        "id": ".cmx",
+        "type": "image/x-cmx"
+    },
+    {
+        "id": ".co",
+        "type": "application/x-cult3d-object"
+    },
+    {
+        "id": ".cod",
+        "type": "image/cis-cod"
+    },
+    {
+        "id": ".conf",
+        "type": "text/plain"
+    },
+    {
+        "id": ".cpio",
+        "type": "application/x-cpio"
+    },
+    {
+        "id": ".cpp",
+        "type": "text/plain"
+    },
+    {
+        "id": ".cpt",
+        "type": "application/mac-compactpro"
+    },
+    {
+        "id": ".crd",
+        "type": "application/x-mscardfile"
+    },
+    {
+        "id": ".crl",
+        "type": "application/pkix-crl"
+    },
+    {
+        "id": ".crt",
+        "type": "application/x-x509-ca-cert"
+    },
+    {
+        "id": ".csh",
+        "type": "application/x-csh"
+    },
+    {
+        "id": ".csm",
+        "type": "chemical/x-csml"
+    },
+    {
+        "id": ".csml",
+        "type": "chemical/x-csml"
+    },
+    {
+        "id": ".css",
+        "type": "text/css"
+    },
+    {
+        "id": ".cur",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".dcm",
+        "type": "x-lml/x-evm"
+    },
+    {
+        "id": ".dcr",
+        "type": "application/x-director"
+    },
+    {
+        "id": ".dcx",
+        "type": "image/x-dcx"
+    },
+    {
+        "id": ".der",
+        "type": "application/x-x509-ca-cert"
+    },
+    {
+        "id": ".dhtml",
+        "type": "text/html"
+    },
+    {
+        "id": ".dir",
+        "type": "application/x-director"
+    },
+    {
+        "id": ".dll",
+        "type": "application/x-msdownload"
+    },
+    {
+        "id": ".dmg",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".dms",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".doc",
+        "type": "application/msword"
+    },
+    {
+        "id": ".docx",
+        "type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    {
+        "id": ".dot",
+        "type": "application/msword"
+    },
+    {
+        "id": ".dvi",
+        "type": "application/x-dvi"
+    },
+    {
+        "id": ".dwf",
+        "type": "drawing/x-dwf"
+    },
+    {
+        "id": ".dwg",
+        "type": "application/x-autocad"
+    },
+    {
+        "id": ".dxf",
+        "type": "application/x-autocad"
+    },
+    {
+        "id": ".dxr",
+        "type": "application/x-director"
+    },
+    {
+        "id": ".ebk",
+        "type": "application/x-expandedbook"
+    },
+    {
+        "id": ".emb",
+        "type": "chemical/x-embl-dl-nucleotide"
+    },
+    {
+        "id": ".embl",
+        "type": "chemical/x-embl-dl-nucleotide"
+    },
+    {
+        "id": ".eps",
+        "type": "application/postscript"
+    },
+    {
+        "id": ".epub",
+        "type": "application/epub+zip"
+    },
+    {
+        "id": ".eri",
+        "type": "image/x-eri"
+    },
+    {
+        "id": ".es",
+        "type": "audio/echospeech"
+    },
+    {
+        "id": ".esl",
+        "type": "audio/echospeech"
+    },
+    {
+        "id": ".etc",
+        "type": "application/x-earthtime"
+    },
+    {
+        "id": ".etx",
+        "type": "text/x-setext"
+    },
+    {
+        "id": ".evm",
+        "type": "x-lml/x-evm"
+    },
+    {
+        "id": ".evy",
+        "type": "application/envoy"
+    },
+    {
+        "id": ".exe",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".fh4",
+        "type": "image/x-freehand"
+    },
+    {
+        "id": ".fh5",
+        "type": "image/x-freehand"
+    },
+    {
+        "id": ".fhc",
+        "type": "image/x-freehand"
+    },
+    {
+        "id": ".fif",
+        "type": "application/fractals"
+    },
+    {
+        "id": ".flr",
+        "type": "x-world/x-vrml"
+    },
+    {
+        "id": ".flv",
+        "type": "flv-application/octet-stream"
+    },
+    {
+        "id": ".fm",
+        "type": "application/x-maker"
+    },
+    {
+        "id": ".fpx",
+        "type": "image/x-fpx"
+    },
+    {
+        "id": ".fvi",
+        "type": "video/isivideo"
+    },
+    {
+        "id": ".gau",
+        "type": "chemical/x-gaussian-input"
+    },
+    {
+        "id": ".gca",
+        "type": "application/x-gca-compressed"
+    },
+    {
+        "id": ".gdb",
+        "type": "x-lml/x-gdb"
+    },
+    {
+        "id": ".gif",
+        "type": "image/gif"
+    },
+    {
+        "id": ".gps",
+        "type": "application/x-gps"
+    },
+    {
+        "id": ".gtar",
+        "type": "application/x-gtar"
+    },
+    {
+        "id": ".gz",
+        "type": "application/x-gzip"
+    },
+    {
+        "id": ".h",
+        "type": "text/plain"
+    },
+    {
+        "id": ".hdf",
+        "type": "application/x-hdf"
+    },
+    {
+        "id": ".hdm",
+        "type": "text/x-hdml"
+    },
+    {
+        "id": ".hdml",
+        "type": "text/x-hdml"
+    },
+    {
+        "id": ".hlp",
+        "type": "application/winhlp"
+    },
+    {
+        "id": ".hqx",
+        "type": "application/mac-binhex40"
+    },
+    {
+        "id": ".hta",
+        "type": "application/hta"
+    },
+    {
+        "id": ".htc",
+        "type": "text/x-component"
+    },
+    {
+        "id": ".htm",
+        "type": "text/html"
+    },
+    {
+        "id": ".html",
+        "type": "text/html"
+    },
+    {
+        "id": ".hts",
+        "type": "text/html"
+    },
+    {
+        "id": ".htt",
+        "type": "text/webviewhtml"
+    },
+    {
+        "id": ".ice",
+        "type": "x-conference/x-cooltalk"
+    },
+    {
+        "id": ".ico",
+        "type": "image/x-icon"
+    },
+    {
+        "id": ".ief",
+        "type": "image/ief"
+    },
+    {
+        "id": ".ifm",
+        "type": "image/gif"
+    },
+    {
+        "id": ".ifs",
+        "type": "image/ifs"
+    },
+    {
+        "id": ".iii",
+        "type": "application/x-iphone"
+    },
+    {
+        "id": ".imy",
+        "type": "audio/melody"
+    },
+    {
+        "id": ".ins",
+        "type": "application/x-internet-signup"
+    },
+    {
+        "id": ".ips",
+        "type": "application/x-ipscript"
+    },
+    {
+        "id": ".ipx",
+        "type": "application/x-ipix"
+    },
+    {
+        "id": ".isp",
+        "type": "application/x-internet-signup"
+    },
+    {
+        "id": ".it",
+        "type": "audio/x-mod"
+    },
+    {
+        "id": ".itz",
+        "type": "audio/x-mod"
+    },
+    {
+        "id": ".ivr",
+        "type": "i-world/i-vrml"
+    },
+    {
+        "id": ".j2k",
+        "type": "image/j2k"
+    },
+    {
+        "id": ".jad",
+        "type": "text/vnd.sun.j2me.app-descriptor"
+    },
+    {
+        "id": ".jam",
+        "type": "application/x-jam"
+    },
+    {
+        "id": ".jar",
+        "type": "application/java-archive"
+    },
+    {
+        "id": ".java",
+        "type": "text/plain"
+    },
+    {
+        "id": ".jfif",
+        "type": "image/pipeg"
+    },
+    {
+        "id": ".jnlp",
+        "type": "application/x-java-jnlp-file"
+    },
+    {
+        "id": ".jpe",
+        "type": "image/jpeg"
+    },
+    {
+        "id": ".jpeg",
+        "type": "image/jpeg"
+    },
+    {
+        "id": ".jpg",
+        "type": "image/jpeg"
+    },
+    {
+        "id": ".jpz",
+        "type": "image/jpeg"
+    },
+    {
+        "id": ".js",
+        "type": "application/x-javascript"
+    },
+    {
+        "id": ".jwc",
+        "type": "application/jwc"
+    },
+    {
+        "id": ".kjx",
+        "type": "application/x-kjx"
+    },
+    {
+        "id": ".lak",
+        "type": "x-lml/x-lak"
+    },
+    {
+        "id": ".latex",
+        "type": "application/x-latex"
+    },
+    {
+        "id": ".lcc",
+        "type": "application/fastman"
+    },
+    {
+        "id": ".lcl",
+        "type": "application/x-digitalloca"
+    },
+    {
+        "id": ".lcr",
+        "type": "application/x-digitalloca"
+    },
+    {
+        "id": ".lgh",
+        "type": "application/lgh"
+    },
+    {
+        "id": ".lha",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".lml",
+        "type": "x-lml/x-lml"
+    },
+    {
+        "id": ".lmlpack",
+        "type": "x-lml/x-lmlpack"
+    },
+    {
+        "id": ".log",
+        "type": "text/plain"
+    },
+    {
+        "id": ".lsf",
+        "type": "video/x-la-asf"
+    },
+    {
+        "id": ".lsx",
+        "type": "video/x-la-asf"
+    },
+    {
+        "id": ".lzh",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".m13",
+        "type": "application/x-msmediaview"
+    },
+    {
+        "id": ".m14",
+        "type": "application/x-msmediaview"
+    },
+    {
+        "id": ".m15",
+        "type": "audio/x-mod"
+    },
+    {
+        "id": ".m3u",
+        "type": "audio/x-mpegurl"
+    },
+    {
+        "id": ".m3url",
+        "type": "audio/x-mpegurl"
+    },
+    {
+        "id": ".m4a",
+        "type": "audio/mp4a-latm"
+    },
+    {
+        "id": ".m4b",
+        "type": "audio/mp4a-latm"
+    },
+    {
+        "id": ".m4p",
+        "type": "audio/mp4a-latm"
+    },
+    {
+        "id": ".m4u",
+        "type": "video/vnd.mpegurl"
+    },
+    {
+        "id": ".m4v",
+        "type": "video/x-m4v"
+    },
+    {
+        "id": ".ma1",
+        "type": "audio/ma1"
+    },
+    {
+        "id": ".ma2",
+        "type": "audio/ma2"
+    },
+    {
+        "id": ".ma3",
+        "type": "audio/ma3"
+    },
+    {
+        "id": ".ma5",
+        "type": "audio/ma5"
+    },
+    {
+        "id": ".man",
+        "type": "application/x-troff-man"
+    },
+    {
+        "id": ".map",
+        "type": "magnus-internal/imagemap"
+    },
+    {
+        "id": ".mbd",
+        "type": "application/mbedlet"
+    },
+    {
+        "id": ".mct",
+        "type": "application/x-mascot"
+    },
+    {
+        "id": ".mdb",
+        "type": "application/x-msaccess"
+    },
+    {
+        "id": ".mdz",
+        "type": "audio/x-mod"
+    },
+    {
+        "id": ".me",
+        "type": "application/x-troff-me"
+    },
+    {
+        "id": ".mel",
+        "type": "text/x-vmel"
+    },
+    {
+        "id": ".mht",
+        "type": "message/rfc822"
+    },
+    {
+        "id": ".mhtml",
+        "type": "message/rfc822"
+    },
+    {
+        "id": ".mi",
+        "type": "application/x-mif"
+    },
+    {
+        "id": ".mid",
+        "type": "audio/mid"
+    },
+    {
+        "id": ".midi",
+        "type": "audio/midi"
+    },
+    {
+        "id": ".mif",
+        "type": "application/x-mif"
+    },
+    {
+        "id": ".mil",
+        "type": "image/x-cals"
+    },
+    {
+        "id": ".mio",
+        "type": "audio/x-mio"
+    },
+    {
+        "id": ".mmf",
+        "type": "application/x-skt-lbs"
+    },
+    {
+        "id": ".mng",
+        "type": "video/x-mng"
+    },
+    {
+        "id": ".mny",
+        "type": "application/x-msmoney"
+    },
+    {
+        "id": ".moc",
+        "type": "application/x-mocha"
+    },
+    {
+        "id": ".mocha",
+        "type": "application/x-mocha"
+    },
+    {
+        "id": ".mod",
+        "type": "audio/x-mod"
+    },
+    {
+        "id": ".mof",
+        "type": "application/x-yumekara"
+    },
+    {
+        "id": ".mol",
+        "type": "chemical/x-mdl-molfile"
+    },
+    {
+        "id": ".mop",
+        "type": "chemical/x-mopac-input"
+    },
+    {
+        "id": ".mov",
+        "type": "video/quicktime"
+    },
+    {
+        "id": ".movie",
+        "type": "video/x-sgi-movie"
+    },
+    {
+        "id": ".mp2",
+        "type": "video/mpeg"
+    },
+    {
+        "id": ".mp3",
+        "type": "audio/mpeg"
+    },
+    {
+        "id": ".mp4",
+        "type": "video/mp4"
+    },
+    {
+        "id": ".mpa",
+        "type": "video/mpeg"
+    },
+    {
+        "id": ".mpc",
+        "type": "application/vnd.mpohun.certificate"
+    },
+    {
+        "id": ".mpe",
+        "type": "video/mpeg"
+    },
+    {
+        "id": ".mpeg",
+        "type": "video/mpeg"
+    },
+    {
+        "id": ".mpg",
+        "type": "video/mpeg"
+    },
+    {
+        "id": ".mpg4",
+        "type": "video/mp4"
+    },
+    {
+        "id": ".mpga",
+        "type": "audio/mpeg"
+    },
+    {
+        "id": ".mpn",
+        "type": "application/vnd.mophun.application"
+    },
+    {
+        "id": ".mpp",
+        "type": "application/vnd.ms-project"
+    },
+    {
+        "id": ".mps",
+        "type": "application/x-mapserver"
+    },
+    {
+        "id": ".mpv2",
+        "type": "video/mpeg"
+    },
+    {
+        "id": ".mrl",
+        "type": "text/x-mrml"
+    },
+    {
+        "id": ".mrm",
+        "type": "application/x-mrm"
+    },
+    {
+        "id": ".ms",
+        "type": "application/x-troff-ms"
+    },
+    {
+        "id": ".msg",
+        "type": "application/vnd.ms-outlook"
+    },
+    {
+        "id": ".mts",
+        "type": "application/metastream"
+    },
+    {
+        "id": ".mtx",
+        "type": "application/metastream"
+    },
+    {
+        "id": ".mtz",
+        "type": "application/metastream"
+    },
+    {
+        "id": ".mvb",
+        "type": "application/x-msmediaview"
+    },
+    {
+        "id": ".mzv",
+        "type": "application/metastream"
+    },
+    {
+        "id": ".nar",
+        "type": "application/zip"
+    },
+    {
+        "id": ".nbmp",
+        "type": "image/nbmp"
+    },
+    {
+        "id": ".nc",
+        "type": "application/x-netcdf"
+    },
+    {
+        "id": ".ndb",
+        "type": "x-lml/x-ndb"
+    },
+    {
+        "id": ".ndwn",
+        "type": "application/ndwn"
+    },
+    {
+        "id": ".nif",
+        "type": "application/x-nif"
+    },
+    {
+        "id": ".nmz",
+        "type": "application/x-scream"
+    },
+    {
+        "id": ".nokia-op-logo",
+        "type": "image/vnd.nok-oplogo-color"
+    },
+    {
+        "id": ".npx",
+        "type": "application/x-netfpx"
+    },
+    {
+        "id": ".nsnd",
+        "type": "audio/nsnd"
+    },
+    {
+        "id": ".nva",
+        "type": "application/x-neva1"
+    },
+    {
+        "id": ".nws",
+        "type": "message/rfc822"
+    },
+    {
+        "id": ".oda",
+        "type": "application/oda"
+    },
+    {
+        "id": ".ogg",
+        "type": "audio/ogg"
+    },
+    {
+        "id": ".oom",
+        "type": "application/x-AtlasMate-Plugin"
+    },
+    {
+        "id": ".p10",
+        "type": "application/pkcs10"
+    },
+    {
+        "id": ".p12",
+        "type": "application/x-pkcs12"
+    },
+    {
+        "id": ".p7b",
+        "type": "application/x-pkcs7-certificates"
+    },
+    {
+        "id": ".p7c",
+        "type": "application/x-pkcs7-mime"
+    },
+    {
+        "id": ".p7m",
+        "type": "application/x-pkcs7-mime"
+    },
+    {
+        "id": ".p7r",
+        "type": "application/x-pkcs7-certreqresp"
+    },
+    {
+        "id": ".p7s",
+        "type": "application/x-pkcs7-signature"
+    },
+    {
+        "id": ".pac",
+        "type": "audio/x-pac"
+    },
+    {
+        "id": ".pae",
+        "type": "audio/x-epac"
+    },
+    {
+        "id": ".pan",
+        "type": "application/x-pan"
+    },
+    {
+        "id": ".pbm",
+        "type": "image/x-portable-bitmap"
+    },
+    {
+        "id": ".pcx",
+        "type": "image/x-pcx"
+    },
+    {
+        "id": ".pda",
+        "type": "image/x-pda"
+    },
+    {
+        "id": ".pdb",
+        "type": "chemical/x-pdb"
+    },
+    {
+        "id": ".pdf",
+        "type": "application/pdf"
+    },
+    {
+        "id": ".pfr",
+        "type": "application/font-tdpfr"
+    },
+    {
+        "id": ".pfx",
+        "type": "application/x-pkcs12"
+    },
+    {
+        "id": ".pgm",
+        "type": "image/x-portable-graymap"
+    },
+    {
+        "id": ".pict",
+        "type": "image/x-pict"
+    },
+    {
+        "id": ".pko",
+        "type": "application/ynd.ms-pkipko"
+    },
+    {
+        "id": ".pm",
+        "type": "application/x-perl"
+    },
+    {
+        "id": ".pma",
+        "type": "application/x-perfmon"
+    },
+    {
+        "id": ".pmc",
+        "type": "application/x-perfmon"
+    },
+    {
+        "id": ".pmd",
+        "type": "application/x-pmd"
+    },
+    {
+        "id": ".pml",
+        "type": "application/x-perfmon"
+    },
+    {
+        "id": ".pmr",
+        "type": "application/x-perfmon"
+    },
+    {
+        "id": ".pmw",
+        "type": "application/x-perfmon"
+    },
+    {
+        "id": ".png",
+        "type": "image/png"
+    },
+    {
+        "id": ".pnm",
+        "type": "image/x-portable-anymap"
+    },
+    {
+        "id": ".pnz",
+        "type": "image/png"
+    },
+    {
+        "id": ".pot",
+        "type": "application/vnd.ms-powerpoint"
+    },
+    {
+        "id": ".ppm",
+        "type": "image/x-portable-pixmap"
+    },
+    {
+        "id": ".pps",
+        "type": "application/vnd.ms-powerpoint"
+    },
+    {
+        "id": ".ppt",
+        "type": "application/vnd.ms-powerpoint"
+    },
+    {
+        "id": ".pptx",
+        "type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    },
+    {
+        "id": ".pqf",
+        "type": "application/x-cprplayer"
+    },
+    {
+        "id": ".pqi",
+        "type": "application/cprplayer"
+    },
+    {
+        "id": ".prc",
+        "type": "application/x-prc"
+    },
+    {
+        "id": ".prf",
+        "type": "application/pics-rules"
+    },
+    {
+        "id": ".prop",
+        "type": "text/plain"
+    },
+    {
+        "id": ".proxy",
+        "type": "application/x-ns-proxy-autoconfig"
+    },
+    {
+        "id": ".ps",
+        "type": "application/postscript"
+    },
+    {
+        "id": ".ptlk",
+        "type": "application/listenup"
+    },
+    {
+        "id": ".pub",
+        "type": "application/x-mspublisher"
+    },
+    {
+        "id": ".pvx",
+        "type": "video/x-pv-pvx"
+    },
+    {
+        "id": ".qcp",
+        "type": "audio/vnd.qcelp"
+    },
+    {
+        "id": ".qt",
+        "type": "video/quicktime"
+    },
+    {
+        "id": ".qti",
+        "type": "image/x-quicktime"
+    },
+    {
+        "id": ".qtif",
+        "type": "image/x-quicktime"
+    },
+    {
+        "id": ".r3t",
+        "type": "text/vnd.rn-realtext3d"
+    },
+    {
+        "id": ".ra",
+        "type": "audio/x-pn-realaudio"
+    },
+    {
+        "id": ".ram",
+        "type": "audio/x-pn-realaudio"
+    },
+    {
+        "id": ".rar",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".ras",
+        "type": "image/x-cmu-raster"
+    },
+    {
+        "id": ".rc",
+        "type": "text/plain"
+    },
+    {
+        "id": ".rdf",
+        "type": "application/rdf+xml"
+    },
+    {
+        "id": ".rf",
+        "type": "image/vnd.rn-realflash"
+    },
+    {
+        "id": ".rgb",
+        "type": "image/x-rgb"
+    },
+    {
+        "id": ".rlf",
+        "type": "application/x-richlink"
+    },
+    {
+        "id": ".rm",
+        "type": "audio/x-pn-realaudio"
+    },
+    {
+        "id": ".rmf",
+        "type": "audio/x-rmf"
+    },
+    {
+        "id": ".rmi",
+        "type": "audio/mid"
+    },
+    {
+        "id": ".rmm",
+        "type": "audio/x-pn-realaudio"
+    },
+    {
+        "id": ".rmvb",
+        "type": "audio/x-pn-realaudio"
+    },
+    {
+        "id": ".rnx",
+        "type": "application/vnd.rn-realplayer"
+    },
+    {
+        "id": ".roff",
+        "type": "application/x-troff"
+    },
+    {
+        "id": ".rp",
+        "type": "image/vnd.rn-realpix"
+    },
+    {
+        "id": ".rpm",
+        "type": "audio/x-pn-realaudio-plugin"
+    },
+    {
+        "id": ".rt",
+        "type": "text/vnd.rn-realtext"
+    },
+    {
+        "id": ".rte",
+        "type": "x-lml/x-gps"
+    },
+    {
+        "id": ".rtf",
+        "type": "application/rtf"
+    },
+    {
+        "id": ".rtg",
+        "type": "application/metastream"
+    },
+    {
+        "id": ".rtx",
+        "type": "text/richtext"
+    },
+    {
+        "id": ".rv",
+        "type": "video/vnd.rn-realvideo"
+    },
+    {
+        "id": ".rwc",
+        "type": "application/x-rogerwilco"
+    },
+    {
+        "id": ".s3m",
+        "type": "audio/x-mod"
+    },
+    {
+        "id": ".s3z",
+        "type": "audio/x-mod"
+    },
+    {
+        "id": ".sca",
+        "type": "application/x-supercard"
+    },
+    {
+        "id": ".scd",
+        "type": "application/x-msschedule"
+    },
+    {
+        "id": ".sct",
+        "type": "text/scriptlet"
+    },
+    {
+        "id": ".sdf",
+        "type": "application/e-score"
+    },
+    {
+        "id": ".sea",
+        "type": "application/x-stuffit"
+    },
+    {
+        "id": ".setpay",
+        "type": "application/set-payment-initiation"
+    },
+    {
+        "id": ".setreg",
+        "type": "application/set-registration-initiation"
+    },
+    {
+        "id": ".sgm",
+        "type": "text/x-sgml"
+    },
+    {
+        "id": ".sgml",
+        "type": "text/x-sgml"
+    },
+    {
+        "id": ".sh",
+        "type": "application/x-sh"
+    },
+    {
+        "id": ".shar",
+        "type": "application/x-shar"
+    },
+    {
+        "id": ".shtml",
+        "type": "magnus-internal/parsed-html"
+    },
+    {
+        "id": ".shw",
+        "type": "application/presentations"
+    },
+    {
+        "id": ".si6",
+        "type": "image/si6"
+    },
+    {
+        "id": ".si7",
+        "type": "image/vnd.stiwap.sis"
+    },
+    {
+        "id": ".si9",
+        "type": "image/vnd.lgtwap.sis"
+    },
+    {
+        "id": ".sis",
+        "type": "application/vnd.symbian.install"
+    },
+    {
+        "id": ".sit",
+        "type": "application/x-stuffit"
+    },
+    {
+        "id": ".skd",
+        "type": "application/x-Koan"
+    },
+    {
+        "id": ".skm",
+        "type": "application/x-Koan"
+    },
+    {
+        "id": ".skp",
+        "type": "application/x-Koan"
+    },
+    {
+        "id": ".skt",
+        "type": "application/x-Koan"
+    },
+    {
+        "id": ".slc",
+        "type": "application/x-salsa"
+    },
+    {
+        "id": ".smd",
+        "type": "audio/x-smd"
+    },
+    {
+        "id": ".smi",
+        "type": "application/smil"
+    },
+    {
+        "id": ".smil",
+        "type": "application/smil"
+    },
+    {
+        "id": ".smp",
+        "type": "application/studiom"
+    },
+    {
+        "id": ".smz",
+        "type": "audio/x-smd"
+    },
+    {
+        "id": ".snd",
+        "type": "audio/basic"
+    },
+    {
+        "id": ".spc",
+        "type": "application/x-pkcs7-certificates"
+    },
+    {
+        "id": ".spl",
+        "type": "application/futuresplash"
+    },
+    {
+        "id": ".spr",
+        "type": "application/x-sprite"
+    },
+    {
+        "id": ".sprite",
+        "type": "application/x-sprite"
+    },
+    {
+        "id": ".sdp",
+        "type": "application/sdp"
+    },
+    {
+        "id": ".spt",
+        "type": "application/x-spt"
+    },
+    {
+        "id": ".src",
+        "type": "application/x-wais-source"
+    },
+    {
+        "id": ".sst",
+        "type": "application/vnd.ms-pkicertstore"
+    },
+    {
+        "id": ".stk",
+        "type": "application/hyperstudio"
+    },
+    {
+        "id": ".stl",
+        "type": "application/vnd.ms-pkistl"
+    },
+    {
+        "id": ".stm",
+        "type": "text/html"
+    },
+    {
+        "id": ".svg",
+        "type": "image/svg+xml"
+    },
+    {
+        "id": ".sv4cpio",
+        "type": "application/x-sv4cpio"
+    },
+    {
+        "id": ".sv4crc",
+        "type": "application/x-sv4crc"
+    },
+    {
+        "id": ".svf",
+        "type": "image/vnd"
+    },
+    {
+        "id": ".svg",
+        "type": "image/svg+xml"
+    },
+    {
+        "id": ".svh",
+        "type": "image/svh"
+    },
+    {
+        "id": ".svr",
+        "type": "x-world/x-svr"
+    },
+    {
+        "id": ".swf",
+        "type": "application/x-shockwave-flash"
+    },
+    {
+        "id": ".swfl",
+        "type": "application/x-shockwave-flash"
+    },
+    {
+        "id": ".t",
+        "type": "application/x-troff"
+    },
+    {
+        "id": ".tad",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".talk",
+        "type": "text/x-speech"
+    },
+    {
+        "id": ".tar",
+        "type": "application/x-tar"
+    },
+    {
+        "id": ".taz",
+        "type": "application/x-tar"
+    },
+    {
+        "id": ".tbp",
+        "type": "application/x-timbuktu"
+    },
+    {
+        "id": ".tbt",
+        "type": "application/x-timbuktu"
+    },
+    {
+        "id": ".tcl",
+        "type": "application/x-tcl"
+    },
+    {
+        "id": ".tex",
+        "type": "application/x-tex"
+    },
+    {
+        "id": ".texi",
+        "type": "application/x-texinfo"
+    },
+    {
+        "id": ".texinfo",
+        "type": "application/x-texinfo"
+    },
+    {
+        "id": ".tgz",
+        "type": "application/x-compressed"
+    },
+    {
+        "id": ".thm",
+        "type": "application/vnd.eri.thm"
+    },
+    {
+        "id": ".tif",
+        "type": "image/tiff"
+    },
+    {
+        "id": ".tiff",
+        "type": "image/tiff"
+    },
+    {
+        "id": ".tki",
+        "type": "application/x-tkined"
+    },
+    {
+        "id": ".tkined",
+        "type": "application/x-tkined"
+    },
+    {
+        "id": ".toc",
+        "type": "application/toc"
+    },
+    {
+        "id": ".toy",
+        "type": "image/toy"
+    },
+    {
+        "id": ".tr",
+        "type": "application/x-troff"
+    },
+    {
+        "id": ".trk",
+        "type": "x-lml/x-gps"
+    },
+    {
+        "id": ".trm",
+        "type": "application/x-msterminal"
+    },
+    {
+        "id": ".tsi",
+        "type": "audio/tsplayer"
+    },
+    {
+        "id": ".tsp",
+        "type": "application/dsptype"
+    },
+    {
+        "id": ".tsv",
+        "type": "text/tab-separated-values"
+    },
+    {
+        "id": ".ttf",
+        "type": "application/octet-stream"
+    },
+    {
+        "id": ".ttz",
+        "type": "application/t-time"
+    },
+    {
+        "id": ".txt",
+        "type": "text/plain"
+    },
+    {
+        "id": ".uls",
+        "type": "text/iuls"
+    },
+    {
+        "id": ".ult",
+        "type": "audio/x-mod"
+    },
+    {
+        "id": ".ustar",
+        "type": "application/x-ustar"
+    },
+    {
+        "id": ".uu",
+        "type": "application/x-uuencode"
+    },
+    {
+        "id": ".uue",
+        "type": "application/x-uuencode"
+    },
+    {
+        "id": ".vcd",
+        "type": "application/x-cdlink"
+    },
+    {
+        "id": ".vcf",
+        "type": "text/x-vcard"
+    },
+    {
+        "id": ".vdo",
+        "type": "video/vdo"
+    },
+    {
+        "id": ".vib",
+        "type": "audio/vib"
+    },
+    {
+        "id": ".viv",
+        "type": "video/vivo"
+    },
+    {
+        "id": ".vivo",
+        "type": "video/vivo"
+    },
+    {
+        "id": ".vmd",
+        "type": "application/vocaltec-media-desc"
+    },
+    {
+        "id": ".vmf",
+        "type": "application/vocaltec-media-file"
+    },
+    {
+        "id": ".vmi",
+        "type": "application/x-dreamcast-vms-info"
+    },
+    {
+        "id": ".vms",
+        "type": "application/x-dreamcast-vms"
+    },
+    {
+        "id": ".vox",
+        "type": "audio/voxware"
+    },
+    {
+        "id": ".vqe",
+        "type": "audio/x-twinvq-plugin"
+    },
+    {
+        "id": ".vqf",
+        "type": "audio/x-twinvq"
+    },
+    {
+        "id": ".vql",
+        "type": "audio/x-twinvq"
+    },
+    {
+        "id": ".vre",
+        "type": "x-world/x-vream"
+    },
+    {
+        "id": ".vrml",
+        "type": "x-world/x-vrml"
+    },
+    {
+        "id": ".vrt",
+        "type": "x-world/x-vrt"
+    },
+    {
+        "id": ".vrw",
+        "type": "x-world/x-vream"
+    },
+    {
+        "id": ".vts",
+        "type": "workbook/formulaone"
+    },
+    {
+        "id": ".wav",
+        "type": "audio/x-wav"
+    },
+    {
+        "id": ".wax",
+        "type": "audio/x-ms-wax"
+    },
+    {
+        "id": ".wbmp",
+        "type": "image/vnd.wap.wbmp"
+    },
+    {
+        "id": ".wcm",
+        "type": "application/vnd.ms-works"
+    },
+    {
+        "id": ".wdb",
+        "type": "application/vnd.ms-works"
+    },
+    {
+        "id": ".web",
+        "type": "application/vnd.xara"
+    },
+    {
+        "id": ".wi",
+        "type": "image/wavelet"
+    },
+    {
+        "id": ".wis",
+        "type": "application/x-InstallShield"
+    },
+    {
+        "id": ".wks",
+        "type": "application/vnd.ms-works"
+    },
+    {
+        "id": ".wm",
+        "type": "video/x-ms-wm"
+    },
+    {
+        "id": ".wma",
+        "type": "audio/x-ms-wma"
+    },
+    {
+        "id": ".wmd",
+        "type": "application/x-ms-wmd"
+    },
+    {
+        "id": ".wmf",
+        "type": "application/x-msmetafile"
+    },
+    {
+        "id": ".wml",
+        "type": "text/vnd.wap.wml"
+    },
+    {
+        "id": ".wmlc",
+        "type": "application/vnd.wap.wmlc"
+    },
+    {
+        "id": ".wmls",
+        "type": "text/vnd.wap.wmlscript"
+    },
+    {
+        "id": ".wmlsc",
+        "type": "application/vnd.wap.wmlscriptc"
+    },
+    {
+        "id": ".wmlscript",
+        "type": "text/vnd.wap.wmlscript"
+    },
+    {
+        "id": ".wmv",
+        "type": "audio/x-ms-wmv"
+    },
+    {
+        "id": ".wmx",
+        "type": "video/x-ms-wmx"
+    },
+    {
+        "id": ".wmz",
+        "type": "application/x-ms-wmz"
+    },
+    {
+        "id": ".wpng",
+        "type": "image/x-up-wpng"
+    },
+    {
+        "id": ".wps",
+        "type": "application/vnd.ms-works"
+    },
+    {
+        "id": ".wpt",
+        "type": "x-lml/x-gps"
+    },
+    {
+        "id": ".wri",
+        "type": "application/x-mswrite"
+    },
+    {
+        "id": ".wrl",
+        "type": "x-world/x-vrml"
+    },
+    {
+        "id": ".wrz",
+        "type": "x-world/x-vrml"
+    },
+    {
+        "id": ".ws",
+        "type": "text/vnd.wap.wmlscript"
+    },
+    {
+        "id": ".wsc",
+        "type": "application/vnd.wap.wmlscriptc"
+    },
+    {
+        "id": ".wv",
+        "type": "video/wavelet"
+    },
+    {
+        "id": ".wvx",
+        "type": "video/x-ms-wvx"
+    },
+    {
+        "id": ".wxl",
+        "type": "application/x-wxl"
+    },
+    {
+        "id": ".x-gzip",
+        "type": "application/x-gzip"
+    },
+    {
+        "id": ".xaf",
+        "type": "x-world/x-vrml"
+    },
+    {
+        "id": ".xar",
+        "type": "application/vnd.xara"
+    },
+    {
+        "id": ".xbm",
+        "type": "image/x-xbitmap"
+    },
+    {
+        "id": ".xdm",
+        "type": "application/x-xdma"
+    },
+    {
+        "id": ".xdma",
+        "type": "application/x-xdma"
+    },
+    {
+        "id": ".xdw",
+        "type": "application/vnd.fujixerox.docuworks"
+    },
+    {
+        "id": ".xht",
+        "type": "application/xhtml+xml"
+    },
+    {
+        "id": ".xhtm",
+        "type": "application/xhtml+xml"
+    },
+    {
+        "id": ".xhtml",
+        "type": "application/xhtml+xml"
+    },
+    {
+        "id": ".xla",
+        "type": "application/vnd.ms-excel"
+    },
+    {
+        "id": ".xlc",
+        "type": "application/vnd.ms-excel"
+    },
+    {
+        "id": ".xll",
+        "type": "application/x-excel"
+    },
+    {
+        "id": ".xlm",
+        "type": "application/vnd.ms-excel"
+    },
+    {
+        "id": ".xls",
+        "type": "application/vnd.ms-excel"
+    },
+    {
+        "id": ".xlsx",
+        "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+    },
+    {
+        "id": ".xlt",
+        "type": "application/vnd.ms-excel"
+    },
+    {
+        "id": ".xlw",
+        "type": "application/vnd.ms-excel"
+    },
+    {
+        "id": ".xm",
+        "type": "audio/x-mod"
+    },
+    {
+        "id": ".xml",
+        "type": "text/plain"
+    },
+    {
+        "id": ".xmz",
+        "type": "audio/x-mod"
+    },
+    {
+        "id": ".xof",
+        "type": "x-world/x-vrml"
+    },
+    {
+        "id": ".xpi",
+        "type": "application/x-xpinstall"
+    },
+    {
+        "id": ".xpm",
+        "type": "image/x-xpixmap"
+    },
+    {
+        "id": ".xsit",
+        "type": "text/xml"
+    },
+    {
+        "id": ".xsl",
+        "type": "text/xml"
+    },
+    {
+        "id": ".xul",
+        "type": "text/xul"
+    },
+    {
+        "id": ".xwd",
+        "type": "image/x-xwindowdump"
+    },
+    {
+        "id": ".xyz",
+        "type": "chemical/x-pdb"
+    },
+    {
+        "id": ".yz1",
+        "type": "application/x-yz1"
+    },
+    {
+        "id": ".z",
+        "type": "application/x-compress"
+    },
+    {
+        "id": ".zac",
+        "type": "application/x-zaurus-zac"
+    },
+    {
+        "id": ".zip",
+        "type": "application/zip"
+    },
+    {
+        "id": ".json",
+        "type": "application/json"
+    }
+]

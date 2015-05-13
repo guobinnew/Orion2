@@ -1,0 +1,18 @@
+{
+    "type": "Behavior",
+    "id": "destroy",
+    "name":	"自动销毁",
+    "version": "1.0",
+    "description": "对象离开场景自动销毁",
+    "category":	"通用",
+    "attributes":["once"],
+    "variables": [
+    ],
+    "conditions":[
+    ],
+    "actions":[
+    ],
+    "expresses":[
+    ]
+}
+

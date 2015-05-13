@@ -1,0 +1,26 @@
+{
+    "type": "Behavior",
+    "id": "Wrap",
+    "name":	"回转",
+    "version": "1.0",
+    "description": "当对象从场景一边离开时会从另一边出现",
+    "category":	"通用",
+    "attributes":["once"],
+    "variables": [
+        {
+            "name": "Layout",
+            "title": "模式",
+            "type": "enum",
+            "enums":["场景","视口"],
+            "default": "场景",
+            "description": "回转模式"
+        }
+    ],
+    "conditions":[
+    ],
+    "actions":[
+    ],
+    "expresses":[
+    ]
+}
+

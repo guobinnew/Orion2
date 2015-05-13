@@ -1,0 +1,342 @@
+{
+    "type": "Entity",
+    "id": "Audio",
+    "name":	"声音",
+    "version": "1.0",
+    "description": "播放音频文件",
+    "category":	"多媒体",
+    "attributes":["singleglobal"],
+    "variables": [
+        {
+            "name": "Timescale",
+            "title":"播放速度控制",
+            "type": "enum",
+            "default": "关闭",
+            "enums": ["关闭", "开启（音效）", "开启（音效和背景音乐）"],
+            "description": "播放速率是否可调"
+        },
+        {
+            "name": "Saveload",
+            "title":"保存方式",
+            "type": "enum",
+            "default": "全部",
+            "enums": ["全部","仅音效","仅背景音乐","无"],
+            "description": "是否保存播放状态"
+        },
+        {
+            "name": "PlayInBackground",
+            "title":"后台播放",
+            "type": "bool",
+            "description": "当切换到后台后是否继续播放"
+        },
+        {
+            "name": "PanningModel",
+            "title":"立体声模式",
+            "type": "enum",
+            "default": "HRTF",
+            "enums": ["等功率","HRTF"],
+            "description": "立体声模式"
+        },
+        {
+            "name": "DistanceModel",
+            "title":"距离模型",
+            "type": "enum",
+            "default": "倒数",
+            "enums": ["线性","倒数","指数"],
+            "description": "距离模型"
+        },
+        {
+            "name": "ListenerHeight",
+            "title":"听筒高度",
+            "type": "float",
+            "default": "600",
+            "description": "听筒相对于场景的高度"
+        },
+        {
+            "name": "ReferenceDistance",
+            "title":"衰减参考距离",
+            "type": "float",
+            "default": "600",
+            "description": "声音衰减参考距离"
+        },
+        {
+            "name": "MaximumDistance",
+            "title":"传播最大距离",
+            "type": "float",
+            "default": "10000",
+            "description": "声音衰减最大距离"
+        },
+        {
+            "name": "RollOff",
+            "title":"衰减因子",
+            "type": "float",
+            "default": "1",
+            "description": "声音衰减因子"
+        }
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "声音播放结束",
+            "function": "OnEnded",
+            "description": "当声音文件<%1>播放完毕时触发",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "声音文件标签"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "预加载完成",
+            "function": "PreloadsComplete",
+            "description": "检查预加载声音文件是否加载完成"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "高级声音支持",
+            "function": "AdvancedAudioSupported",
+            "description": "检查是否支持高级声音功能"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "静音模式",
+            "function": "IsSilent",
+            "description": "检查是否处于静音模式"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "正在播放声音",
+            "function": "IsAnyPlaying",
+            "description": "检查当前是否正在播放声音"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "正在播放指定声音",
+            "function": "IsTagPlaying",
+            "description": "检查当前是否正在播放指定标签的声音",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "声音文件标签"
+                }
+            ]
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "播放声音",
+            "function": "Play",
+            "description": "播放声音",
+            "parameters": [
+                {
+                    "type": "audio",
+                    "name": "audio",
+                    "description": "声音文件"
+                },
+                {
+                    "type": "enum",
+                    "name": "loop",
+                    "enums":["单次","循环"],
+                    "description": "循环播放模式"
+                },
+                {
+                    "type": "float",
+                    "name": "volume",
+                    "description": "音量"
+                },
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "声音文件标签"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置循环模式",
+            "function": "SetLooping",
+            "description": "设置循环模式",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "声音文件标签"
+                },
+                {
+                    "type": "enum",
+                    "name": "loop",
+                    "enums":["单次","循环"],
+                    "description": "循环播放模式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置静音模式",
+            "function": "SetMuted",
+            "description": "设置静音模式",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "声音文件标签"
+                },
+                {
+                    "type": "enum",
+                    "name": "loop",
+                    "enums":["开启","关闭"],
+                    "description": "静音模式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置音量",
+            "function": "SetVolume",
+            "description": "设置音量",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "声音文件标签"
+                },
+                {
+                    "type": "float",
+                    "name": "volume",
+                    "description": "音量（0表示正常音量）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "预加载声音文件",
+            "function": "Preload",
+            "description": "预加载声音文件",
+            "parameters": [
+                {
+                    "type": "audio",
+                    "name": "audio",
+                    "description": "声音文件"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置声音播放速度",
+            "function": "SetPlaybackRate",
+            "description": "设置声音播放速度",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "声音文件标签"
+                },
+                {
+                    "type": "float",
+                    "name": "rate",
+                    "description": "播放速度（1.0表示正常速度）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "停止声音播放",
+            "function": "Stop",
+            "description": "停止声音播放",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "声音文件标签"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "声音长度",
+            "function": "Duration",
+            "description": "获取声音长度",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "声音文件标签"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "声音播放位置",
+            "function": "PlaybackTime",
+            "description": "获取声音播放位置",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "声音文件标签"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "声音音量",
+            "function": "Volume",
+            "description": "获取声音音量",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "声音文件标签"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "系统主音量",
+            "function": "MasterVolume",
+            "description": "获取系统主音量",
+            "parameters": [
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "音效数目",
+            "function": "EffectCount",
+            "description": "获取音效数目",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "声音文件标签"
+                }
+            ]
+        }
+    ]
+
+}
+

@@ -1,0 +1,26 @@
+{
+    "type": "Behavior",
+    "id": "bound",
+    "name": "场景边界限制",
+    "version": "1.0",
+    "description": "防止对象离开场景",
+    "category": "运动",
+    "attributes": ["once"],
+    "variables": [
+        {
+            "name": "BoundBy",
+            "title": "限制方式",
+            "type": "enum",
+            "default": "边框",
+            "enums": ["原点", "边框"],
+            "description": "限制对象的中心或边框离开场景"
+        }
+    ],
+    "conditions": [
+    ],
+    "actions": [
+    ],
+    "expresses": [
+    ]
+}
+

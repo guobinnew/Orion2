@@ -1,0 +1,26 @@
+{
+    "type": "Effect",
+    "id": "blacknwhite",
+    "name":	"黑白效果",
+    "version": "1.0",
+    "description": "转换为黑白色",
+    "category":	"颜色",
+    "attributes":[],
+    "extendbox":["0","0"],
+    "variables": [
+        {
+            "name": "threshold",
+            "title": "阈值",
+            "type": "percent",
+            "default": "0.5",
+            "description": "阈值"
+        }
+    ],
+    "conditions":[
+    ],
+    "actions":[
+    ],
+    "expresses":[
+    ]
+}
+

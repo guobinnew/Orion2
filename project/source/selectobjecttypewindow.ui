@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SelectObjectTypeWindow</class>
+ <widget class="QWidget" name="SelectObjectTypeWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>427</width>
+    <height>626</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>200</width>
+    <height>300</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>选择对象类型</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="orion2.qrc">
+    <normaloff>:/images/unique32.png</normaloff>:/images/unique32.png</iconset>
+  </property>
+  <widget class="ObjectTreeWidget" name="treeWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>411</width>
+     <height>611</height>
+    </rect>
+   </property>
+   <attribute name="headerVisible">
+    <bool>false</bool>
+   </attribute>
+   <column>
+    <property name="text">
+     <string notr="true">1</string>
+    </property>
+   </column>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ObjectTreeWidget</class>
+   <extends>QTreeWidget</extends>
+   <header>objecttreewidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="orion2.qrc"/>
+ </resources>
+ <connections/>
+</ui>

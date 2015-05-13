@@ -1,0 +1,597 @@
+{
+    "type": "Entity",
+    "id": "Arr",
+    "name":	"数组",
+    "version": "1.0",
+    "description": "处理数组数据访问",
+    "category":	"数据存储",
+    "attributes":[],
+    "variables": [
+        {
+            "name": "Width",
+            "title":"宽度",
+            "type": "int",
+            "default": "10",
+            "description": "X维大小"
+        },
+        {
+            "name": "Height",
+            "title":"高度",
+            "type": "int",
+            "default": "1",
+            "description": "Y维大小"
+        },
+        {
+            "name": "Depth",
+            "title":"深度",
+            "type": "int",
+            "default": "1",
+            "description": "Z维大小"
+        }
+    ],
+    "conditions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较X值",
+            "function": "CompareX",
+            "description": "比较位于X的值（1维数组）",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "x",
+                    "description": "数组下标x"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "待比较的值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较XY值",
+            "function": "CompareXY",
+            "description": "比较位于XY的值（2维数组）",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "x",
+                    "description": "数组下标x"
+                },
+                {
+                    "type": "int",
+                    "name": "x",
+                    "description": "数组下标y"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "待比较的值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较XYZ值",
+            "function": "CompareXYZ",
+            "description": "比较位于XYZ的值（3维数组）",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "x",
+                    "description": "数组下标x"
+                },
+                {
+                    "type": "int",
+                    "name": "x",
+                    "description": "数组下标y"
+                },
+                {
+                    "type": "int",
+                    "name": "z",
+                    "description": "数组下标z"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "待比较的值"
+                }
+            ]
+        },
+        {
+            "flags": ["looping","invertible"],
+            "category": "",
+            "name": "遍历数组",
+            "function": "ArrForEach",
+            "description": "比较位于XYZ的值（3维数组）",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "Axes",
+                    "enums":["XYZ","XY","X"],
+                    "description": "维数"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较当前值",
+            "function": "CompareCurrent",
+            "description": "在Foreach循环中比较数组当前值",
+            "parameters": [
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "待比较的值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "是否包含值",
+            "function": "Contains",
+            "description": "检查数组中是否包含指定值",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "待检查的值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "是否为空",
+            "function": "IsEmpty",
+            "description": "检查数组中是否为空"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "数组维大小比较",
+            "function": "CompareSize",
+            "description": "比较数组一个维的大小",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "Axis",
+                    "enums":["X","Y","Z"],
+                    "description": "维"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "int",
+                    "name": "value",
+                    "description": "待比较的值"
+                }
+            ]
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "清空数组",
+            "function": "Clear",
+            "description": "清空数组数据"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置维大小",
+            "function": "SetSize",
+            "description": "设置数据各个维的长度",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "x",
+                    "default":"1",
+                    "description": "X维大小"
+                },
+                {
+                    "type": "int",
+                    "name": "y",
+                    "default":"1",
+                    "description": "Y维大小"
+                },
+                {
+                    "type": "int",
+                    "name": "z",
+                    "default":"1",
+                    "description": "Z维大小"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置X值",
+            "function": "SetX",
+            "description": "设置位于X的值（1维数组）",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "x",
+                    "default":"0",
+                    "description": "数组下标X"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "default":"0",
+                    "description": "值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置XY值",
+            "function": "SetXY",
+            "description": "设置位于XY的值（2维数组）",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "x",
+                    "default":"0",
+                    "description": "数组下标X"
+                },
+                {
+                    "type": "int",
+                    "name": "y",
+                    "default":"0",
+                    "description": "数组下标Y"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "default":"0",
+                    "description": "值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置XYZ值",
+            "function": "SetXYZ",
+            "description": "设置位于XYZ的值（3维数组）",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "x",
+                    "default":"0",
+                    "description": "数组下标X"
+                },
+                {
+                    "type": "int",
+                    "name": "y",
+                    "default":"0",
+                    "description": "数组下标Y"
+                },
+                {
+                    "type": "int",
+                    "name": "z",
+                    "default":"0",
+                    "description": "数组下标Z"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "default":"0",
+                    "description": "值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "添加元素",
+            "function": "Push",
+            "description": "向数组中添加元素",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "where",
+                    "enums":["尾部","开头"],
+                    "description": "添加位置"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "default":"0",
+                    "description": "待添加的元素"
+                },
+                {
+                    "type": "enum",
+                    "name": "axis",
+                    "enums":["X","Y","Z"],
+                    "description": "维"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "取出元素",
+            "function": "Pop",
+            "description": "从数组中删除一个元素",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "where",
+                    "enums":["尾部","开头"],
+                    "description": "添加位置"
+                },
+                {
+                    "type": "enum",
+                    "name": "axis",
+                    "enums":["X","Y","Z"],
+                    "description": "维"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "反转元素",
+            "function": "Reverse",
+            "description": "将数组中元素位置前后颠倒",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "axis",
+                    "enums":["X","Y","Z"],
+                    "description": "维"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "元素排序",
+            "function": "Sort",
+            "description": "将数组中元素排序",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "axis",
+                    "enums":["X","Y","Z"],
+                    "description": "维"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "删除元素",
+            "function": "Delete",
+            "description": "将数组中指定位置的元素删除",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "数组下标"
+                },
+                {
+                    "type": "enum",
+                    "name": "axis",
+                    "enums":["X","Y","Z"],
+                    "description": "维"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "插入元素",
+            "function": "Insert",
+            "description": "将数组中指定位置的插入元素",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "值"
+                },
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "数组下标"
+                },
+                {
+                    "type": "enum",
+                    "name": "axis",
+                    "enums":["X","Y","Z"],
+                    "description": "维"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "读取JSON数据",
+            "function": "JSONLoad",
+            "description": "从JSON中读取数组数据",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "json",
+                    "description": "JSON格式文本"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "保存为JSON文件",
+            "function": "JSONDownload",
+            "description": "将数据保存为JSON文件",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "filename",
+                    "description": "JSON文件名"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_any"],
+            "category": "",
+            "name": "返回XYZ值",
+            "function": "At",
+            "description": "获取位于XYZ的值",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "x",
+                    "description": "数组下标X"
+                },
+                {
+                    "type": "int",
+                    "name": "y",
+                    "default":"0",
+                    "description": "数组下标Y"
+                },
+                {
+                    "type": "int",
+                    "name": "z",
+                    "default":"0",
+                    "description": "数组下标Z"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "数组X维大小",
+            "function": "Width",
+            "description": "获取数组的X维大小"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "数组Y维大小",
+            "function": "Height",
+            "description": "获取数组的Y维大小"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "数组Z维大小",
+            "function": "Depth",
+            "description": "获取数组的Z维大小"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "数组X维索引",
+            "function": "CurX",
+            "description": "获取数组循环中的X维索引"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "数组Y维索引",
+            "function": "CurY",
+            "description": "获取数组循环中的Y维索引"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "数组Z维索引",
+            "function": "CurZ",
+            "description": "获取数组循环中的Z维索引"
+        },
+        {
+            "flags": ["return_any"],
+            "category": "",
+            "name": "数组当前值",
+            "function": "CurValue",
+            "description": "获取数组循环中的当前值"
+        },
+        {
+            "flags": ["return_any"],
+            "category": "",
+            "name": "数组首值",
+            "function": "Front",
+            "description": "获取数组X维第一个值"
+        },
+        {
+            "flags": ["return_any"],
+            "category": "",
+            "name": "数组尾值",
+            "function": "Back",
+            "description": "获取数组X维最后一个值"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "查找元素",
+            "function": "IndexOf",
+            "description": "获取元素第一次出现的索引位置",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "待查找的值"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "反向查找元素",
+            "function": "LastIndexOf",
+            "description": "获取元素最后一次出现的索引位置",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "待查找的值"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "转换为JSON",
+            "function": "AsJSON",
+            "description": "将数据转换为JSON格式"
+        }
+    ]
+
+}
+

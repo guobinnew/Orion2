@@ -1,0 +1,288 @@
+{
+    "type": "Behavior",
+    "id": "EightDir",
+    "name": "八方向运动",
+    "version": "1.0",
+    "description": "朝八个方向运动",
+    "category": "运动",
+    "attributes": [],
+    "variables": [
+        {
+            "name": "MaxSpeed",
+            "title": "最大速度",
+            "type": "float",
+            "default": "200",
+            "description": "最大运动速度（像素/秒）"
+        },
+        {
+            "name": "Acceleration",
+            "title": "加速度",
+            "type": "float",
+            "default": "600",
+            "description": "加速度（像素/秒平方）"
+        },
+        {
+            "name": "Deceleration",
+            "title": "减速度",
+            "type": "float",
+            "default": "500",
+            "description": "减速度（像素/秒平方）"
+        },
+        {
+            "name": "Directions",
+            "title": "运动方向",
+            "type": "enum",
+            "enums": ["上下", "左右", "上下左右", "上下左右&对角线"],
+            "default": "上下左右&对角线",
+            "description": "允许运动的方向"
+        },
+        {
+            "name": "Angle",
+            "title": "运动角度",
+            "type": "enum",
+            "enums": ["无", "90度间隔", "45度间隔", "360度"],
+            "default": "360度",
+            "description": "当运动时如何设置运动角度"
+        },
+        {
+            "name": "Controls",
+            "title": "方向键控制",
+            "type": "bool",
+            "default": "true",
+            "description": "是否支持方向键来控制运动"
+        },
+        {
+            "name": "InitialState",
+            "title": "初始状态",
+            "type": "enum",
+            "enums": ["关闭", "启用"],
+            "default": "启用",
+            "description": "是否支持方向键来控制运动"
+        }
+    ],
+    "conditions": [
+        {
+            "flags": [],
+            "category": "",
+            "name": "是否正在运动",
+            "function": "IsMoving",
+            "description": "对象是否正在运动"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较速度",
+            "function": "CompareSpeed",
+            "description": "比较对象的运动速度值",
+            "parameters": [
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "用于比较的速度值"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "flags": [],
+            "category": "",
+            "name": "停止运动",
+            "function": "Stop",
+            "description": "让对象停止运动"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "反转运动方向",
+            "function": "Reverse",
+            "description": "让对象反向运动"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "忽略输入控制",
+            "function": "SetIgnoreInput",
+            "description": "让对象忽略输入控制事件",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "input",
+                    "enums": ["开启", "关闭"],
+                    "description": "开启标志"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置速度",
+            "function": "SetSpeed",
+            "description": "设置对象的运动速度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "速度值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置最大速度",
+            "function": "SetMaxSpeed",
+            "description": "设置对象的最大运动速度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "最大速度值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置加速度",
+            "function": "SetAcceleration",
+            "description": "设置对象的加速度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "加速度值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置减速度",
+            "function": "SetDeceleration",
+            "description": "设置对象的加速度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "减速度值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "模拟控制输入",
+            "function": "SimulateControl",
+            "description": "通过事件来模拟输入控制",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "control",
+                    "enums": ["左", "右", "上", "下"],
+                    "description": "模拟的控制输入"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "开启关闭行为",
+            "function": "SetEnabled",
+            "description": "开启关闭运动行为",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "state",
+                    "enums": ["关闭", "开启"],
+                    "description": "开启关闭状态"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置运动X分量",
+            "function": "SetVectorX",
+            "description": "设置对象运动的X分量（像素/秒）",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "X",
+                    "description": "X分量"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置运动Y分量",
+            "function": "SetVectorY",
+            "description": "设置对象运动的Y分量（像素/秒）",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "Y",
+                    "description": "Y分量"
+                }
+            ]
+        }
+    ],
+    "expresses": [
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "速度值",
+            "function": "Speed",
+            "description": "获取当前的速度值"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "最大速度值",
+            "function": "MaxSpeed",
+            "description": "获取当前的最大速度值"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "加速度值",
+            "function": "Acceleration",
+            "description": "获取当前的加速度值"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "减速度值",
+            "function": "Deceleration",
+            "description": "获取当前的减速度值"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "运动角度",
+            "function": "MovingAngle",
+            "description": "获取当前的运动角度"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "运动X分量",
+            "function": "VectorX",
+            "description": "获取当前的运动X分量"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "运动Y分量",
+            "function": "VectorY",
+            "description": "获取当前的运动Y分量"
+        }
+    ]
+}
+

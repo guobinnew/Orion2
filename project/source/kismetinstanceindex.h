@@ -1,0 +1,52 @@
+/************************************************************************
+**
+**  Copyright (C) 2015  guobin  <guobin.gb@alibaba-inc.com>
+**
+**  This file is part of Orion2.
+**
+**  Orion2 is free software: you can redistribute it and/or modify
+**  it under the terms of the GNU General Public License as published by
+**  the Free Software Foundation.
+**
+**  Orion is distributed in the hope that it will be useful,
+**  but WITHOUT ANY WARRANTY; without even the implied warranty of
+**  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+**  GNU General Public License for more details.
+**
+**  You should have received a copy of the GNU General Public License
+**  along with Orion.  If not, see <http://www.gnu.org/licenses/>.
+**
+*************************************************************************/
+#ifndef ORION_KISMET_INSTANCEINDEX_H
+#define ORION_KISMET_INSTANCEINDEX_H
+
+#include "kismetdefine.h"
+#include "kismetmodel.h"
+#include "resourceobject.h"
+
+using namespace ORION;
+
+
+class BlueprintInstanceIndex : public BlueprintModel{
+public:
+	// 实体类型
+	ORION_TYPE_DECLARE(KISMET_INSTANCE_INDEX);
+
+	BlueprintInstanceIndex(QGraphicsItem * parent = 0);
+	virtual ~BlueprintInstanceIndex();
+
+	void prepare();
+	virtual void init();
+	// 获取表达式
+	virtual QJsonValue expNode(int dt = -1);
+
+	BlueprintModelPort* hostPort(){
+		return hostPort_;
+	}
+
+private:
+	BlueprintModelPort* hostPort_;  // 对象端口
+};
+
+
+#endif

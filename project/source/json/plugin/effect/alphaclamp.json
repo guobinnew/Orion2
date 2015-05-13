@@ -1,0 +1,40 @@
+{
+    "type": "Effect",
+    "id": "alphaclamp",
+    "name":	"Alpha阈值",
+    "version": "1.0",
+    "description": "把alpha值限定最大/最小值区间范围",
+    "category":	"通用",
+    "attributes":[],
+    "extendbox":["0","0"],
+    "variables": [
+        {
+            "name": "alphathreshold",
+            "title": "阈值",
+            "type": "percent",
+            "default": "0.5",
+            "description": "alpha阈值"
+        },
+        {
+            "name": "lowerclamp",
+            "title": "下限",
+            "type": "percent",
+            "default": "0",
+            "description": "alpha下限"
+        },
+        {
+            "name": "upperclamp",
+            "title": "上限",
+            "type": "percent",
+            "default": "1",
+            "description": "alpha上限"
+        }
+    ],
+    "conditions":[
+    ],
+    "actions":[
+    ],
+    "expresses":[
+    ]
+}
+

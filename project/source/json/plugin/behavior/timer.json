@@ -1,0 +1,99 @@
+{
+    "type": "Behavior",
+    "id": "Timer",
+    "name":	"定时器",
+    "version": "1.0",
+    "description": "管理多个定时器",
+    "category":	"通用",
+    "attributes":[],
+    "variables": [
+    ],
+    "conditions":[
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "启动定时器",
+            "function": "StartTimer",
+            "description": "启动定时器",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "duration",
+                    "description": "时长"
+                },
+                {
+                    "type": "enum",
+                    "name": "type",
+                    "enums":["一次","周期"],
+                    "description": "触发类型"
+                },
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "定时器标签"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "停止定时器",
+            "function": "StopTimer",
+            "description": "设置炮塔的弹道速度",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "定时器标签"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "定时器当前时间",
+            "function": "CurrentTime",
+            "description": "获取指定定时器的当前时间",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "定时器标签"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "定时器总时间",
+            "function": "TotalTime",
+            "description": "获取指定定时器自启动以来的总时长",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "定时器标签"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "定时器的时长",
+            "function": "Duration",
+            "description": "获取指定定时器的时长",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "定时器标签"
+                }
+            ]
+        }
+    ]
+}
+

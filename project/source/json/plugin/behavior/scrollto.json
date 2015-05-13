@@ -1,0 +1,67 @@
+{
+    "type": "Behavior",
+    "id": "scrollto",
+    "name":	"焦点跟踪",
+    "version": "1.0",
+    "description": "总是让对象居中显示（如果有多个对象，则居中显示对象的中心）",
+    "category":	"通用",
+    "attributes":["once"],
+    "variables": [
+        {
+            "name": "InitialState",
+            "title": "初始状态",
+            "type": "enum",
+            "enums":["关闭","开启"],
+            "default": "开启",
+            "description": "是否在创建后激活该行为"
+        }
+    ],
+    "conditions":[
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "晃动",
+            "function": "Shake",
+            "description": "晃动对象",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "magnitude",
+                    "default":"20",
+                    "description": "晃动幅度（像素）"
+                },
+                {
+                    "type": "float",
+                    "name": "duration",
+                    "default":"0.4",
+                    "description": "晃动持续时间"
+                },
+                {
+                    "type": "enum",
+                    "name": "mode",
+                    "enums":["幅度衰减","幅度不变"],
+                    "description": "晃动模式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "跟踪行为开关",
+            "function": "SetEnabled",
+            "description": "开启关闭焦点跟踪行为",
+            "parameters": [
+                {
+                    "type": "bool",
+                    "name": "enable",
+                    "description": "开启关闭状态"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+    ]
+}
+

@@ -1,0 +1,99 @@
+{
+    "type": "Entity",
+    "id": "TiledBg",
+    "name":	"平铺背景",
+    "version": "1.0",
+    "description": "图片平铺的背景图",
+    "category":	"通用",
+    "attributes":["world","rotatable","texture","tiling","position","size","angle","appearance","zorder","effects","predraw","behaviors"],
+    "variables": [
+        {
+            "name": "InitVisibility",
+            "title": "初始可见",
+            "type": "enum",
+            "default": "可见",
+            "enums": ["可见","不可见"],
+            "description": "对象是否在界面启动时可见"
+        },
+        {
+            "name": "Hotspot",
+            "title": "锚点",
+            "type": "enum",
+            "default": "左上角",
+            "enums": ["左上角", "中心"],
+            "description": "背景图片锚点"
+        },
+        {
+            "name": "Animation",
+            "title": "动画资源",
+            "type": "string",
+            "description": "关联的动画资源名",
+            "extend": true
+        },
+        {
+            "name": "StaticImage",
+            "title": "静态图片",
+            "type": "bool",
+            "default": "false",
+            "description": "是否为静态图片",
+            "extend": true
+        }
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "网络",
+            "name": "图片加载完成",
+            "function": "OnURLLoaded",
+            "description": "当图片被成功加载后触发"
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置混合模式",
+            "function": "SetEffect",
+            "description": "设置混合模式为<%1>",
+            "parameters": [
+                {
+                    "type": "blend",
+                    "name": "mode",
+                    "description": "混合模式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "网络",
+            "name": "加载图片",
+            "function": "LoadURL",
+            "description": "加载图片",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "URI",
+                    "description": "图片地址"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "图片宽度",
+            "function": "ImageWidth",
+            "description": "获取当前图片的宽度（像素）"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "图片高度",
+            "function": "ImageHeight",
+            "description": "获取当前图片的高度（像素）"
+        }
+    ]
+
+}
+

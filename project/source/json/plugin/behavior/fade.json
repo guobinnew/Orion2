@@ -1,0 +1,151 @@
+{
+    "type": "Behavior",
+    "id": "Fade",
+    "name":	"淡入淡出",
+    "version": "1.0",
+    "description": "使对象淡入淡出",
+    "category":	"通用",
+    "attributes":[],
+    "variables": [
+        {
+            "name": "Active",
+            "title": "是否激活",
+            "type": "bool",
+            "default": "true",
+            "description": "是否在对象创建后激活"
+        },
+        {
+            "name": "FadeInTime",
+            "title": "淡入时间",
+            "type": "float",
+            "default": "0",
+            "description": "淡入持续时间，0表示跳过"
+        },
+        {
+            "name": "WaitTime",
+            "title": "等待时间",
+            "type": "float",
+            "default": "0",
+            "description": "淡入淡出之间的等待时间，0表示跳过"
+        },
+        {
+            "name": "FadeOutTime",
+            "title": "淡出时间",
+            "type": "float",
+            "default": "0",
+            "description": "淡出持续时间，0表示跳过"
+        },
+        {
+            "name": "Destroy",
+            "title": "销毁对象",
+            "type": "bool",
+            "default": "true",
+            "description": "是否在对象淡出后销毁对象"
+        }
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "淡出结束",
+            "function": "OnFadeOutEnd",
+            "description": "当淡出完成时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "淡入结束",
+            "function": "OnFadeInEnd",
+            "description": "当淡入完成时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "等待结束",
+            "function": "OnWaitEnd",
+            "description": "当完成等待时触发"
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "重新开始淡入淡出",
+            "function": "RestartFade",
+            "description": "重新开始淡入淡出"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "开始淡入淡出",
+            "function": "StartFade",
+            "description": "开始淡入淡出"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置淡入时间",
+            "function": "SetFadeInTime",
+            "description": "设置淡入时间为<%1>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "time",
+                    "description": "淡入持续时间"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置淡出时间",
+            "function": "SetFadeOutTime",
+            "description": "设置淡出时间为<%1>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "time",
+                    "description": "淡出持续时间"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置等待时间",
+            "function": "SetWaitTime",
+            "description": "设置等待时间为<%1>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "time",
+                    "description": "等待持续时间"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "淡入时间",
+            "function": "FadeInTime",
+            "description": "获取当前的淡入时间"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "淡出时间",
+            "function": "FadeOutTime",
+            "description": "获取当前的淡出时间"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "等待时间",
+            "function": "WaitTime",
+            "description": "获取当前的等待时间"
+        }
+    ]
+}
+

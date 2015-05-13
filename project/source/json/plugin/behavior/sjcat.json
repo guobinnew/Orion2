@@ -1,0 +1,74 @@
+{
+    "type": "Behavior",
+    "id": "sjcat",
+    "name":	"神经猫格子移动",
+    "version": "1.0",
+    "description": "从网格中计算逃跑路线",
+    "category":	"运动",
+    "attributes":["once"],
+    "variables": [
+    ],
+    "conditions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "是否逃跑成功",
+            "function": "IsExit",
+            "description": "判断神经猫是否逃跑成功"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "是否被围住",
+            "function": "IsClosed",
+            "description": "判断神经猫是否被围住"
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "计算逃跑路线",
+            "function": "FindPath",
+            "description": "计算神经猫的逃跑路线",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "grid",
+                    "description": "网格数组"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "重置状态",
+            "function": "Reset",
+            "description": "重置神经猫的状态"
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "下一步行索引",
+            "function": "NextRow",
+            "description": "获取下一步移动的行索引"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "下一步列索引",
+            "function": "NextCol",
+            "description": "获取下一步移动的列索引"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "神经猫状态",
+            "function": "State",
+            "description": "获取神经猫的当前状态"
+        }
+    ]
+}
+

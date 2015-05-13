@@ -1,0 +1,394 @@
+{
+    "type": "Entity",
+    "id": "List",
+    "name":	"列表框",
+    "version": "1.0",
+    "description": "列表框控件",
+    "category":	"UI",
+    "attributes":["world","position","size"],
+    "variables": [
+        {
+            "name": "Items",
+            "title": "列表项",
+            "type": "string",
+            "default":"单元1;单元2;单元3",
+            "description": "列表中的单元项"
+        },
+        {
+            "name": "Tooltip",
+            "title": "提示文字",
+            "type": "string",
+            "description": "提示文字"
+        },
+        {
+            "name": "InitVisibility",
+            "title": "是否初始可见",
+            "type": "enum",
+            "enums":["不可见","可见"],
+            "default":"可见",
+            "description": "是否初始可见"
+        },
+        {
+            "name": "Enabled",
+            "title": "是否可用",
+            "type": "bool",
+            "default":"true",
+            "description": "是否可用"
+        },
+        {
+            "name": "Type",
+            "title": "类型",
+            "type": "enum",
+            "default": "列表",
+            "enums": ["列表","下拉列表"],
+            "description": "列表框类型"
+        },
+        {
+            "name": "MultiSelect",
+            "title": "允许多选",
+            "type": "bool",
+            "default":"false",
+            "description": "多选状态"
+        },
+        {
+            "name": "AutoFont",
+            "title": "字体自动调整",
+            "type": "bool",
+            "default":"true",
+            "description": "自动调整字体大小"
+        },
+        {
+            "name": "ElementId",
+            "title": "ID",
+            "type": "string",
+            "description": "HTML元素ID"
+        }
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "改变选择项",
+            "function": "OnSelectionChanged",
+            "description": "当列表框当前选中项改变时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "点击列表框",
+            "function": "OnClicked",
+            "description": "当列表框被点击时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "双击列表框",
+            "function": "OnDoubleClicked",
+            "description": "当列表框被双击时触发"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较当前选中项",
+            "function": "CompareSelection",
+            "description": "比较当前选中项",
+            "parameters":[
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引（从0开始）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较当前选中文字",
+            "function": "CompareSelectedText",
+            "description": "比较当前选中的文字",
+            "parameters":[
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "用于比较文字"
+                },
+                {
+                    "type": "enum",
+                    "name": "case",
+                    "enums":["大小写不敏感","大小写敏感"],
+                    "description": "大小写敏感"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较指定项的文字",
+            "function": "CompareTextAt",
+            "description": "比较指定项的文字",
+            "parameters":[
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引（从0开始）"
+                },
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "用于比较文字"
+                },
+                {
+                    "type": "enum",
+                    "name": "case",
+                    "enums":["大小写不敏感","大小写敏感"],
+                    "description": "大小写敏感"
+                }
+            ]
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "选中指定项",
+            "function": "Select",
+            "description": "选中列表中的指定项",
+            "parameters":[
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引（从0开始）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置提示文本",
+            "function": "SetTooltip",
+            "description": "设置列表的提示文字",
+            "parameters":[
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "提示文字"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置是否可见",
+            "function": "SetVisible",
+            "description": "设置列表是否可见",
+            "parameters":[
+                {
+                    "type": "enum",
+                    "name": "visibility",
+                    "enums":["隐藏","显示"],
+                    "description": "可见状态"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置是否可用",
+            "function": "SetEnabled",
+            "description": "设置列表是否可用",
+            "parameters":[
+                {
+                    "type": "enum",
+                    "name": "mode",
+                    "enums":["禁用","可用"],
+                    "description": "可用状态"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "获得输入焦点",
+            "function": "SetFocus",
+            "description": "设置列表获得输入焦点"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置CSS样式",
+            "function": "SetCSSStyle",
+            "description": "设置列表CSS样式",
+            "parameters":[
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "属性名"
+                },
+                {
+                    "type": "string",
+                    "name": "value",
+                    "description": "属性值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "移除输入焦点",
+            "function": "SetBlur",
+            "description": "移除列表的输入焦点"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "添加单元项",
+            "function": "AddItem",
+            "description": "向列表添加单元项",
+            "parameters":[
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "文字"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "添加单元项到指定位置",
+            "function": "AddItemAt",
+            "description": "向列表的指定位置添加单元项",
+            "parameters":[
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引（从0开始）"
+                },
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "文字"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "删除单元项",
+            "function": "Remove",
+            "description": "从列表删除单元项",
+            "parameters":[
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "文字"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置指定单元项的文字",
+            "function": "SetItemText",
+            "description": "设置指定单元项的文字",
+            "parameters":[
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引（从0开始）"
+                },
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "文字"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "清空列表",
+            "function": "Clear",
+            "description": "清空列表中所有内容"
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "单元项数目",
+            "function": "ItemCount",
+            "description": "获取列表中的单元数目"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "当前选中的索引",
+            "function": "SelectedIndex",
+            "description": "当前选中的索引"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "当前选中的文字",
+            "function": "SelectedText",
+            "description": "当前选中的文字"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "当前选中项的数目",
+            "function": "SelectedCount",
+            "description": "当前选中项的数目"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "指定选中项",
+            "function": "SelectedIndexAt",
+            "description": "指定选中项",
+            "parameters":[
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引（从0开始）"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "指定选中项的文字",
+            "function": "SelectedTextAt",
+            "description": "指定选中项的文字",
+            "parameters":[
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引（从0开始）"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "指定项的文字",
+            "function": "ItemTextAt",
+            "description": "指定项的文字",
+            "parameters":[
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引（从0开始）"
+                }
+            ]
+        }
+    ]
+
+}
+

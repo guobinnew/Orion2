@@ -1,0 +1,26 @@
+{
+    "type": "Effect",
+    "id": "sharpen",
+    "name":	"锐化",
+    "version": "1.0",
+    "description": "把图像边界锐化",
+    "category":	"通用",
+    "attributes":[],
+    "extendbox":["0","0"],
+    "variables": [
+        {
+            "name": "intensity",
+            "title": "密度",
+            "type": "percent",
+            "default": "1",
+            "description": "密度(0-100)"
+        }
+    ],
+    "conditions":[
+    ],
+    "actions":[
+    ],
+    "expresses":[
+    ]
+}
+

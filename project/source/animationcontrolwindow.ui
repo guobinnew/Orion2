@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AnimationControlWindow</class>
+ <widget class="QWidget" name="AnimationControlWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>337</width>
+    <height>25</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>动画控制</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="orion2.qrc">
+    <normaloff>:/images/unique32.png</normaloff>:/images/unique32.png</iconset>
+  </property>
+  <widget class="QWidget" name="layoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>2</y>
+     <width>331</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QPushButton" name="playpushButton">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="orion2.qrc">
+        <normaloff>:/images/play.png</normaloff>:/images/play.png</iconset>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pausepushButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="icon">
+       <iconset resource="orion2.qrc">
+        <normaloff>:/images/pause.png</normaloff>:/images/pause.png</iconset>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="stoppushButton">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="orion2.qrc">
+        <normaloff>:/images/stop.png</normaloff>:/images/stop.png</iconset>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="addpushButton">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="orion2.qrc">
+        <normaloff>:/images/add.png</normaloff>:/images/add.png</iconset>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="minuspushButton">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="orion2.qrc">
+        <normaloff>:/images/delete.png</normaloff>:/images/delete.png</iconset>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QDoubleSpinBox" name="speeddoubleSpinBox">
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="minimum">
+       <double>0.010000000000000</double>
+      </property>
+      <property name="maximum">
+       <double>1.000000000000000</double>
+      </property>
+      <property name="singleStep">
+       <double>0.100000000000000</double>
+      </property>
+      <property name="value">
+       <double>1.000000000000000</double>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="backpushButton">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="orion2.qrc">
+        <normaloff>:/images/left-x.png</normaloff>:/images/left-x.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="pingpongpushButton">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="orion2.qrc">
+        <normaloff>:/images/flowcontrol.png</normaloff>:/images/flowcontrol.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_2">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="looppushButton">
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset resource="orion2.qrc">
+        <normaloff>:/images/import.png</normaloff>:/images/import.png</iconset>
+      </property>
+      <property name="checkable">
+       <bool>true</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="repeatspinBox">
+      <property name="maximumSize">
+       <size>
+        <width>32</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="minimum">
+       <number>1</number>
+      </property>
+      <property name="maximum">
+       <number>9999</number>
+      </property>
+      <property name="value">
+       <number>9999</number>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QSpinBox" name="endspinBox">
+      <property name="maximumSize">
+       <size>
+        <width>32</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="buttonSymbols">
+       <enum>QAbstractSpinBox::NoButtons</enum>
+      </property>
+      <property name="maximum">
+       <number>999</number>
+      </property>
+      <property name="value">
+       <number>999</number>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="orion2.qrc"/>
+ </resources>
+ <connections/>
+</ui>

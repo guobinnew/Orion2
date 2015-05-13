@@ -1,0 +1,26 @@
+{
+    "type": "Effect",
+    "id": "blurhorizontal",
+    "name":	"水平模糊",
+    "version": "1.0",
+    "description": "把图像沿水平方向模糊处理（9点采样高斯模糊）",
+    "category":	"通用",
+    "attributes":[],
+    "extendbox":["8","0"],
+    "variables": [
+        {
+            "name": "intensity",
+            "title": "密度",
+            "type": "percent",
+            "default": "1",
+            "description": "密度(0-100)"
+        }
+    ],
+    "conditions":[
+    ],
+    "actions":[
+    ],
+    "expresses":[
+    ]
+}
+

@@ -1,0 +1,87 @@
+[
+    {
+        "id": "Apple iPad",
+        "width": "768",
+        "height": "1024"
+    },
+    {
+        "id": "Apple iPad 2",
+        "width": "768",
+        "height": "1024"
+    },
+    {
+        "id": "Apple iPad 3",
+        "width": "1536",
+        "height": "2048"
+    },
+    {
+        "id": "Apple iPad 4",
+        "width": "1536",
+        "height": "2048"
+    },
+    {
+        "id": "Apple iPad Mini",
+        "width": "768",
+        "height": "1024"
+    },
+    {
+        "id": "Apple iPad Mini 2",
+        "width": "1536",
+        "height": "2048"
+    },
+    {
+        "id": "Apple iPad Air",
+        "width": "1536",
+        "height": "2048"
+    },
+    {
+        "id": "Apple iPad Air 2",
+        "width": "1536",
+        "height": "2048"
+    },
+    {
+        "id": "Apple iPhone 4",
+        "width": "640",
+        "height": "960"
+    },
+    {
+        "id": "Apple iPhone 5",
+        "width": "640",
+        "height": "1136"
+    },
+    {
+        "id": "Apple iPhone 6",
+        "width": "750",
+        "height": "1134"
+    },
+    {
+        "id": "Samsung Galaxy S4",
+        "width": "1080",
+        "height": "1920"
+    },
+    {
+        "id": "Samsung Galaxy S5",
+        "width": "1080",
+        "height": "1920"
+    },
+    {
+        "id": "Samsung Galaxy Note",
+        "width": "800",
+        "height": "1280"
+    },
+    {
+        "id": "Samsung Galaxy Note 2",
+        "width": "720",
+        "height": "1280"
+    },
+    {
+        "id": "Samsung Galaxy Note 3",
+        "width": "1080",
+        "height": "1920"
+    },
+    {
+        "id": "Samsung Galaxy Note 4",
+        "width": "1440",
+        "height": "2560"
+    }
+]

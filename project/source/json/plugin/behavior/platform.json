@@ -1,0 +1,18 @@
+{
+    "type": "Behavior",
+    "id": "Platform",
+    "name":	"平台",
+    "version": "1.0",
+    "description": "在平台之间进行跳、跑等动作",
+    "category":	"运动",
+    "attributes":[],
+    "variables": [
+    ],
+    "conditions":[
+    ],
+    "actions":[
+    ],
+    "expresses":[
+    ]
+}
+

@@ -1,0 +1,18 @@
+{
+    "type": "Behavior",
+    "id": "Persist",
+    "name":	"持久化",
+    "version": "1.0",
+    "description": "当对象实例离开场景时记录当前状态，等返回场景时恢复",
+    "category":	"属性",
+    "attributes":["once"],
+    "variables": [
+    ],
+    "conditions":[
+    ],
+    "actions":[
+    ],
+    "expresses":[
+    ]
+}
+

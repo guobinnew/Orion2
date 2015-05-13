@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddStaticSpriteWindow</class>
+ <widget class="QWidget" name="AddStaticSpriteWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>662</width>
+    <height>628</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>添加对象</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="orion2.qrc">
+    <normaloff>:/images/unique64.png</normaloff>:/images/unique64.png</iconset>
+  </property>
+ </widget>
+ <resources>
+  <include location="orion2.qrc"/>
+ </resources>
+ <connections/>
+</ui>

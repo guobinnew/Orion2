@@ -1,0 +1,898 @@
+{
+    "type": "Native",
+    "id": "Common",
+    "name": "公共接口",
+    "version": "1.0",
+    "description": "定义插件的公用接口",
+    "category": "系统",
+    "attributes": [],
+    "variables": [
+    ],
+    "conditions": [
+        {
+            "flags": ["position"],
+            "category": "位置",
+            "name": "比较X坐标",
+            "function": "CompareX",
+            "description": "比较是否<%1><%2>坐标值",
+            "parameters": [
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "用于比较的X坐标值"
+                }
+            ]
+        },
+        {
+            "flags": ["position"],
+            "category": "位置",
+            "name": "比较Y坐标",
+            "function": "CompareY",
+            "description": "比较是否<%1><%2>坐标值",
+            "parameters": [
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "用于比较的y坐标值"
+                }
+            ]
+        },
+        {
+            "flags": ["position"],
+            "category": "位置",
+            "name": "根据距离选取对象实例",
+            "function": "PickDistance",
+            "description": "根据与指定位置(<%2>,<%3>)的距离远近来选取对象实例",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "which",
+                    "enums": ["最近", "最远"],
+                    "description": "距离远近"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "指定的X坐标值"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "指定的Y坐标值"
+                }
+            ]
+        },
+        {
+            "flags": ["position"],
+            "category": "位置",
+            "name": "是否出现在屏幕上",
+            "function": "IsOnScreen",
+            "description": "是否出现在屏幕上",
+            "parameters": [
+            ]
+        },
+        {
+            "flags": ["position"],
+            "category": "位置",
+            "name": "是否在界面边界之外",
+            "function": "IsOutsideLayout",
+            "description": "是否在界面边界之外"
+        },
+        {
+            "flags": ["size"],
+            "category": "大小",
+            "name": "宽度比较",
+            "function": "CompareWidth",
+            "description": "比较宽度大小",
+            "parameters": [
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "width",
+                    "description": "用于比较的宽度"
+                }
+            ]
+        },
+        {
+            "flags": ["size"],
+            "category": "大小",
+            "name": "高度比较",
+            "function": "CompareHeight",
+            "description": "比较高度大小",
+            "parameters": [
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "height",
+                    "description": "用于比较的高度"
+                }
+            ]
+        },
+        {
+            "flags": ["angle"],
+            "category": "角度",
+            "name": "角度检查",
+            "function": "AngleWithin",
+            "description": "检查对象角度到指定角度<%2>的夹角是否小于<%2>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "within",
+                    "description": "比较的夹角大小"
+                },
+                {
+                    "type": "float",
+                    "name": "angle",
+                    "description": "指定的角度"
+                }
+            ]
+        },
+        {
+            "flags": ["angle"],
+            "category": "角度",
+            "name": "顺时针检查",
+            "function": "IsClockwiseFrom",
+            "description": "检查对象角度到指定角度<%2>的是否为顺时针方向",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "angle",
+                    "description": "指定的角度"
+                }
+            ]
+        },
+        {
+            "flags": ["angle"],
+            "category": "角度",
+            "name": "角度区间检查",
+            "function": "IsBetweenAngles",
+            "description": "检查对象角度是否位于区间[<%1>,<%2>]",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "low",
+                    "description": "下限"
+                },
+                {
+                    "type": "float",
+                    "name": "high",
+                    "description": "上限"
+                }
+            ]
+        },
+        {
+            "flags": ["appearance"],
+            "category": "展现",
+            "name": "是否可见",
+            "function": "IsVisible",
+            "description": "是否可见"
+        },
+        {
+            "flags": ["zorder"],
+            "category": "深度",
+            "name": "所在图层检查",
+            "function": "IsOnLayer",
+            "description": "是否在图层<%1>上",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层名"
+                }
+            ]
+        },
+        {
+            "flags": ["zorder"],
+            "category": "深度",
+            "name": "根据深度选择对象实例",
+            "function": "PickTopBottom ",
+            "description": "根据深度大小选择对象实例",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "which",
+                    "enums": ["最前", "最后"],
+                    "description": "深度排序方向"
+                }
+            ]
+        },
+        {
+            "flags": ["appearance"],
+            "category": "展现",
+            "name": "比较透明度",
+            "function": "CompareOpacity",
+            "description": "比较是否<%1><%2>透明度",
+            "parameters": [
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "int",
+                    "name": "x",
+                    "description": "用于比较的透明度（0-100）"
+                }
+            ]
+        },
+        {
+            "flags": ["singleglobal"],
+            "category": "变量",
+            "name": "比较实例变量值",
+            "function": "CompareInstanceVar",
+            "description": "比较实例变量<%1>是否<%2><%3>",
+            "parameters": [
+                {
+                    "type": "instance",
+                    "name": "v",
+                    "description": "变量名"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "用于比较的值"
+                }
+            ]
+        },
+        {
+            "flags": ["singleglobal"],
+            "category": "变量",
+            "name": "比较实例布尔变量值",
+            "function": "IsBoolInstanceVarSet",
+            "description": "检查实例变量<%1>是否为布尔变量",
+            "parameters": [
+                {
+                    "type": "instance",
+                    "name": "v",
+                    "description": "变量名"
+                }
+            ]
+        },
+        {
+            "flags": ["singleglobal"],
+            "category": "变量",
+            "name": "根据变量值大小选取实例",
+            "function": "PickInstVarHiLow",
+            "description": "检查实例变量<%2>的大小来选取对象",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "which",
+                    "enums": ["最小", "最大"],
+                    "description": "最大/最小标志"
+                },
+                {
+                    "type": "instance",
+                    "name": "v",
+                    "description": "变量名"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger", "singleglobal"],
+            "category": "变量",
+            "name": "创建对象",
+            "function": "OnCreated",
+            "description": "对象实例创建时触发",
+            "parameters": [
+            ]
+        },
+        {
+            "flags": ["trigger", "singleglobal"],
+            "category": "变量",
+            "name": "销毁对象",
+            "function": "OnDestroyed",
+            "description": "对象实例销毁时触发"
+        }
+    ],
+    "actions": [
+        {
+            "flags": ["position"],
+            "category": "位置",
+            "name": "设置X坐标",
+            "function": "SetX",
+            "description": "将X坐标设置为<%1>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "X坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["position"],
+            "category": "位置",
+            "name": "设置Y坐标",
+            "function": "SetY",
+            "description": "将Y坐标设置为<%1>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "y坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["position"],
+            "category": "位置",
+            "name": "设置坐标位置",
+            "function": "SetPos",
+            "description": "将坐标设置为<%1>,<%2>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["position"],
+            "category": "位置",
+            "name": "根据目标对象来设置坐标",
+            "function": "SetPosToObject",
+            "description": "将坐标设置为目标对象<%1>的<%2>处",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "目标对象"
+                },
+                {
+                    "type": "any",
+                    "name": "imagePoint",
+                    "description": "图像点名称或序号"
+                }
+            ]
+        },
+        {
+            "flags": ["position"],
+            "category": "位置",
+            "name": "向前移动",
+            "function": "MoveForward",
+            "description": "将位置向前方移动<%1>距离",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "distance",
+                    "description": "移动距离"
+                }
+            ]
+        },
+        {
+            "flags": ["position"],
+            "category": "位置",
+            "name": "向指定方向移动",
+            "function": "MoveAtAngle",
+            "description": "将位置向指定角度<%1>移动<%2>距离",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "angle",
+                    "description": "移动方向（度数，正前方为0度，顺时针旋转）"
+                },
+                {
+                    "type": "float",
+                    "name": "distance",
+                    "description": "移动距离"
+                }
+            ]
+        },
+        {
+            "flags": ["angle"],
+            "category": "角度",
+            "name": "设置方位角",
+            "function": "SetAngle",
+            "description": "设置方位角为<%1>度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "angle",
+                    "description": "方位角（度数，右方为0度，顺时针）"
+                }
+            ]
+        },
+        {
+            "flags": ["angle"],
+            "category": "角度",
+            "name": "顺时针旋转方位角",
+            "function": "RotateClockwise",
+            "description": "顺时针旋转方位角<%1>度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "angle",
+                    "description": "旋转角度"
+                }
+            ]
+        },
+        {
+            "flags": ["angle"],
+            "category": "角度",
+            "name": "逆时针旋转方位角",
+            "function": "RotateCounterclockwise",
+            "description": "逆时针旋转方位角<%1>度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "angle",
+                    "description": "旋转角度"
+                }
+            ]
+        },
+        {
+            "flags": ["angle"],
+            "category": "角度",
+            "name": "指向指定位置",
+            "function": "SetTowardPosition",
+            "description": "设置对象方位指定位置<%1,%2>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "目标位置X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "目标位置Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["angle"],
+            "category": "角度",
+            "name": "朝指定位置旋转",
+            "function": "RotateTowardPosition",
+            "description": "朝指定位置<%2,%3>旋转<%1>度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "angle",
+                    "description": "旋转角度"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "目标位置X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "目标位置Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["angle"],
+            "category": "角度",
+            "name": "朝指定方位旋转",
+            "function": "RotateTowardAngle",
+            "description": "朝指定方位<%2>旋转<%1>度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "angle",
+                    "description": "旋转角度"
+                },
+                {
+                    "type": "float",
+                    "name": "target",
+                    "description": "目标位方位角"
+                }
+            ]
+        },
+        {
+            "flags": ["size"],
+            "category": "大小",
+            "name": "设置宽度",
+            "function": "SetWidth",
+            "description": "设置对象的宽度为<%1>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "width",
+                    "description": "宽度"
+                }
+            ]
+        },
+        {
+            "flags": ["size"],
+            "category": "大小",
+            "name": "设置高度",
+            "function": "SetHeight",
+            "description": "设置对象的高度为<%1>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "height",
+                    "description": "高度"
+                }
+            ]
+        },
+        {
+            "flags": ["size"],
+            "category": "大小",
+            "name": "设置大小",
+            "function": "SetSize",
+            "description": "设置对象的大小为<%1>,<%2>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "width",
+                    "description": "宽度"
+                },
+                {
+                    "type": "float",
+                    "name": "height",
+                    "description": "高度"
+                }
+            ]
+        },
+        {
+            "flags": ["appearance"],
+            "category": "展现",
+            "name": "设置是否可见",
+            "function": "SetVisible",
+            "description": "设置是否可见",
+            "parameters": [
+                {
+                    "type": "bool",
+                    "name": "visible",
+                    "description": "是否可见"
+                }
+            ]
+        },
+        {
+            "flags": ["appearance"],
+            "category": "展现",
+            "name": "设置透明度",
+            "function": "SetOpacity",
+            "description": "将透明度设置为<%1>",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "alpha",
+                    "description": "透明度（0-100）"
+                }
+            ]
+        },
+        {
+            "flags": ["zorder"],
+            "category": "深度",
+            "name": "移动到前面",
+            "function": "MoveToTop",
+            "description": "将对象实例移动到所在图层的最前面",
+            "parameters": [
+            ]
+        },
+        {
+            "flags": ["zorder"],
+            "category": "深度",
+            "name": "移动到后面",
+            "function": "MoveToBottom",
+            "description": "将对象实例移动到所在图层的最后面"
+        },
+        {
+            "flags": ["zorder"],
+            "category": "深度",
+            "name": "移动到图层",
+            "function": "MoveToLayer",
+            "description": "将对象实例移动到指定图层<%1>",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                }
+            ]
+        },
+        {
+            "flags": ["zorder"],
+            "category": "深度",
+            "name": "移动到指定对象前后",
+            "function": "ZMoveToObject",
+            "description": "将对象实例移动到指定对象的前面或后面",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "where",
+                    "enums": ["后面", "前面"],
+                    "description": "移动位置"
+                },
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "对象实例"
+                }
+            ]
+        },
+        {
+            "flags": ["effects"],
+            "category": "特效",
+            "name": "特效开关",
+            "function": "SetEffectEnabled",
+            "description": "开启/关闭对象实例的特效<%2>",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "flag",
+                    "enums": ["关闭", "开启"],
+                    "description": "开关标志"
+                },
+                {
+                    "type": "string",
+                    "name": "effect",
+                    "description": "特效名"
+                }
+            ]
+        },
+        {
+            "flags": ["effects"],
+            "category": "特效",
+            "name": "设置特效参数",
+            "function": "SetEffectParam",
+            "description": "设置对象实例的特效<%1>的参数<%2>为<%3>",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "effect",
+                    "description": "特效名"
+                },
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "参数索引"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "参数值"
+                }
+            ]
+        },
+        {
+            "flags": ["singleglobal"],
+            "category": "实体",
+            "name": "删除对象",
+            "function": "Destroy",
+            "description": "删除对象"
+        },
+        {
+            "flags": ["singleglobal"],
+            "category": "实体",
+            "name": "实例变量赋值",
+            "function": "SetInstanceVar",
+            "description": "给对象的实例变量<%1>赋值为<%2>",
+            "parameters": [
+                {
+                    "type": "instance",
+                    "name": "name",
+                    "description": "变量名"
+                },
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "变量值（数组或字符串）"
+                }
+            ]
+        },
+        {
+            "flags": ["singleglobal"],
+            "category": "实体",
+            "name": "实例变量增值",
+            "function": "AddInstanceVar",
+            "description": "将对象的实例变量<%1>增加<%2>",
+            "parameters": [
+                {
+                    "type": "instance",
+                    "name": "name",
+                    "description": "变量名"
+                },
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "相加的数值（数组或字符串）"
+                }
+            ]
+        },
+        {
+            "flags": ["singleglobal"],
+            "category": "实体",
+            "name": "实例变量减值",
+            "function": "SubInstanceVar",
+            "description": "将对象实例的变量<%1>减去<%2>",
+            "parameters": [
+                {
+                    "type": "instance",
+                    "name": "name",
+                    "description": "变量名"
+                },
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "相减的数值（数组或字符串）"
+                }
+            ]
+        },
+        {
+            "flags": ["singleglobal"],
+            "category": "实体",
+            "name": "实例布尔变量减值",
+            "function": "SetBoolnstanceVar",
+            "description": "给对象实例的布尔变量<%1>赋值",
+            "parameters": [
+                {
+                    "type": "instance",
+                    "name": "name",
+                    "description": "变量名"
+                },
+                {
+                    "type": "bool",
+                    "name": "x",
+                    "description": "布尔值"
+                }
+            ]
+        },
+        {
+            "flags": ["singleglobal"],
+            "category": "实体",
+            "name": "反转实例布尔变量",
+            "function": "ToggleBoolInstanceVar ",
+            "description": "将对象实例的布尔变量<%1>反转",
+            "parameters": [
+                {
+                    "type": "instance",
+                    "name": "name",
+                    "description": "变量名"
+                }
+            ]
+        }
+    ],
+    "expresses": [
+        {
+            "flags": ["return_float", "position"],
+            "category": "位置",
+            "name": "X坐标",
+            "function": "X",
+            "description": "获取X坐标"
+        },
+        {
+            "flags": ["return_float", "position"],
+            "category": "位置",
+            "name": "Y坐标",
+            "function": "Y",
+            "description": "获取X坐标"
+        },
+        {
+            "flags": ["return_float", "position"],
+            "category": "位置",
+            "name": "时间间隔",
+            "function": "dt",
+            "description": "获取与前一帧的时间间隔"
+        },
+        {
+            "flags": ["return_float", "size"],
+            "category": "大小",
+            "name": "宽度",
+            "function": "Width",
+            "description": "获取宽度"
+        },
+        {
+            "flags": ["return_float", "size"],
+            "category": "大小",
+            "name": "高度",
+            "function": "Height",
+            "description": "获取高度"
+        },
+        {
+            "flags": ["return_float", "size"],
+            "category": "大小",
+            "name": "包围盒右边X坐标",
+            "function": "BBoxRight",
+            "description": "获取包围盒右边X坐标"
+        },
+        {
+            "flags": ["return_float", "size"],
+            "category": "大小",
+            "name": "包围盒顶部Y坐标",
+            "function": "BBoxTop",
+            "description": "获取包围盒顶部Y坐标"
+        },
+        {
+            "flags": ["return_float", "size"],
+            "category": "大小",
+            "name": "包围盒底部Y坐标",
+            "function": "BBoxBottom",
+            "description": "获取包围盒底部Y坐标"
+        },
+        {
+            "flags": ["return_float", "size"],
+            "category": "大小",
+            "name": "包围盒左边X坐标",
+            "function": "BBoxLeft",
+            "description": "获取包围盒左边X坐标"
+        },
+        {
+            "flags": ["return_float", "angle"],
+            "category": "角度",
+            "name": "方位角",
+            "function": "Angle",
+            "description": "获取方位角"
+        },
+        {
+            "flags": ["return_float", "appearance"],
+            "category": "展现",
+            "name": "透明度",
+            "function": "Opacity",
+            "description": "获取透明度"
+        },
+        {
+            "flags": ["return_int", "zorder"],
+            "category": "深度",
+            "name": "图层序号",
+            "function": "LayerNumber",
+            "description": "返回所在图层的序号"
+        },
+        {
+            "flags": ["return_string", "zorder"],
+            "category": "深度",
+            "name": "图层名",
+            "function": "LayerName",
+            "description": "返回所在图层的名"
+        },
+        {
+            "flags": ["return_int", "zorder"],
+            "category": "深度",
+            "name": "深度索引",
+            "function": "ZIndex",
+            "description": "返回在图层中的深度索引"
+        },
+        {
+            "flags": ["return_int", "singleglobal"],
+            "category": "通用",
+            "name": "对象实例数目",
+            "function": "Count",
+            "description": "获取对象的实例数目"
+        },
+        {
+            "flags": ["return_int", "singleglobal"],
+            "category": "通用",
+            "name": "选中的对象实例数目",
+            "function": "PickedCount",
+            "description": "获取对象的所有实例中被选中的数目"
+        }
+    ]
+
+}
+

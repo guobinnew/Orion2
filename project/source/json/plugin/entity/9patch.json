@@ -1,0 +1,127 @@
+{
+    "type": "Entity",
+    "id": "NinePatch",
+    "name":	"九宫格",
+    "version": "1.0",
+    "description": "九宫格",
+    "category":	"通用",
+    "attributes":["world","texture","position","size","appearance","zorder","effects","predraw","behaviors"],
+    "variables": [
+        {
+            "name": "LeftMargin",
+            "title": "左边框",
+            "type": "int",
+            "default": "16",
+            "description": "左边框宽度"
+        },
+        {
+            "name": "RightMargin",
+            "title": "右边框",
+            "type": "int",
+            "default": "16",
+            "description": "右边框宽度"
+        },
+        {
+            "name": "TopMargin",
+            "title": "顶边框",
+            "type": "int",
+            "default": "16",
+            "description": "顶边框宽度"
+        },
+        {
+            "name": "BottomMargin",
+            "title": "底边框",
+            "type": "int",
+            "default": "16",
+            "description": "底边框宽度"
+        },
+        {
+            "name": "Edges",
+            "title": "边框填充模式",
+            "type": "enum",
+            "default": "拉伸",
+            "enums":["平铺","拉伸"],
+            "description": "边框填充模式"
+        },
+        {
+            "name": "Fill",
+            "title": "中心填充模式",
+            "type": "enum",
+            "default": "拉伸",
+            "enums":["平铺","拉伸","透明"],
+            "description": "中心填充模式"
+        },
+        {
+            "name": "InitVisibility",
+            "title": "初始可见",
+            "type": "enum",
+            "default": "可见",
+            "enums": ["可见","不可见"],
+            "description": "对象是否在界面启动时可见"
+        },
+        {
+            "name": "Hotspot",
+            "title": "锚点位置",
+            "type": "enum",
+            "default": "左上角",
+            "enums": ["左上角", "顶边中间","右上角","左边中间","中心","右边中间","左下角","底边中间","右下角"],
+            "description": "锚点位置"
+        },
+        {
+            "name": "Seams",
+            "title": "缝隙处理方式",
+            "type": "enum",
+            "default": "重合",
+            "enums": ["精确", "重合"],
+            "description": "缝隙处理"
+        },
+        {
+            "name": "Animation",
+            "title": "动画资源",
+            "type": "string",
+            "description": "关联的动画资源名",
+            "extend": true
+        },
+        {
+            "name": "StaticImage",
+            "title": "静态图片",
+            "type": "bool",
+            "default": "false",
+            "description": "是否为静态图片",
+            "extend": true
+        }
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "碰撞检测",
+            "name": "加载图片",
+            "function": "OnURLLoaded",
+            "description": "当图片加载完成时触发",
+            "parameters": [
+            ]
+        }
+
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置混合模式",
+            "function": "SetEffect",
+            "description": "设置与背景图案的混合模式",
+            "parameters": [
+                {
+                    "type": "blend",
+                    "name": "mode",
+                    "description": "混合模式"
+                }
+            ]
+        }
+
+    ],
+    "expresses":[
+    ]
+
+}
+

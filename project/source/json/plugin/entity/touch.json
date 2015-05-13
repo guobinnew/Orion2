@@ -1,0 +1,545 @@
+{
+    "type": "Entity",
+    "id": "Touch",
+    "name":	"触摸屏",
+    "version": "1.0",
+    "description": "处理触摸屏输入",
+    "category":	"输入设备",
+    "attributes":["singleglobal"],
+    "variables": [
+        {
+            "name": "UseMouseInput",
+            "title": "鼠标模拟",
+            "type": "bool",
+            "default": "true",
+            "description": "是否使用鼠标单击模拟触摸输入（用于测试）"
+        }
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "开始触摸任意位置",
+            "function": "OnTouchStart",
+            "description": "当触摸任意位置时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "停止触摸",
+            "function": "OnTouchEnd",
+            "description": "当停止触摸时触发"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "是否正在触摸",
+            "function": "IsInTouch",
+            "description": "检测是否正处于触摸状态"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "触摸对象",
+            "function": "OnTouchObject",
+            "description": "当触摸对象<%1>时触发",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "触摸对象类型"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "是否正在触摸对象",
+            "function": "IsTouchingObject",
+            "description": "检测是否正在触摸对象<%1>",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "触摸对象类型"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较触摸速度",
+            "function": "CompareTouchSpeed",
+            "description": "比较触摸速度",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "比较的速度"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较方向角",
+            "function": "CompareOrientation",
+            "description": "检查方向",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "orient",
+                    "enums":["Alpha","Beta","Gamma"],
+                    "description": "索引"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "angle",
+                    "description": "角度"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较加速度",
+            "function": "CompareAcceleration",
+            "description": "检查加速度",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "axis",
+                    "enums":["X(重力)","Y(重力)","Z(重力)","X","Y","Z"],
+                    "description": "索引"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "angle",
+                    "description": "角度"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "第N个触摸点开始",
+            "function": "OnNthTouchStart",
+            "description": "第N个触摸点开始",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "触摸点索引"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "第N个触摸点结束",
+            "function": "OnNthTouchEnd",
+            "description": "第N个触摸点结束",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "触摸点索引"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "第N个触摸点是否有效",
+            "function": "HasNthTouch",
+            "description": "第N个触摸点结束",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "触摸点索引"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "按住手势",
+            "function": "OnHoldGesture",
+            "description": "按住手势"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "点击手势",
+            "function": "OnTapGesture",
+            "description": "点击手势"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "双击手势",
+            "function": "OnDoubleTapGesture",
+            "description": "双击手势"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "按住对象",
+            "function": "OnHoldGestureObject",
+            "description": "按住对象时触发",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "触摸对象类型"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "点击对象",
+            "function": "OnTapGestureObject",
+            "description": "点击对象时触发",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "触摸对象类型"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "双击对象",
+            "function": "OnDoubleTapGestureObject",
+            "description": "双击对象时触发",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "触摸对象类型"
+                }
+            ]
+        }
+    ],
+    "actions":[
+    ],
+    "expresses":[
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "触摸点数",
+            "function": "TouchCount",
+            "description": "返回触摸点的数目"
+        },
+        {
+            "flags": ["return_float","variadic"],
+            "category": "",
+            "name": "触摸点X坐标",
+            "function": "X",
+            "description": "返回触摸点在场景中的X坐标"
+        },
+        {
+            "flags": ["return_float","variadic"],
+            "category": "",
+            "name": "触摸点Y坐标",
+            "function": "Y",
+            "description": "返回触摸点在场景中的Y坐标"
+        },
+        {
+            "flags": ["return_float","variadic"],
+            "category": "",
+            "name": "触摸点X图层坐标",
+            "function": "XAt",
+            "description": "返回触摸点在图层中的X坐标",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "触摸点索引"
+                },
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float","variadic"],
+            "category": "",
+            "name": "触摸点Y图层坐标",
+            "function": "YAt",
+            "description": "返回触摸点在图层中的Y坐标",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "触摸点索引"
+                },
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "触摸点X绝对坐标",
+            "function": "AbsoluteX",
+            "description": "返回触摸点在图层中的X坐标"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "触摸点Y绝对坐标",
+            "function": "AbsoluteY",
+            "description": "返回触摸点在图层中的Y坐标"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "第N个触摸点X绝对坐标",
+            "function": "AbsoluteXAt",
+            "description": "返回触摸点在图层中的X坐标",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "触摸点索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "第N个触摸点Y绝对坐标",
+            "function": "AbsoluteYAt",
+            "description": "返回触摸点在图层中的Y坐标",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "触摸点索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "第N个触摸点移动速度",
+            "function": "SpeedAt",
+            "description": "返回第N个触摸点移动速度",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "触摸点索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "第N个触摸点移动方向",
+            "function": "AngleAt",
+            "description": "返回第N个触摸点移动方向",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "触摸点索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "Alpha",
+            "function": "Alpha",
+            "description": "返回Alpha方位角"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "Beta",
+            "function": "Beta",
+            "description": "返回Beta方位角"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "Gamma",
+            "function": "Gamma",
+            "description": "返回Gamma方位角"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "X轴加速度（重力）",
+            "function": "AccelerationXWithG",
+            "description": "返回X轴加速度（考虑重力加速度）"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "X轴加速度",
+            "function": "AccelerationX",
+            "description": "返回X轴加速度"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "Y轴加速度（重力）",
+            "function": "AccelerationYWithG",
+            "description": "返回Y轴加速度（考虑重力加速度）"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "Y轴加速度",
+            "function": "AccelerationY",
+            "description": "返回Y轴加速度"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "Z轴加速度（重力）",
+            "function": "AccelerationZWithG",
+            "description": "返回Z轴加速度（考虑重力加速度）"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "Z轴加速度",
+            "function": "AccelerationZ",
+            "description": "返回Z轴加速度"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "当前触摸点索引",
+            "function": "TouchIndex",
+            "description": "返回当前触摸点索引"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "当前触摸点ID",
+            "function": "TouchID",
+            "description": "返回当前触摸点ID"
+        },
+        {
+            "flags": ["return_float","variadic"],
+            "category": "",
+            "name": "指定ID触摸点X坐标",
+            "function": "XForID",
+            "description": "返回指定ID触摸点在场景中的X坐标",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "id",
+                    "description": "触摸点ID"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float","variadic"],
+            "category": "",
+            "name": "指定ID触摸点Y坐标",
+            "function": "YForID",
+            "description": "返回指定ID触摸点在场景中的Y坐标",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "id",
+                    "description": "触摸点ID"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "指定ID触摸点X绝对坐标",
+            "function": "AbsoluteXForID",
+            "description": "返回指定ID触摸点在画布中的X坐标",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "id",
+                    "description": "触摸点ID"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "指定ID触摸点Y绝对坐标",
+            "function": "AbsoluteYForID",
+            "description": "返回指定ID触摸点在画布中的Y坐标",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "id",
+                    "description": "触摸点ID"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "指定ID触摸点移动速度",
+            "function": "SpeedForID",
+            "description": "返回指定ID触摸点的移动速度",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "id",
+                    "description": "触摸点ID"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "指定ID触摸点移动角度",
+            "function": "AngleForID",
+            "description": "返回指定ID触摸点的移动方位角",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "id",
+                    "description": "触摸点ID"
+                }
+            ]
+        }
+
+    ]
+
+}
+

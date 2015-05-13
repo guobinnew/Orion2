@@ -1,0 +1,286 @@
+/*所有控件默认颜色*/
+QWidget{
+    background-color: #2d2d30;
+    color: white;
+}
+
+/*主菜单条背景色*/
+QMenuBar {
+    background-color: #2d2d30;
+}
+
+/*主菜单条上菜单项*/
+QMenuBar::item {
+    spacing: 3px;
+    padding: 1px 4px;
+    background-color: #2d2d30;
+    border-radius: 0px;
+    border: 2px solid #2d2d30;
+    color: white;
+}
+
+/*主菜单条上菜单项在鼠标经过上方时的颜色*/
+QMenuBar::item:selected {
+    background-color: gray;
+}
+
+/*主菜单条上菜单项被鼠标点击后的颜色*/
+QMenuBar::item:pressed {
+    background-color: gray;
+}
+
+/*弹出菜单条*/
+QMenu{
+    background-color: #2d2d30;
+    color: white;
+    border: 1px solid black;
+}
+
+/*弹出菜单条上菜单项在鼠标经过上方时的颜色*/
+QMenu::item:selected {
+    background-color: gray;
+    
+}
+
+/*弹出菜单条上菜单项被鼠标点击后的颜色*/
+QMenu::item:pressed {
+    background-color: gray;
+}
+
+QMenu::item {
+    background-color: transparent;
+}
+
+/*弹出菜单上的分隔条设置*/
+QMenu::separator {
+    height: 1px;
+    background-color: gray;
+    margin-left: 10px;
+    margin-right: 5px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+QMenu::indicator {
+    width: 13px;
+    height: 13px;
+}
+
+/*主工具条设置*/
+QToolBar{
+    background-color: #2d2d30;
+    border: 1px solid #2d2d30;
+    border-radius: 0px;
+}
+
+
+QToolButton{
+    border: none;
+}
+
+QToolButton:hover {
+    background-color: gray;
+    border-radius: 0px;
+    border: 1px solid gray;
+}
+
+QToolButton:checked{
+    background-color: gray;
+}
+
+/*状态条*/
+QStatusBar{
+    background-color: brown;
+    color: white;
+}
+
+QStatusBar::item {  
+    border: 1px solid gray;
+    border-radius: 0px;
+ } 
+
+
+/*弹出提示框*/
+QToolTip {
+    border: 1px solid gray;
+    border-radius: 0px;
+    background-color: lightgray;
+    color: black;
+}
+
+/* Tab/Tree视图的表头*/
+QHeaderView{
+    background-color: #2d2d30;
+    color:black;
+}
+
+QListWidget{
+    background-color: #2d2d30;
+    color: white;
+}
+
+
+QLabel{
+    background-color: #2d2d30;
+}
+
+QHeaderView::section {
+    background-color: #2d2d30;
+    color: white;
+    padding-left: 4px;
+    border: 1px solid #6c6c6c;
+}
+
+/*文本框颜色设置*/
+QLineEdit{
+	border: 1px solid gray;
+	color: white;
+	selection-background-color: white;
+	selection-color: black;
+}
+
+/*分割条大小和颜色*/
+QMainWindow::separator {
+    background: gray;
+    width: 4px;
+    height: 4px;
+}
+
+/*分割条在鼠标经过时的颜色*/
+QMainWindow::separator:hover {
+    background-color: white;
+}
+
+/*按钮设置*/
+QPushButton:flat {
+    border: none;
+    padding: 4px;
+    border-radius: 0px;
+}
+
+QPushButton:hover {
+    background-color: darkGray;
+    border: 1px solid gray;
+}
+
+QPushButton:checked{
+    background-color: gray;
+    border: 1px solid gray;
+}
+
+/*组合框设置*/
+QComboBox {
+    border: 1px solid gray;
+    border-radius: 0px;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 15px;
+
+    border-left-width: 1px;
+    border-left-color: darkgray;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: url(:/images/arrow_down.png);
+}
+
+QComboBox::down-arrow:on {
+    top: 1px;
+    left: 1px;
+}
+
+/*Line*/
+QLineEdit {
+    background-color: #2d2d30;
+}
+
+/*Tab*/
+QTabWidget::pane { 
+    border-top: 2px solid #C2C7CB;
+    position: absolute;
+    top: -0.5em;
+}
+
+QTabWidget::tab-bar {
+    alignment: left;
+}
+
+QTabBar::tab {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #E1E1E1, stop: 0.4 #DDDDDD,
+                                stop: 0.5 #D8D8D8, stop: 1.0 #D3D3D3);
+    border: 2px solid #C4C4C3;
+    border-bottom-color: #C2C7CB;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    min-width: 8ex;
+    padding: 2px;
+    color:gray;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+    background: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                stop: 0 #fafafa, stop: 0.4 #f4f4f4,
+                                stop: 0.5 #e7e7e7, stop: 1.0 #fafafa);
+   	color:black;
+}
+
+QTabBar::tab:selected {
+    border-color: #9B9B9B;
+    border-bottom-color: #C2C7CB;
+	color:black;
+}
+
+
+/*进度条 */
+QProgressBar {
+    border: 2px solid gray;
+    border-radius: 5px;
+    text-align: center;
+    color: gray;
+}
+
+QProgressBar::chunk {
+    background-color: white;
+    width: 20px;
+}
+
+/*滚动条 */
+QScrollBar:vertical {
+     border-color: gray;
+     background: gray;
+ }
+
+QScrollBar::handle:vertical {
+     background: #2d2d30;
+     border: 1px solid gray;
+}
+
+
+QScrollBar:horizontal {
+     border-color: gray;
+     background: gray;
+ }
+
+QScrollBar::handle:horizontal {
+     background: #2d2d30;
+     border: 1px solid gray;
+}
+
+/* 工具箱*/
+QToolBox::tab {
+    border-radius: 0px;
+    border: 1px solid gray;
+    color: darkgray;
+}
+
+QToolBox::tab:selected {
+    color: black;
+    background: #EEEEEE;
+}

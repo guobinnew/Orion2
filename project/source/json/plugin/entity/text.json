@@ -1,0 +1,231 @@
+{
+    "type": "Entity",
+    "id": "Text",
+    "name":	"文本",
+    "version": "1.0",
+    "description": "文本对象",
+    "category":	"通用",
+    "attributes":["world","rotatable","position","size","angle","appearance","zorder","effects","behaviors"],
+    "variables": [
+        {
+            "name": "Text",
+            "title": "显示文字",
+            "type": "string",
+            "description": "显示的文字"
+        },
+        {
+            "name": "InitVisibility",
+            "title": "初始可见",
+            "type": "enum",
+            "default": "可见",
+            "enums": ["可见","不可见"],
+            "description": "对象是否在界面启动时可见"
+        },
+        {
+            "name": "Font",
+            "title": "字体",
+            "type": "font",
+            "default": "12pt Arial",
+            "description": "文本字体"
+        },
+        {
+            "name": "Color",
+            "title": "颜色",
+            "type": "color",
+            "default": "#000000",
+            "description": "文字颜色"
+        },
+        {
+            "name": "HorizontalAlignment",
+            "title": "水平对齐",
+            "type": "enum",
+            "default": "左对齐",
+            "enums": ["左对齐","中对齐","右对齐"],
+            "description": "水平对齐"
+        },
+        {
+            "name": "VerticalAlignment",
+            "title": "垂直对齐",
+            "type": "enum",
+            "default": "顶对齐",
+            "enums": ["顶对齐","中对齐","底对齐"],
+            "description": "垂直对齐"
+        },
+        {
+            "name": "Hotspot",
+            "title": "锚点",
+            "type": "enum",
+            "default": "左上角",
+            "enums": ["左上角","中心"],
+            "description": "文本锚点"
+        },
+        {
+            "name": "Wrapping",
+            "title": "换行方式",
+            "type": "enum",
+            "default": "单词",
+            "enums": ["单词","字符"],
+            "description": "文本换行"
+        },
+        {
+            "name": "LineHeight",
+            "title": "行高",
+            "type": "int",
+            "default": "0",
+            "description": "行高，单位是像素"
+        }
+    ],
+    "conditions":[
+        {
+            "flags": [],
+            "category": "文本",
+            "name": "文本比较",
+            "function": "CompareText",
+            "description": "与文本字符串<%1>进行比较，大小写敏感<%2>",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "用于比较的字符串"
+                },
+                {
+                    "type": "enum",
+                    "name": "CaseSensitivity",
+                    "enums": ["不敏感","敏感"],
+                    "description": "是否大小写敏感"
+                }
+            ]
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "文本",
+            "name": "设置文本",
+            "function": "SetText",
+            "description": "设置文本为<%1>",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "text",
+                    "description": "设置的字符串"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "文本",
+            "name": "追加文本",
+            "function": "AppendText",
+            "description": "向当前文本尾部追加<%1>",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "text",
+                    "description": "设置的字符串"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "文本",
+            "name": "设置字体样式",
+            "function": "SetFontFace",
+            "description": "设置文本的字体样式",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "font",
+                    "description": "字体"
+                },
+                {
+                    "type": "enum",
+                    "name": "style",
+                    "enums":["粗体","斜体","粗体加斜体"],
+                    "description": "字体样式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "文本",
+            "name": "设置字体大小",
+            "function": "SetFontSize",
+            "description": "设置文本的字体大小",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "size",
+                    "description": "字体大小"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "文本",
+            "name": "设置字体颜色",
+            "function": "SetFontColor",
+            "description": "设置文本的字体颜色",
+            "parameters": [
+                {
+                    "type": "color",
+                    "name": "color",
+                    "description": "字体颜色"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "动画",
+            "name": "设置混合模式效果",
+            "function": "SetEffect",
+            "description": "设置混合模式效果为<%1>",
+            "parameters": [
+                {
+                    "type": "blend",
+                    "name": "mode",
+                    "description": "混合模式"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_string"],
+            "category": "文本",
+            "name": "文本",
+            "function": "Text",
+            "description": "获取当前的文本字符串"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "文本",
+            "name": "字体名",
+            "function": "FaceName",
+            "description": "获取当前的文本的字体"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "文本",
+            "name": "字体大小",
+            "function": "FaceSize",
+            "description": "获取当前的文本的字体大小"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "文本",
+            "name": "文本宽度",
+            "function": "TextWidth",
+            "description": "获取当前的文本的宽度"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "文本",
+            "name": "文本高度",
+            "function": "TextHeight",
+            "description": "获取当前的文本的高度"
+        }
+    ]
+
+}
+

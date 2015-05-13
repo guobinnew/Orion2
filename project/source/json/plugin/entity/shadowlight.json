@@ -1,0 +1,89 @@
+{
+    "type": "Entity",
+    "id": "shadowlight",
+    "name":	"投影灯光",
+    "version": "1.0",
+    "description": "投影灯光",
+    "category":	"通用",
+    "attributes":["world","position","appearance","zorder","effects","nosize","behaviors"],
+    "variables": [
+        {
+            "name": "LightHeight",
+            "title": "灯光高度",
+            "type": "int",
+            "default": "200",
+            "description": "灯光高度"
+        },
+        {
+            "name": "LightRadius",
+            "title": "光照半径",
+            "type": "int",
+            "default": "0",
+            "description": "光照半径"
+        },
+        {
+            "name": "Cast",
+            "title": "投影方式",
+            "type": "enum",
+            "default": "全部",
+            "enums":["全部","相同标签对象","不同标签对象"],
+            "description": "投影方式"
+        },
+        {
+            "name": "Tag",
+            "title": "标签",
+            "type": "string",
+            "description": "标签"
+        }
+    ],
+    "conditions":[
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "光照",
+            "name": "设置灯光高度",
+            "function": "SetLightHeight",
+            "description": "设置灯光高度为<%1>",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "height",
+                    "description": "灯光高度"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "光照",
+            "name": "设置灯光标签",
+            "function": "SetTag",
+            "description": "设置灯光标签为<%1>",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "灯光标签"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "光照",
+            "name": "设置灯光颜色",
+            "function": "SetLightColor",
+            "description": "设置灯光颜色为<%1>",
+            "parameters": [
+                {
+                    "type": "color",
+                    "name": "color",
+                    "description": "灯光颜色"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+    ]
+
+}
+

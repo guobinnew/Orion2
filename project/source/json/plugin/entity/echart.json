@@ -1,0 +1,109 @@
+{
+    "type": "Entity",
+    "id": "EChart",
+    "name":	"百度图表",
+    "version": "1.0",
+    "description": "百度图表显示控件",
+    "category":	"图表",
+    "attributes":["world","position","size"],
+    "variables": [
+        {
+            "name": "InitVisibility",
+            "title": "初始可见",
+            "type": "enum",
+            "default": "可见",
+            "enums": ["可见","不可见"],
+            "description": "对象是否在界面启动时可见"
+        },
+        {
+            "name": "ChartId",
+            "title": "图表ID",
+            "type": "string",
+            "description": "图表ID"
+        },
+        {
+            "name": "Title",
+            "title": "主标题",
+            "type": "string",
+            "description": "图表主标题"
+        },
+        {
+            "name": "ToolBox",
+            "title": "工具箱",
+            "type": "enum",
+            "enums":["关闭","开启"]
+            "description": "地图工具箱"
+        },
+        {
+            "name": "Calculable",
+            "title": "拖拽重计算",
+            "type": "enum",
+            "enums":["关闭","开启"]
+            "description": "拖拽重计算"
+        },
+        {
+            "name": "Tooltip",
+            "title": "提示框",
+            "type": "enum",
+            "enums":["关闭","开启"]
+            "description": "提示框"
+        }
+    ],
+    "conditions":[
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置是否可见",
+            "function": "SetVisible",
+            "description": "设置图表是否可见",
+            "parameters": [
+                {
+                    "type": "bool",
+                    "name": "visible",
+                    "description": "可见标志"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置是否可用",
+            "function": "SetEnabled",
+            "description": "设置图表是否可用",
+            "parameters": [
+                {
+                    "type": "bool",
+                    "name": "enable",
+                    "description": "可用标志"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "刷新图表",
+            "function": "Refresh",
+            "description": "刷新图表"
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "主标题",
+            "function": "title",
+            "description": "图表主标题"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "副标题",
+            "function": "subtitle",
+            "description": "图表副标题"
+        }
+    ]
+
+}
+

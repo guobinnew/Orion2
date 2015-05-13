@@ -1,0 +1,294 @@
+{
+    "type": "Entity",
+    "id": "WebStorage",
+    "name":	"网络存储",
+    "version": "1.0",
+    "description": "WebStorage接口访问",
+    "category":	"数据存储",
+    "attributes":["singleglobal"],
+    "variables": [
+    ],
+    "conditions":[
+        {
+            "flags": [],
+            "category": "本地",
+            "name": "检查本地存储",
+            "function": "LocalStorageExists",
+            "description": "检查本地存储<%1>是否存在",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "存储名称"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "会话",
+            "name": "检查会话存储",
+            "function": "SessionStorageExists",
+            "description": "检查会话存储<%1>是否存在",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "存储名称"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "到达存储上限",
+            "function": "OnQuotaExceeded",
+            "description": "当达到浏览器存储限制时触发"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较键值(文本)",
+            "function": "CompareKeyText",
+            "description": "比较键值对应值",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "存储名称"
+                },
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "待比较的文本"
+                },
+                {
+                    "type": "enum",
+                    "name": "case",
+                    "enums":["大小写不敏感","大小写敏感"],
+                    "description": "大小写敏感设置"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较键值(数值)",
+            "function": "CompareKeyText",
+            "description": "比较键值对应值",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "存储名称"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "value",
+                    "description": "待比较的数值"
+                }
+            ]
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "本地",
+            "name": "本地存储",
+            "function": "StoreLocal",
+            "description": "保存到本地存储",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "存储名称"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "数值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "会话",
+            "name": "会话存储",
+            "function": "StoreSession",
+            "description": "保存到会话存储",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "存储名称"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "数值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "本地",
+            "name": "删除本地存储",
+            "function": "RemoveLocal",
+            "description": "删除本地存储",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "存储名称"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "会话",
+            "name": "删除会话存储",
+            "function": "RemoveSession",
+            "description": "删除会话存储",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "存储名称"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "本地",
+            "name": "清空本地存储",
+            "function": "ClearLocal",
+            "description": "删除本地存储"
+        },
+        {
+            "flags": [],
+            "category": "会话",
+            "name": "清空会话存储",
+            "function": "ClearSession",
+            "description": "删除会话存储"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "读取JSON数据",
+            "function": "JSONLoad",
+            "description": "从JSON中读取数组数据",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "json",
+                    "description": "JSON格式文本"
+                },
+                {
+                    "type": "enum",
+                    "name": "mode",
+                    "enums":["替换","合并"],
+                    "description": "读取方式"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_string"],
+            "category": "本地",
+            "name": "本地存储名",
+            "function": "LocalValue",
+            "description": "获取本地存储键值"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "会话",
+            "name": "会话名",
+            "function": "SessionValue",
+            "description": "获取会话名"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "本地",
+            "name": "本地存储中键值数目",
+            "function": "LocalCount",
+            "description": "获取本地存储中键值数目"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "会话",
+            "name": "会话存储中键值数目",
+            "function": "SessionCount",
+            "description": "获取会话存储中键值数目"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "本地",
+            "name": "本地存储数据",
+            "function": "LocalAt",
+            "description": "获取本地存储中指定索引的键值对应的值",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "会话",
+            "name": "会话存储数据",
+            "function": "SessionAt",
+            "description": "获取会话存储中指定索引的键值对应的数据",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "本地",
+            "name": "本地存储键名",
+            "function": "LocalKeyAt",
+            "description": "获取本地存储中指定索引的键名",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "会话",
+            "name": "会话存储键名",
+            "function": "SessionKeyAt",
+            "description": "获取会话存储中指定索引的键名",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "转换为JSON",
+            "function": "AsJSON",
+            "description": "将数据转换为JSON格式"
+        }
+    ]
+
+}
+

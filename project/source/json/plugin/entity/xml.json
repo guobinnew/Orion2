@@ -1,0 +1,89 @@
+{
+    "type": "Entity",
+    "id": "XML",
+    "name":	"XML文件",
+    "version": "1.0",
+    "description": "XML文件访问",
+    "category":	"数据存储",
+    "attributes":[],
+    "variables": [
+    ],
+    "conditions":[
+        {
+            "flags": ["looping"],
+            "category": "",
+            "name": "遍历XML节点",
+            "function": "ForEach",
+            "description": "遍历XML的所有节点",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "xpath",
+                    "description": "XPath"
+                }
+            ]
+        }
+    ],
+    "actions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "读取XML",
+            "function": "Load",
+            "description": "读取XML文档",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "xml",
+                    "description": "XML文档"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "XPath取值",
+            "function": "NumberValue",
+            "description": "从XPath表达式中获取数值",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "xpath",
+                    "description": "XPath表达式"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "XPath取文本",
+            "function": "StringValue",
+            "description": "从XPath表达式中获取字符串",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "xpath",
+                    "description": "XPath表达式"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "XPath节点数",
+            "function": "NodeCount",
+            "description": "统计XPath表达式返回的节点数目",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "xpath",
+                    "description": "XPath表达式"
+                }
+            ]
+        }
+    ]
+
+}
+

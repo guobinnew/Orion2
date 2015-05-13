@@ -1,0 +1,189 @@
+{
+    "type": "Entity",
+    "id": "AJAX",
+    "name":	"AJAX",
+    "version": "1.0",
+    "description": "请求接受其他网页",
+    "category":	"网络",
+    "attributes":["singleglobal"],
+    "variables": [
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "完成请求",
+            "function": "OnComplete",
+            "description": "当请求完成时触发",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "请求标签"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "请求失败",
+            "function": "OnError",
+            "description": "当请求失败时触发",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "请求标签"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "请求进度改变",
+            "function": "OnProgress",
+            "description": "当请求进度改变时触发",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "请求标签"
+                }
+            ]
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "发送请求",
+            "function": "Request",
+            "description": "发送请求",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "标签"
+                },
+                {
+                    "type": "string",
+                    "name": "url",
+                    "description": "链接地址"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "发送文件请求",
+            "function": "RequestFile",
+            "description": "发送文件请求",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "标签"
+                },
+                {
+                    "type": "string",
+                    "name": "filename",
+                    "description": "文件名"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "发送Post请求",
+            "function": "Post",
+            "description": "发送Post请求",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "标签"
+                },
+                {
+                    "type": "string",
+                    "name": "url",
+                    "description": "链接地址"
+                },
+                {
+                    "type": "string",
+                    "name": "data",
+                    "description": "数据"
+                },
+                {
+                    "type": "string",
+                    "name": "method",
+                    "description": "方法名"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置请求超时",
+            "function": "SetTimeout",
+            "description": "设置请求超时",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "time",
+                    "description": "超时时间（单位为秒）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置请求数据头",
+            "function": "SetHeader",
+            "description": "设置请求超时",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "header",
+                    "description": "数据头名称"
+                },
+                {
+                    "type": "string",
+                    "name": "value",
+                    "description": "数据值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "重载MIME类型",
+            "function": "OverrideMIMEType",
+            "description": "设置请求超时",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "mime",
+                    "description": "MIME类型"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "上一次请求结果数据",
+            "function": "LastData",
+            "description": "获取上一次请求结果数据"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "请求进度",
+            "function": "Progress",
+            "description": "获取当前请求的进度（用于OnProgress中）"
+        }
+    ]
+
+}
+

@@ -1,0 +1,287 @@
+{
+    "type": "Behavior",
+    "id": "Turret",
+    "name":	"炮塔",
+    "version": "1.0",
+    "description": "探测范围内的对象并瞄准开火",
+    "category":	"运动",
+    "attributes":[],
+    "variables": [
+        {
+            "name": "Range",
+            "title": "探测范围",
+            "type": "float",
+            "default": "300",
+            "description": "探测目标的最大范围（像素）"
+        },
+        {
+            "name": "FireRate",
+            "title": "开火速度",
+            "type": "float",
+            "default": "1",
+            "description": "开火速度（次/秒）"
+        },
+        {
+            "name": "Rotate",
+            "title": "自动瞄准",
+            "type": "bool",
+            "default": "true",
+            "description": "是否自动瞄准目标"
+        },
+        {
+            "name": "RotateSpeed",
+            "title": "旋转速度",
+            "type": "float",
+            "default": "180",
+            "description": "旋转速度（度/秒）"
+        },
+        {
+            "name": "TargetMode",
+            "title": "选择目标模式",
+            "type": "enum",
+            "enums":["第一个进入范围的目标","距离最近的目标"],
+            "default": "第一个进入范围的目标",
+            "description": "选择目标的模式"
+        },
+        {
+            "name": "PredictiveAim",
+            "title": "预先瞄准",
+            "type": "bool",
+            "default": "false",
+            "description": "瞄准目标是否考虑提前量"
+        },
+        {
+            "name": "ProjectileSpeed",
+            "title": "弹道速度",
+            "type": "float",
+            "default": "500",
+            "description": "用于计算提前量的弹道速度（像素/秒）"
+        },
+        {
+            "name": "InitialState",
+            "title": "初始状态",
+            "type": "enum",
+            "enums":["关闭","开启"],
+            "default": "开启",
+            "description": "是否在创建后激活该行为"
+        },
+        {
+            "name": "UseCollisionCells",
+            "title": "启用碰撞网格",
+            "type": "bool",
+            "default": "true",
+            "description": "是否使用碰撞网格"
+        }
+    ],
+    "conditions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "是否有目标",
+            "function": "HasTarget",
+            "description": "是否有目标去瞄准"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "向目标开火",
+            "function": "OnShoot",
+            "description": "当向目标开火时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "发现新目标",
+            "function": "OnTargetAcquired",
+            "description": "当发现新目标时触发"
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "瞄准目标",
+            "function": "AcquireTarget",
+            "description": "瞄准一个目标（如果有的话）",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "target",
+                    "description": "目标类型"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "添加目标",
+            "function": "AddTarget",
+            "description": "添加目标",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "target",
+                    "description": "目标类型"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "清除目标",
+            "function": "ClearTargets",
+            "description": "清除目标"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "放弃当前目标",
+            "function": "UnacquireTarget",
+            "description": "放弃瞄准当前瞄准的目标"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "炮塔行为开关",
+            "function": "SetEnabled",
+            "description": "开启关闭炮塔行为",
+            "parameters": [
+                {
+                    "type": "bool",
+                    "name": "enable",
+                    "description": "开启关闭状态"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置探测范围",
+            "function": "SetRange",
+            "description": "设置炮塔的探测范围",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "range",
+                    "description": "探测范围"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置开火速度",
+            "function": "SetRateOfFire",
+            "description": "设置炮塔的开火速度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "开火速度"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "是否自动瞄准",
+            "function": "SetRotate",
+            "description": "开启关闭自动瞄准",
+            "parameters": [
+                {
+                    "type": "bool",
+                    "name": "enable",
+                    "description": "开启关闭状态"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置旋转速度",
+            "function": "SetRotateSpeed",
+            "description": "设置炮塔的旋转速度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "旋转速度"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置选择目标模式",
+            "function": "SetRotate",
+            "description": "设置选择目标模式",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "mode",
+                    "enums":["第一个进入范围的目标","距离最近的目标"],
+                    "description": "选择目标模式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "是否预先瞄准",
+            "function": "SetPredictiveAim",
+            "description": "开启关闭预先瞄准",
+            "parameters": [
+                {
+                    "type": "bool",
+                    "name": "enable",
+                    "description": "开启关闭状态"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置弹道速度",
+            "function": "SetProjectileSpeed",
+            "description": "设置炮塔的弹道速度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "弹道速度"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "当前目标UID",
+            "function": "TargetUID",
+            "description": "获取当前目标的UID"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "探测范围",
+            "function": "Range",
+            "description": "获取当前的探测范围"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "开火速度",
+            "function": "RateOfFire",
+            "description": "获取当前的开火速度"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "旋转速度",
+            "function": "RotateSpeed",
+            "description": "获取当前的旋转速度"
+        }
+    ]
+}
+

@@ -1,0 +1,298 @@
+{
+    "type": "Entity",
+    "id": "Particles",
+    "name":	"粒子系统",
+    "version": "1.0",
+    "description": "粒子系统",
+    "category":	"通用",
+    "attributes":["world","rotatable","texture","position","appearance","zorder","effects","predraw","behaviors"],
+    "variables": [
+        {
+            "name": "Rate",
+            "title":"发射速度",
+            "type": "float",
+            "default": "50",
+            "description": "每秒发射的粒子数目"
+        },
+        {
+            "name": "SprayCone",
+            "title":"发射锥角",
+            "type": "float",
+            "default": "60",
+            "description": "粒子发射的锥角"
+        },
+        {
+            "name": "Type",
+            "title":"发射模式",
+            "type": "enum",
+            "default": "连续发射",
+            "enums":["连续发射","发射一次"],
+            "description": "粒子发射模式"
+        },
+        {
+            "name": "Speed",
+            "title":"初始速度",
+            "type": "float",
+            "default": "200",
+            "description": "粒子初始速度"
+        },
+        {
+            "name": "Size",
+            "title":"初始大小",
+            "type": "float",
+            "default": "32",
+            "description": "粒子初始大小"
+        },
+        {
+            "name": "Opacity",
+            "title":"初始透明度",
+            "type": "float",
+            "default": "100",
+            "description": "粒子初始透明度"
+        },
+        {
+            "name": "GrowRate",
+            "title":"大小变化速度",
+            "type": "float",
+            "default": "0",
+            "description": "粒子大小变化速度"
+        },
+        {
+            "name": "XRandomiser",
+            "title":"X坐标随机偏移",
+            "type": "float",
+            "default": "0",
+            "description": "X坐标随机偏移"
+        },
+        {
+            "name": "YRandomiser",
+            "title":"Y坐标随机偏移",
+            "type": "float",
+            "default": "0",
+            "description": "Y坐标随机偏移"
+        },
+        {
+            "name": "InitSpeedRandomiser",
+            "title":"初始速度随机增量",
+            "type": "float",
+            "default": "0",
+            "description": "初始速度随机增量"
+        },
+        {
+            "name": "InitSizeRandomiser",
+            "title":"初始大小随机增量",
+            "type": "float",
+            "default": "0",
+            "description": "初始大小随机增量"
+        },
+        {
+            "name": "GrowRandomiser",
+            "title":"大小变化速度随机增量",
+            "type": "float",
+            "default": "0",
+            "description": "大小变化速度随机增量"
+        },
+        {
+            "name": "Acceleration",
+            "title":"加速度",
+            "type": "float",
+            "default": "-150",
+            "description": "粒子加速度"
+        },
+        {
+            "name": "Gravity",
+            "title":"重力加速度",
+            "type": "float",
+            "default": "0",
+            "description": "重力加速度"
+        },
+        {
+            "name": "AngleRandomiser",
+            "title":"角度随机偏移",
+            "type": "float",
+            "default": "0",
+            "description": "粒子角度随机偏移"
+        },
+        {
+            "name": "SpeedRandomiser",
+            "title": "速度随机偏移",
+            "type": "float",
+            "default": "800",
+            "description": "粒子速度随机偏移"
+        },
+        {
+            "name": "OpacityRandomiser",
+            "title": "透明度随机偏移",
+            "type": "float",
+            "default": "0",
+            "description": "粒子透明度偏移"
+        },
+        {
+            "name": "Destroy",
+            "title": "消失方式",
+            "type": "enum",
+            "default": "淡出",
+            "enums":["淡出","生命超时","停止运动"],
+            "description": "消失方式"
+        },
+        {
+            "name": "Timeout",
+            "title": "生命周期",
+            "type": "float",
+            "default": "1",
+            "description": "粒子生命周期"
+        },
+        {
+            "name": "Animation",
+            "title": "关联动画资源",
+            "type": "string",
+            "description": "关联的动画资源名",
+            "extend": true
+        },
+        {
+            "name": "StaticImage",
+            "title": "静态图片",
+            "type": "bool",
+            "default": "false",
+            "description": "是否为静态图片",
+            "extend": true
+        }
+    ],
+    "conditions":[
+        {
+            "flags": [],
+            "category": "粒子",
+            "name": "正在发射粒子",
+            "function": "IsSpraying",
+            "description": "是否正在发射粒子"
+        }
+
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "设置发射状态",
+            "function": "SetSpraying",
+            "description": "设置粒子发射状态",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "state",
+                    "enums":["停止发射","发射"],
+                    "description": "发射状态"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置发射速度",
+            "function": "SetRate",
+            "description": "设置粒子发射速度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "rate",
+                    "description": "发射速度（个/秒）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置发射锥角",
+            "function": "SetSprayCone",
+            "description": "设置粒子发射范围锥角",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "cone",
+                    "description": "锥角"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置混合模式",
+            "function": "SetEffect",
+            "description": "设置与背景图案的混合模式",
+            "parameters": [
+                {
+                    "type": "blend",
+                    "name": "mode",
+                    "description": "混合模式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "设置粒子初始速度",
+            "function": "SetInitSpeed",
+            "description": "设置粒子初始速度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "初始速度"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "设置粒子初始大小",
+            "function": "SetInitSize",
+            "description": "设置粒子初始大小",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "size",
+                    "description": "初始大小"
+                }
+            ]
+        }
+
+    ],
+    "expresses":[
+        {
+            "flags": ["return_float"],
+            "category": "粒子",
+            "name": "粒子数目",
+            "function": "ParticleCount",
+            "description": "获取粒子数目"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "粒子",
+            "name": "粒子发射速度",
+            "function": "Rate",
+            "description": "获取粒子发射速度"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "粒子",
+            "name": "粒子发射锥角",
+            "function": "SprayCone",
+            "description": "获取粒子发射锥角"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "粒子",
+            "name": "粒子初始速度",
+            "function": "InitSpeed",
+            "description": "获取粒子初始速度"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "粒子",
+            "name": "粒子初始大小",
+            "function": "InitSize",
+            "description": "获取粒子初始大小"
+        }
+    ]
+
+}
+

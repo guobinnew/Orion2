@@ -1,0 +1,26 @@
+{
+    "type": "Effect",
+    "id": "lens",
+    "name":	"透镜效果",
+    "version": "1.0",
+    "description": "扭曲图像背景产生类似透镜效果",
+    "category":	"变形",
+    "attributes":[],
+    "extendbox":["0","0"],
+    "variables": [
+        {
+            "name": "magnification",
+            "title": "放大因子",
+            "type": "percent",
+            "default": "1",
+            "description": "放大因子"
+        }
+    ],
+    "conditions":[
+    ],
+    "actions":[
+    ],
+    "expresses":[
+    ]
+}
+

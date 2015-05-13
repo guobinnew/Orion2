@@ -1,0 +1,73 @@
+{
+    "type": "Behavior",
+    "id": "Anchor",
+    "name":	"定位",
+    "version": "1.0",
+    "description": "将对象固定在屏指定位置上",
+    "category":	"通用",
+    "attributes":[],
+    "variables": [
+        {
+            "name": "LeftEdge",
+            "title": "左边界",
+            "type": "enum",
+            "default": "窗口左边",
+            "enums": ["窗口左边","窗口右边","无"],
+            "description": "左边界"
+        },
+        {
+            "name": "RightEdge",
+            "title": "右边界",
+            "type": "enum",
+            "default": "无",
+            "enums": ["无", "窗口右边"],
+            "description": "右边界"
+        },
+        {
+            "name": "TopEdge",
+            "title": "顶边界",
+            "type": "enum",
+            "default": "窗口顶边",
+            "enums": ["窗口顶边","窗口底边","无"],
+            "description": "顶边界"
+        },
+        {
+            "name": "BottomEdge",
+            "title": "底边界",
+            "type": "enum",
+            "default": "无",
+            "enums": ["无", "窗口底边"],
+            "description": "底边界"
+        },
+        {
+            "name": "InitialState",
+            "title": "初始状态",
+            "type": "enum",
+            "default": "开启",
+            "enums": ["关闭", "开启"],
+            "description": "初始是否可用"
+        }
+    ],
+    "conditions":[
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置有效状态",
+            "function": "SetEnabled",
+            "description": "设置状态为<%1>",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "flag",
+                    "enums": ["关闭", "开启"],
+                    "description": "有效状态"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+    ]
+}
+

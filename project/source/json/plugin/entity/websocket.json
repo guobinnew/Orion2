@@ -1,0 +1,135 @@
+{
+    "type": "Entity",
+    "id": "O2WebSocket",
+    "name":	"WebSocket",
+    "version": "1.0",
+    "description": "与服务器进行文本消息通信",
+    "category":	"网络",
+    "attributes":["_singleglobal"],
+    "variables": [
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "建立连接",
+            "function": "OnOpened",
+            "description": "当与服务器建立连接时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "断开连接",
+            "function": "OnClosed",
+            "description": "当与服务器断开连接时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "发生连接错误",
+            "function": "OnError",
+            "description": "当与服务器发生连接错误时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "收到消息",
+            "function": "OnMessage",
+            "description": "当接受到来自服务器的消息时触发"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "已连接状态",
+            "function": "IsOpen",
+            "description": "检查是否处于连接状态"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "支持WebSocket",
+            "function": "IsSupported",
+            "description": "检查是否支持WebSocket"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "正在连接状态",
+            "function": "IsConnecting",
+            "description": "检查是否正在连接中"
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "连接服务器",
+            "function": "Connect",
+            "description": "连接服务器",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "url",
+                    "description": "服务器地址"
+                },
+                {
+                    "type": "string",
+                    "name": "protocol",
+                    "description": "采用协议（可选）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "断开服务器",
+            "function": "Close",
+            "description": "与服务器断开连接"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "发送文本消息",
+            "function": "Send",
+            "description": "向服务器发送文本消息",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "data",
+                    "description": "文本消息"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "消息文本",
+            "function": "MessageText",
+            "description": "接受的消息文本（在OnMessage中使用）"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "错误消息",
+            "function": "ErrorMsg",
+            "description": "获取返回的错误消息（在OnError中使用）"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "断开连接代号",
+            "function": "CloseCode",
+            "description": "获取断开连接代号（在OnClosed中使用）"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "断开连接原因",
+            "function": "CloseReason",
+            "description": "获取返回断开连接原因（在OnClosed中使用）"
+        }
+    ]
+}
+

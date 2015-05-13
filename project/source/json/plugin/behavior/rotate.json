@@ -1,0 +1,74 @@
+{
+    "type": "Behavior",
+    "id": "Rotate",
+    "name":	"旋转",
+    "version": "1.0",
+    "description": "绕自身中心旋转",
+    "category":	"运动",
+    "attributes":["once"],
+    "variables": [
+        {
+            "name": "Speed",
+            "title": "速度",
+            "type": "float",
+            "default": "180",
+            "description": "旋转角速度（角度/秒）"
+        },
+        {
+            "name": "Acceleration",
+            "title": "加速度",
+            "type": "float",
+            "default": "0",
+            "description": "加速度（角度/秒平方）"
+        }
+    ],
+    "conditions":[
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置速度",
+            "function": "SetSpeed",
+            "description": "设置旋转速度为<%1>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "输入的速度值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置加速度",
+            "function": "SetAcceleration",
+            "description": "设置旋转加速度为<%1>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "acceleration",
+                    "description": "输入的加速度值"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "速度值",
+            "function": "Speed",
+            "description": "获取当前的旋转速度值"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "加速度值",
+            "function": "Acceleration",
+            "description": "获取当前的旋转加速度值"
+        }
+    ]
+}
+

@@ -1,0 +1,218 @@
+{
+    "type": "Entity",
+    "id": "Tilemap",
+    "name":	"格子地图",
+    "version": "1.0",
+    "description": "格子地图",
+    "category":	"通用",
+    "attributes":["world","texture","position","size","appearance","zorder","effects","predraw","behaviors"],
+    "variables": [
+        {
+            "name": "InitVisibility",
+            "title": "初始可见",
+            "type": "enum",
+            "default": "可见",
+            "enums": ["可见","不可见"],
+            "description": "对象是否在界面启动时可见"
+        },
+        {
+            "name": "TileWidth",
+            "title": "格子宽度",
+            "type": "int",
+            "default": "32",
+            "description": "格子宽度"
+        },
+        {
+            "name": "TileHeight",
+            "title": "格子高度",
+            "type": "int",
+            "default": "32",
+            "description": "格子高度"
+        },
+        {
+            "name": "TileXOffset",
+            "title": "X偏移坐标",
+            "type": "int",
+            "default": "0",
+            "description": "X偏移坐标"
+        },
+        {
+            "name": "TileYOffset",
+            "title": "Y偏移坐标",
+            "type": "int",
+            "default": "0",
+            "description": "Y偏移坐标"
+        },
+        {
+            "name": "TileXSpacing",
+            "title": "水平间隔",
+            "type": "int",
+            "default": "0",
+            "description": "水平间隔"
+        },
+        {
+            "name": "TileYSpacing",
+            "title": "垂直间隔",
+            "type": "int",
+            "default": "0",
+            "description": "垂直间隔"
+        },
+        {
+            "name": "Seamless",
+            "title": "无缝模式",
+            "type": "enum",
+            "default": "开启",
+            "enums": ["关闭", "开启"],
+            "description": "无缝隙模式"
+        },
+        {
+            "name": "Animation",
+            "title": "动画资源",
+            "type": "string",
+            "description": "关联的动画资源名",
+            "extend": true
+        },
+        {
+            "name": "StaticImage",
+            "title": "静态图片",
+            "type": "bool",
+            "default": "false",
+            "description": "是否为静态图片",
+            "extend": true
+        }
+    ],
+    "conditions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较格子索引",
+            "function": "CompareTileAt",
+            "description": "比较格子索引",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "x",
+                    "description": "格子X索引"
+                },
+                {
+                    "type": "int",
+                    "name": "y",
+                    "description": "格子Y索引"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "int",
+                    "name": "tile",
+                    "description": "格子ID"
+                }
+            ]
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "加载图片",
+            "function": "LoadURL",
+            "description": "加载图片",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "URI",
+                    "description": "图片地址"
+                }
+            ]
+        }
+
+    ],
+    "expresses":[
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "格子ID",
+            "function": "TileAt",
+            "description": "根据格子索引获取格子ID",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "x",
+                    "description": "格子X索引"
+                },
+                {
+                    "type": "int",
+                    "name": "y",
+                    "description": "格子Y索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "格子X索引",
+            "function": "PositionToTileX",
+            "description": "根据X坐标获取对应格子X索引",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "X坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "格子Y索引",
+            "function": "PositionToTileY",
+            "description": "根据X坐标获取对应格子Y索引",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "格子X坐标",
+            "function": "TileToPositionX",
+            "description": "根据格子X索引获取对应的X坐标",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "X坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "格子Y坐标",
+            "function": "TileToPositionY",
+            "description": "根据格子Y索引获取对应的Y坐标",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "JSON格式",
+            "function": "TilesJSON",
+            "description": "将地图数据转换为JSON格式"
+        }
+    ]
+
+}
+

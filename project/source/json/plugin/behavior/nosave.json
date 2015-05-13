@@ -1,0 +1,18 @@
+{
+    "type": "Behavior",
+    "id": "NoSave",
+    "name":	"不用保存",
+    "version": "1.0",
+    "description": "不会保存/加载该对象数据，让游戏保存/加载更快",
+    "category":	"属性",
+    "attributes":["once"],
+    "variables": [
+    ],
+    "conditions":[
+    ],
+    "actions":[
+    ],
+    "expresses":[
+    ]
+}
+

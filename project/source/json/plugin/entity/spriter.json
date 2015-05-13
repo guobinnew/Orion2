@@ -1,0 +1,301 @@
+{
+    "type": "Entity",
+    "id": "Scml",
+    "name":	"Spriter精灵",
+    "version": "1.0",
+    "description": "支持函数封装",
+    "category":	"通用",
+    "attributes":["world","rotatable","position","angle","zorder"],
+    "variables": [
+        {
+            "name":"SCMLFile",
+            "title": "SCML文件名",
+            "type": "string",
+            "description": "SCML文件名"
+        },
+        {
+            "name":"InitEntity",
+            "title": "精灵角色名",
+            "type": "string",
+            "description": "精灵角色名"
+        },
+        {
+            "name":"InitAnimation",
+            "title": "初始播放的动画名",
+            "type": "string",
+            "description": "初始播放的动画名"
+        }
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "动画播放结束",
+            "function": "OnAnimFinished",
+            "description": "当动画播放结束时触发",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "动画名"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "任意动画播放结束",
+            "function": "OnAnyAnimFinished",
+            "description": "当任何动画播放结束时触发"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较当前动画帧",
+            "function": "CompareCurrentKey",
+            "description": "比较当前的动画关键帧",
+            "parameters": [
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "int",
+                    "name": "key",
+                    "description": "动画关键帧号"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较当前动画时间",
+            "function": "CompareCurrentTime",
+            "description": "比较当前的动画时间",
+            "parameters": [
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "time",
+                    "description": "时间"
+                },
+                {
+                    "type": "ennum",
+                    "name": "format",
+                    "enums":["毫秒","时长比率(0-1)"],
+                    "default":"毫秒",
+                    "description": "时间格式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较当前动画名",
+            "function": "CompareAnimation",
+            "description": "检查当前的动画名是否为指定动画",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "动画名"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "动画是否暂停",
+            "function": "AnimationPaused",
+            "description": "检查当前的动画是否暂停"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "动画是否循环播放",
+            "function": "AnimationLooping",
+            "description": "检查当前的动画是否循环播放"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "触发音效",
+            "function": "OnSoundTriggered",
+            "description": "当音效被播放时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "触发音效变化",
+            "function": "OnSoundVolumeChangeTriggered",
+            "description": "当音效音量将要改变时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "完成初始化",
+            "function": "readyForSetup",
+            "description": "当初始化工作完成时触发"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "动画是否处于镜像模式",
+            "function": "isMirrored",
+            "description": "检查当前的动画是否处于镜像模式"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "动画是否处于颠倒模式",
+            "function": "isFlipped",
+            "description": "检查当前的动画是否处于颠倒模式"
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "关联对象",
+            "function": "associateTypeWithName",
+            "description": "将Spriter精灵与对象类型建立关联",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "关联对象类型"
+                },
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "关联的Spriter名称"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置动画",
+            "function": "setAnim",
+            "description": "设置动画",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "animation",
+                    "description": "动画名"
+                },
+                {
+                    "type": "enum",
+                    "name": "where",
+                    "enums":["起始帧","当前帧","当前时间比率","起始帧(混合)","当前时间比率(混合)"],
+                    "default":"起始帧",
+                    "description": "从何处开始播放"
+                },
+                {
+                    "type": "float",
+                    "name": "duration",
+                    "description": "混合持续时间"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置播放速度",
+            "function": "setPlaybackSpeedRatio",
+            "description": "设置动画播放速度",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "播放速度（1.0表示正常,0.5表示半速）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "继续播放动画",
+            "function": "resumeAnimation",
+            "description": "继续播放动画"
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_float"],
+            "name": "当前动画时间",
+            "function": "time",
+            "description": "获取动画的当前时间（从0开始）"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "当前关键帧",
+            "function": "key",
+            "description": "获取动画的当前关键帧（从0开始）"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "动作点X坐标",
+            "function": "pointX",
+            "description": "获取动画的指定动作点的X坐标",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "动作点名称"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "动作点Y坐标",
+            "function": "pointY",
+            "description": "获取动画的指定动作点的X坐标",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "动作点名称"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "动作点角度",
+            "function": "pointAngle",
+            "description": "获取动画的指定动作点的角度",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "动作点名称"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "上一次音效",
+            "function": "triggeredSound",
+            "description": "获取上一次触发的音效名"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "上一次音效标签",
+            "function": "triggeredSoundTag",
+            "description": "获取上一次触发的音效标签"
+        }
+    ]
+
+}
+

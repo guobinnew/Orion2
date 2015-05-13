@@ -1,0 +1,65 @@
+[
+    {
+        "id": "1",
+        "name": "空白项目",
+        "icon": "project_blank.png",
+        "desc": "空项目（缺省设置）",
+        "width": 640,
+        "height": 480,
+        "aspect": 0
+    },
+    {
+        "id": "2",
+        "name": "空白项目（Landscape 4:3）",
+        "icon": "project_blank.png",
+        "desc": "空项目（横版界面 比例4:3）",
+        "width": 1024,
+        "height": 768,
+        "aspect": 1
+    },
+    {
+        "id": "3",
+        "name": "空白项目（Portait 4:3）",
+        "icon": "project_blank.png",
+        "desc": "空项目（竖版界面 比例4:3）",
+        "width": 768,
+        "height": 1024,
+        "aspect": 1
+    },
+    {
+        "id": "4",
+        "name": "空白项目（Landscape 720p）",
+        "icon": "project_blank.png",
+        "desc": "空项目（横版界面 比例16:9 分辨率1280x720）",
+        "width": 1280,
+        "height": 720,
+        "aspect": 1
+    },
+    {
+        "id": "5",
+        "name": "空白项目（Portait 720p）",
+        "icon": "project_blank.png",
+        "desc": "空项目（竖版界面 比例16:9 分辨率720x1280）",
+        "width": 720,
+        "height": 1280,
+        "aspect": 1
+    },
+    {
+        "id": "6",
+        "name": "空白项目（Landscape 1080p）",
+        "icon": "project_blank.png",
+        "desc": "空项目（横版界面 比例16:9 分辨率1920x1080）",
+        "width": 1920,
+        "height": 1080,
+        "aspect": 1
+    },
+    {
+        "id": "7",
+        "name": "空白项目（Portait 1080p）",
+        "icon": "project_blank.png",
+        "desc": "空项目（竖版界面 比例16:9 分辨率1080x1920）",
+        "width": 1080,
+        "height": 1920,
+        "aspect": 1
+    }
+]

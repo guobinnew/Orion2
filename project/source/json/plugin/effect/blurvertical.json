@@ -1,0 +1,26 @@
+{
+    "type": "Effect",
+    "id": "blurvertical",
+    "name":	"垂直模糊",
+    "version": "1.0",
+    "description": "把图像沿垂直方向模糊处理（9点采样高斯模糊）",
+    "category":	"颜色",
+    "attributes":[],
+    "extendbox":["0","8"],
+    "variables": [
+        {
+            "name": "intensity",
+            "title": "密度",
+            "type": "percent",
+            "default": "1",
+            "description": "密度(0-100)"
+        }
+    ],
+    "conditions":[
+    ],
+    "actions":[
+    ],
+    "expresses":[
+    ]
+}
+

@@ -1,0 +1,185 @@
+{
+    "type": "Entity",
+    "id": "Mouse",
+    "name":	"鼠标",
+    "version": "1.0",
+    "description": "处理鼠标输入",
+    "category":	"输入设备",
+    "attributes":["singleglobal"],
+    "variables": [
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "点击鼠标键",
+            "function": "OnClick",
+            "description": "当单击或双击鼠标键时触发",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "button",
+                    "enums": ["左键","中键","右键"],
+                    "description": "鼠标键"
+                },
+                {
+                    "type": "enum",
+                    "name": "click",
+                    "enums": ["单击","双击"],
+                    "description": "点击方式"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "点击鼠标任意键",
+            "function": "OnAnyClick",
+            "description": "当单击或双击鼠标键时触发"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "鼠标键按下状态",
+            "function": "IsButtonDown",
+            "description": "检查是否有鼠标键被按下",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "button",
+                    "enums": ["左键","中键","右键"],
+                    "description": "鼠标键"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "松开鼠标键",
+            "function": "OnRelease",
+            "description": "当松开鼠标键时触发",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "button",
+                    "enums": ["左键","中键","右键"],
+                    "description": "鼠标键"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "点击对象",
+            "function": "OnObjectClicked",
+            "description": "当鼠标点击或双击某个对象时触发",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "button",
+                    "enums": ["左键","中键","右键"],
+                    "description": "鼠标键"
+                },
+                {
+                    "type": "enum",
+                    "name": "click",
+                    "enums": ["单击","双击"],
+                    "description": "点击方式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "鼠标键经过对象",
+            "function": "IsOverObject",
+            "description": "检查是否有鼠标处于某个对象上",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "对象类型"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "滚动鼠标滚轮",
+            "function": "IsOverObject",
+            "description": "当滚动鼠标滚轮时触发",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "direction",
+                    "enums":["向下","向上"],
+                    "description": "滚动方向"
+                }
+            ]
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置精灵指针",
+            "function": "SetCursorSprite",
+            "description": "将精灵对象设置为鼠标指针",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "sprite",
+                    "description": "精灵对象"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置指针样式",
+            "function": "SetCursor",
+            "description": "将精灵对象设置为鼠标指针",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "style",
+                    "enums":["正常","手","选择文字","十字","移动","帮助","等待","无"],
+                    "description": "鼠标指针样式"
+                }
+            ]
+        }
+
+    ],
+    "expresses":[
+        {
+            "flags": ["return_float","variadic"],
+            "category": "",
+            "name": "X坐标",
+            "function": "X",
+            "description": "获取鼠标指针的X坐标位置"
+        },
+        {
+            "flags": ["return_float","variadic"],
+            "category": "",
+            "name": "Y坐标",
+            "function": "Y",
+            "description": "获取鼠标指针的Y坐标位置"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "X绝对坐标",
+            "function": "AbsoluteX",
+            "description": "获取鼠标指针的在画布上的X坐标位置"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "Y绝对坐标",
+            "function": "AbsoluteY",
+            "description": "获取鼠标指针的在画布上的Y坐标位置"
+        }
+    ]
+
+}
+

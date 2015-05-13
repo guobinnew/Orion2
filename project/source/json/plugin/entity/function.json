@@ -1,0 +1,126 @@
+{
+    "type": "Entity",
+    "id": "Function",
+    "name":	"函数",
+    "version": "1.0",
+    "description": "支持函数封装",
+    "category":	"通用",
+    "attributes":["singleglobal"],
+    "variables": [
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger","fast_trigger"],
+            "category": "",
+            "name": "调用函数",
+            "function": "OnFunction",
+            "description": "当调用函数时触发",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "函数名"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较函数参数",
+            "function": "CompareParam",
+            "description": "比较函数参数",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "参数索引"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "用于比较的值"
+                }
+            ]
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置返回值",
+            "function": "SetReturnValue",
+            "description": "设置函数的返回值",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "返回值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "执行表达式",
+            "function": "CallExpression",
+            "description": "执行表达式",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "express",
+                    "description": "表达式"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_any"],
+            "name": "返回值",
+            "function": "ReturnValue",
+            "description": "获取函数返回值"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "参数个数",
+            "function": "ParamCount",
+            "description": "获取函数的输入参数数目"
+        },
+        {
+            "flags": ["return_any"],
+            "category": "",
+            "name": "参数值",
+            "function": "Param",
+            "description": "获取指定索引的参数值",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "参数索引（从0开始）"
+                }
+            ]
+        },
+        {
+            "flags": ["return_any","variadic"],
+            "category": "",
+            "name": "执行函数",
+            "function": "Call",
+            "description": "执行函数",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "函数名"
+                }
+            ]
+        }
+    ]
+
+}
+

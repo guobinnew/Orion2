@@ -1,0 +1,593 @@
+{
+    "type": "Entity",
+    "id": "Browser",
+    "name":	"浏览器",
+    "version": "1.0",
+    "description": "访问浏览器功能",
+    "category":	"网络",
+    "attributes":["singleglobal"],
+    "variables": [
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "进入连线模式",
+            "function": "OnOnline",
+            "description": "进入连线模式"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "进入离线模式",
+            "function": "OnOffline",
+            "description": "进入离线模式"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "正在后台下载更新",
+            "function": "IsDownloadingUpdate",
+            "description": "正在后台下载更新"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "完成更新",
+            "function": "OnUpdateReady",
+            "description": "完成更新"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "页面可见",
+            "function": "PageVisible",
+            "description": "页面可见"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "显示页面",
+            "function": "OnPageVisible",
+            "description": "完成更新"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "隐藏页面",
+            "function": "OnPageHidden",
+            "description": "完成更新"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "全屏模式",
+            "function": "IsFullscreen",
+            "description": "全屏模式"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "点击菜单按钮",
+            "function": "OnMenuButton",
+            "description": "点击菜单按钮"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "点击搜索按钮",
+            "function": "OnSearchButton",
+            "description": "点击搜索按钮"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "电池正在充电",
+            "function": "IsCharging",
+            "description": "检查电池是否正在充电"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "改变页面大小",
+            "function": "OnResize",
+            "description": "改变页面大小"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "设备方向",
+            "function": "IsPortraitLandscape",
+            "description": "检查当前设备的方向（横竖）",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "orient",
+                    "enums":["竖屏","横屏"],
+                    "description": "设备方向"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "点击返回按钮",
+            "function": "OnBackButton",
+            "description": "点击返回按钮"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "支持全屏显示",
+            "function": "SupportsFullscreen",
+            "description": "支持全屏显示"
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "警告",
+            "function": "Alert",
+            "description": "显示警告对话框",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "message",
+                    "description": "警告信息"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "关闭",
+            "function": "Close",
+            "description": "关闭当前的浏览器窗口"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "获得焦点",
+            "function": "Focus",
+            "description": "当前浏览器窗口获得输入焦点"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "失去焦点",
+            "function": "Blur",
+            "description": "当前浏览器窗口失去输入焦点"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "回退",
+            "function": "GoBack",
+            "description": "回退到前一个页面"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "前进",
+            "function": "GoForward",
+            "description": "前进到下一个页面"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "返回主页",
+            "function": "GoHome",
+            "description": "返回浏览器主页"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "跳转URL",
+            "function": "GoToURL",
+            "description": "跳转到指定的URL",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "url",
+                    "description": "地址链接"
+                },
+                {
+                    "type": "enum",
+                    "name": "target",
+                    "enums":["自己","父对象","顶层对象"],
+                    "description": "目标框架"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "新窗口打开URL",
+            "function": "GoToURLWindow",
+            "description": "在新窗口打开指定的URL",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "url",
+                    "description": "地址链接"
+                },
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "窗口标签"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "重新加载",
+            "function": "Reload",
+            "description": "重新加载当前页面"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "请求全屏",
+            "function": "RequestFullScreen",
+            "description": "请求全屏",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "mode",
+                    "enums": ["mode","crop","scale outer","letterbox scale","integer letterbox scale","scale inner"],
+                    "description": "全屏模式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "退出全屏",
+            "function": "CancelFullScreen",
+            "description": "退出全屏"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "震动",
+            "function": "Vibrate",
+            "description": "震动",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "mode",
+                    "description": "震动模式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "请求下载",
+            "function": "InvokeDownload",
+            "description": "请求下载文件",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "url",
+                    "description": "目标地址"
+                },
+                {
+                    "type": "string",
+                    "name": "filename",
+                    "description": "保存文件名"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "打印日志",
+            "function": "ConsoleLog",
+            "description": "向控制台打印日志",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "type",
+                    "enums":["正常","警告","错误"],
+                    "description": "目标地址"
+                },
+                {
+                    "type": "string",
+                    "name": "message",
+                    "description": "日志信息"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "震动",
+            "function": "Vibrate",
+            "description": "震动",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "mode",
+                    "description": "震动模式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "建立消息组",
+            "function": "ConsoleGroup",
+            "description": "建立消息组",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "组名"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "结束消息组",
+            "function": "ConsoleGroupEnd",
+            "description": "结束消息组"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "执行JS脚本",
+            "function": "ExecJs",
+            "description": "执行JS脚本",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "script",
+                    "description": "脚本代码"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "锁住设备方向",
+            "function": "LockOrientation",
+            "description": "锁住设备方向，不允许自动选择(仅在全屏模式有效)",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "orient",
+                    "enums":["竖屏","横屏"],
+                    "description": "设备方向"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "解锁设备方向",
+            "function": "UnlockOrientation",
+            "description": "解锁设备方向"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "请求下载（字符串）",
+            "function": "InvokeDownloadString",
+            "description": "请求下载字符串，保存为文件",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "字符串"
+                },
+                {
+                    "type": "string",
+                    "name": "mime",
+                    "description": "MIME类型"
+                },
+                {
+                    "type": "string",
+                    "name": "filename",
+                    "description": "保存文件名"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "URL",
+            "function": "URL",
+            "description": "获取当前URL"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "协议类型",
+            "function": "Protocol",
+            "description": "获取当前协议类型"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "域名",
+            "function": "Domain",
+            "description": "获取当前域名"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "相对路径",
+            "function": "PathName",
+            "description": "获取相对于域名的路径"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "URL哈希值",
+            "function": "Hash",
+            "description": "获取当前URL的哈希值"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "引用页",
+            "function": "Referrer",
+            "description": "获取当前引用页"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "页标题",
+            "function": "Title",
+            "description": "获取当前页标题"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "浏览器应用名",
+            "function": "Name",
+            "description": "获取当前浏览器应用名"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "浏览器版本",
+            "function": "Version",
+            "description": "获取当前浏览器版本"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "浏览器语言",
+            "function": "Language",
+            "description": "获取当前浏览器语言"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "浏览器运行平台",
+            "function": "Platform",
+            "description": "获取当前浏览器运行平台"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "浏览器名称",
+            "function": "Product",
+            "description": "获取当前浏览器名称"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "浏览器开发商",
+            "function": "Vendor",
+            "description": "获取当前浏览器开发商"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "浏览器用户代理",
+            "function": "UserAgent",
+            "description": "获取当前浏览器用户代理"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "查询字符串",
+            "function": "QueryString",
+            "description": "获取完整的查询字符串"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "查询参数值",
+            "function": "QueryParam",
+            "description": "获取指定的查询参数值",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "参数名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "网络带宽",
+            "function": "Bandwidth",
+            "description": "评估当前网络带宽"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "电池电量",
+            "function": "BatteryLevel",
+            "description": "获取当前电池电量比例（0-1）"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "电池剩余时间",
+            "function": "BatteryTimeLeft",
+            "description": "获取当前电池的剩余时间（单位为秒）"
+        },
+        {
+            "flags": ["return_any"],
+            "category": "",
+            "name": "执行JS脚本",
+            "function": "ExecJS",
+            "description": "执行JS脚本",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "script",
+                    "description": "脚本代码"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "屏幕宽度",
+            "function": "ScreenWidth",
+            "description": "获取整个屏幕宽度(像素)"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "屏幕高度",
+            "function": "ScreenHeight",
+            "description": "获取整个屏幕高度(像素)"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "设备分辨率",
+            "function": "DevicePixelRatio",
+            "description": "获取设备分辨率"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "电池剩余时间",
+            "function": "BatteryTimeLeft",
+            "description": "获取当前电池的剩余时间（单位为秒）"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "网络连接类型",
+            "function": "ConnectionType",
+            "description": "获取网络连接类型（wifi,手机网络等）"
+        }
+    ]
+
+}
+

@@ -1,0 +1,63 @@
+{
+    "type": "Behavior",
+    "id": "Flash",
+    "name":	"闪烁",
+    "version": "1.0",
+    "description": "闪烁",
+    "category":	"通用",
+    "attributes":["once"],
+    "variables": [
+    ],
+    "conditions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "是否正在闪烁",
+            "function": "IsFlashing",
+            "description": "检查是否正在闪烁"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "是闪烁结束",
+            "function": "OnFlashEnded",
+            "description": " 当闪烁结束时触发"
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "闪烁",
+            "function": "Flash",
+            "description": "闪烁显示<%1>秒，隐藏<%2>秒，持续<%3>秒",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "onTime",
+                    "description": "显示状态时间"
+                },
+                {
+                    "type": "float",
+                    "name": "offTime",
+                    "description": "隐藏状态时间"
+                },
+                {
+                    "type": "float",
+                    "name": "duration",
+                    "description": "闪烁持续时间"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "停止闪烁",
+            "function": "StopFlashing",
+            "description": "停止闪烁，保持对象可见"
+        }
+    ],
+    "expresses":[
+    ]
+}
+

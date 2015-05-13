@@ -1,0 +1,138 @@
+{
+    "type": "Entity",
+    "id": "Keyboard",
+    "name":	"键盘",
+    "version": "1.0",
+    "description": "处理键盘输入",
+    "category":	"输入设备",
+    "attributes":["singleglobal"],
+    "variables": [
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "按下键",
+            "function": "OnKey",
+            "description": "当按下键<%1>时触发",
+            "parameters": [
+                {
+                    "type": "key",
+                    "name": "key",
+                    "description": "按键名称"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "按下键（代码）",
+            "function": "OnKeyCode",
+            "description": "当按下键<%1>时触发",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "keycode",
+                    "description": "按键代码"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "松开键",
+            "function": "OnKeyReleased",
+            "description": "当松开键<%1>时触发",
+            "parameters": [
+                {
+                    "type": "key",
+                    "name": "key",
+                    "description": "按键名称"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "松开键（代码）",
+            "function": "OnKeyCodeReleased",
+            "description": "当松开键<%1>时触发",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "keycode",
+                    "description": "按键代码"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "检查键按下状态",
+            "function": "IsKeyDown",
+            "description": "检查键<%1>是否正处于按下状态",
+            "parameters": [
+                {
+                    "type": "key",
+                    "name": "key",
+                    "description": "按键名称"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "检查键按下状态（代码）",
+            "function": "IsKeyCodeDown",
+            "description": "检查键<%1>是否正处于按下状态",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "keycode",
+                    "description": "按键代码"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "按下任意键",
+            "function": "OnAnyKey",
+            "description": "当按下任意键时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "松开任意键",
+            "function": "OnAnyKeyReleased",
+            "description": "当松开任意键时触发"
+        }
+    ],
+    "actions":[
+    ],
+    "expresses":[
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "上次按键代码",
+            "function": "LastKeyCode",
+            "description": "获取上一次按键代码"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "按键代码字符串",
+            "function": "StringFromKeyCode",
+            "description": "将按键代码转换为字符串",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "keycode",
+                    "description": "按键代码"
+                }
+            ]
+        }
+    ]
+
+}
+

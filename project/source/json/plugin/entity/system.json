@@ -1,0 +1,2576 @@
+{
+    "type": "Native",
+    "id": "System",
+    "name": "系统对象",
+    "version": "1.0",
+    "description": "系统对象",
+    "category": "系统",
+    "attributes": [],
+    "variables": [
+    ],
+    "conditions": [
+        {
+            "flags": ["trigger", "invertible"],
+            "category": "场景",
+            "name": "进入场景",
+            "function": "OnLayoutStart",
+            "description": "当进入场景时触发"
+        },
+        {
+            "flags": ["trigger", "invertible"],
+            "category": "场景",
+            "name": "退出场景",
+            "function": "OnLayoutEnd",
+            "description": "当退出场景时触发"
+        },
+        {
+            "flags": ["trigger", "invertible"],
+            "category": "场景",
+            "name": "加载场景完成",
+            "function": "OnLoadFinished",
+            "description": "当场景加载完成时触发"
+        },
+        {
+            "flags": ["trigger", "invertible"],
+            "category": "场景",
+            "name": "加载游戏数据完成",
+            "function": "OnLoadComplete",
+            "description": "当完成游戏数据加载时触发"
+        },
+        {
+            "flags": ["trigger", "invertible"],
+            "category": "场景",
+            "name": "加载游戏数据失败",
+            "function": "OnLoadFailed",
+            "description": "当游戏数据加载失败时触发"
+        },
+        {
+            "flags": ["trigger", "invertible"],
+            "category": "场景",
+            "name": "截屏",
+            "function": "OnCanvasSnapshot",
+            "description": "当截取当前屏幕画面时触发"
+        },
+        {
+            "flags": ["fake_trigger", "invertible"],
+            "category": "时间",
+            "name": "定时器",
+            "function": "Every",
+            "description": "每隔<%1>秒触发一次",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "interval",
+                    "description": "时间间隔（单位秒）"
+                }
+            ]
+        },
+        {
+            "flags": ["fake_trigger", "invertible"],
+            "category": "时间",
+            "name": "单次触发",
+            "function": "TriggerOnce",
+            "description": "仅触发一次"
+        },
+        {
+            "flags": ["fake_trigger", "invertible"],
+            "category": "时间",
+            "name": "周期更新",
+            "function": "EveryTick",
+            "description": "每次渲染更新时触发"
+        },
+        {
+            "flags": [],
+            "category": "比较",
+            "name": "数值比较",
+            "function": "Compare",
+            "description": "检查<%1>是否<%2><%3>",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "数值1"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "any",
+                    "name": "y",
+                    "description": "数值2"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "比较",
+            "name": "数值区间比较",
+            "function": "CompareBetween",
+            "description": "检查<%1>是否位于区间[<%2>,<%3>]",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "数值1"
+                },
+                {
+                    "type": "any",
+                    "name": "a",
+                    "description": "下限"
+                },
+                {
+                    "type": "any",
+                    "name": "b",
+                    "description": "上限"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "比较",
+            "name": "逻辑时间比较",
+            "function": "CompareTime",
+            "description": "检查当前逻辑时间是否<%2><%3>",
+            "parameters": [
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "t",
+                    "description": "时间"
+                }
+            ]
+        },
+        {
+            "flags": ["looping", "invertible"],
+            "category": "循环",
+            "name": "遍历实例",
+            "function": "ForEach",
+            "description": "遍历对象<%1>所有实例",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "对象类型"
+                }
+            ]
+        },
+        {
+            "flags": ["looping", "invertible"],
+            "category": "循环",
+            "name": "有序遍历实例",
+            "function": "ForEachOrdered",
+            "description": "按索引顺序遍历位于对象<%1>和<%2>之间的所有实例",
+            "parameters": [
+                {
+                    "type": "inst",
+                    "name": "a",
+                    "description": "起始对象实例"
+                },
+                {
+                    "type": "inst",
+                    "name": "b",
+                    "description": "结束对象实例"
+                }
+            ]
+        },
+        {
+            "flags": ["looping", "invertible"],
+            "category": "循环",
+            "name": "循环",
+            "function": "Repeat",
+            "description": "循环<%1>次",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "count",
+                    "description": "循环次数"
+                }
+            ]
+        },
+        {
+            "flags": ["looping", "invertible"],
+            "category": "循环",
+            "name": "While循环",
+            "function": "While",
+            "description": "While循环<%1>次",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "count",
+                    "description": "循环次数"
+                }
+            ]
+        },
+        {
+            "flags": ["looping", "invertible"],
+            "category": "循环",
+            "name": "For循环",
+            "function": "For",
+            "description": "For循环从<%2>到<%3>",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "循环名"
+                },
+                {
+                    "type": "int",
+                    "name": "start",
+                    "description": "起始索引"
+                },
+                {
+                    "type": "int",
+                    "name": "end",
+                    "description": "结束索引"
+                }
+            ]
+        },
+        {
+            "flags": ["invertible"],
+            "category": "选择",
+            "name": "随机挑选实例",
+            "function": "PickRandom",
+            "description": "从对象<%1>的所有实例中随机挑选一个实例",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "对象类型"
+                }
+            ]
+        },
+        {
+            "flags": ["invertible"],
+            "category": "选择",
+            "name": "挑选实例",
+            "function": "PickNth",
+            "description": "从对象<%1>的所有实例中挑选第<%2>个实例",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "对象类型"
+                },
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引（从0开始）"
+                }
+            ]
+        },
+        {
+            "flags": ["invertible"],
+            "category": "选择",
+            "name": "条件挑选实例",
+            "function": "PickByComparison",
+            "description": "从对象<%1>的所有实例中挑选满足条件<%2>的实例",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "对象类型"
+                },
+                {
+                    "type": "any",
+                    "name": "exp",
+                    "description": "条件表达式"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "any",
+                    "name": "v",
+                    "description": "比较值"
+                }
+            ]
+        },
+        {
+            "flags": ["invertible"],
+            "category": "选择",
+            "name": "条件挑选实例",
+            "function": "PickByEvaluate",
+            "description": "根据表达式结果从对象<%1>的所有实例中挑选指定索引实例",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "对象类型"
+                },
+                {
+                    "type": "any",
+                    "name": "exp",
+                    "description": "条件表达式"
+                }
+            ]
+        },
+        {
+            "flags": ["invertible"],
+            "category": "选择",
+            "name": "挑选所有实例",
+            "function": "PickAll",
+            "description": "从对象<%1>的所有实例中挑选所有实例",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "对象类型"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "选择",
+            "name": "对象重叠检查",
+            "function": "PickOverlappingPoint",
+            "description": "检查对象<%1>的包围盒是否覆盖位置(<%2>,<%3>)",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "对象类型"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "图层",
+            "name": "图层是否可见",
+            "function": "LayerVisible",
+            "description": "检查图层<%1>是否可见",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "图层",
+            "name": "图层是否为空",
+            "function": "LayerEmpty",
+            "description": "检查图层<%1>是否为空（没有对象实例）",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "图层",
+            "name": "图层透明度比较",
+            "function": "LayerCmpOpacity",
+            "description": "检查图层<%1>的透明度是否<%2><%3>",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "alpha",
+                    "description": "透明度（0-1）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "事件组状态检查",
+            "function": "IsGroupActive",
+            "description": "检查事件组<%1>是否处于活动状态",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "group",
+                    "description": "事件组名"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "预览模式检查",
+            "function": "IsPreview",
+            "description": "检查当前是否处于预览模式"
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "移动设备检查",
+            "function": "IsMobile",
+            "description": "检查是否运行在移动设备上"
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "特效支持检查",
+            "function": "EffectsSupported",
+            "description": "检查是否支持特效（仅在WebGL模式下有效）"
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "运行平台/框架检查",
+            "function": "IsOnPlatform",
+            "description": "检查是否运行在<%1>平台/框架上",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "type",
+                    "enums": ["HTML5", "iOS", "Andriod", "Windows8", "WP8", "Blackberry10", "Tizen", "CocoonJS", "Cordova", "Scirra Arcade", "Node-Webkit", "Crosswalk", "Amazon Webapp"],
+                    "description": "平台类型"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "NaN检查",
+            "function": "IsNaN",
+            "description": "检查<%1>是否为非法数值",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "n",
+                    "description": "数值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "数据类型检查",
+            "function": "IsValueType",
+            "description": "检查数据<%1>的类型是否为Number或String类型",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "数值"
+                },
+                {
+                    "type": "enum",
+                    "name": "type",
+                    "enums": ["数值", "字符串"],
+                    "description": "类型，0表示数值，1表示字符串"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "角度",
+            "name": "角度检查",
+            "function": "AngleWithin",
+            "description": "检查角度<%1>与角度<%3>的差是否小于<%2>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "a",
+                    "description": "角度1(单位为度数)"
+                },
+                {
+                    "type": "float",
+                    "name": "within",
+                    "description": "角度范围(单位为度数)"
+                },
+                {
+                    "type": "float",
+                    "name": "b",
+                    "description": "角度2(单位为度数)"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "角度",
+            "name": "顺时针检查",
+            "function": "IsClockwiseFrom",
+            "description": "检查角度<%1>到角度<%2>是否为顺时针",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "a",
+                    "description": "角度1(单位为度数)"
+                },
+                {
+                    "type": "float",
+                    "name": "b",
+                    "description": "角度2(单位为度数)"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "角度",
+            "name": "顺时针检查",
+            "function": "IsBetweenAngles",
+            "description": "检查角度<%1>是否位于区间[<%2>,<%3>]",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "a",
+                    "description": "角度(单位为度数)"
+                },
+                {
+                    "type": "float",
+                    "name": "low",
+                    "description": "区间下限(单位为度数)"
+                },
+                {
+                    "type": "float",
+                    "name": "high",
+                    "description": "区间上限(单位为度数)"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "滚动到指定位置",
+            "function": "Scroll",
+            "description": "场景滚动到位置<%1>,<%2>处",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["delay"],
+            "category": "时间",
+            "name": "等待时间",
+            "function": "Wait",
+            "description": "等待<%1>秒",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "time",
+                    "description": "时间（单位秒）"
+                }
+            ]
+        },
+        {
+            "flags": ["delay"],
+            "category": "时间",
+            "name": "等待信号",
+            "function": "WaitForSignal",
+            "description": "等待信号",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "信号标签"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "时间",
+            "name": "发出信号",
+            "function": "Signal",
+            "description": "发出信号",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "tag",
+                    "description": "信号标签"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "切换场景",
+            "function": "GoToLayout",
+            "description": "切换到场景<%1>",
+            "parameters": [
+                {
+                    "type": "layout",
+                    "name": "layout",
+                    "description": "将切换的场景名称"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "重新启动场景",
+            "function": "RestartLayout",
+            "description": "重新启动当前场景",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layout",
+                    "description": "场景名称"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "切换指定场景",
+            "function": "GoToLayoutByName",
+            "description": "切换到场景<%1>",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layout",
+                    "description": "将切换的场景名"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "前后场景切换",
+            "function": "NextPrevLayout",
+            "description": "切换到前一个/后一个场景",
+            "parameters": [
+                {
+                    "type": "bool",
+                    "name": "prev",
+                    "description": "切换方向，true表示向前"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "设置图层可见",
+            "function": "SetLayerVisible",
+            "description": "设置图层<%1>是否可见",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "bool",
+                    "name": "visible",
+                    "description": "是否可见"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "设置图层透明度",
+            "function": "SetLayerOpacity",
+            "description": "设置图层<%1>透明度为<%2>",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "int",
+                    "name": "alpha",
+                    "description": "透明度（0-100）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "设置图层缩放速率",
+            "function": "SetLayerScaleRate",
+            "description": "设置图层<%1>缩放速率为<%2>",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "float",
+                    "name": "zoom",
+                    "description": "缩放速率"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "设置图层缩放比例",
+            "function": "SetLayerScale",
+            "description": "设置场景<%1>缩放比例为<%2>",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "float",
+                    "name": "zoom",
+                    "description": "缩放比例"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "设置图层旋转角度",
+            "function": "SetLayerAngle",
+            "description": "设置图层<%1>旋转角度为<%2>",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "float",
+                    "name": "angle",
+                    "description": "旋转角度，右为0度，顺时针旋转"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "设置图层滚动速度",
+            "function": "SetLayerParallax",
+            "description": "设置图层<%1>滚动速度为<%2>",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "int",
+                    "name": "px",
+                    "description": "X轴滚动速度"
+                },
+                {
+                    "type": "int",
+                    "name": "py",
+                    "description": "Y轴滚动速度"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "设置图层背景颜色",
+            "function": "SetLayerBackground",
+            "description": "设置图层<%1>背景颜色为<%2>",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "color",
+                    "name": "color",
+                    "description": "背景颜色"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "设置图层背景透明",
+            "function": "SetLayerTransparent",
+            "description": "设置图层<%1>是否背景完全透明",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "bool",
+                    "name": "flag",
+                    "description": "是否透明"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "设置图层混合模式",
+            "function": "SetLayerBlendMode",
+            "description": "设置图层<%1>的混合模式为<%2>",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "enum",
+                    "name": "mode",
+                    "enums": ["Normal", "Additive", "Xor", "Copy", "DestinationOver"],
+                    "description": "混合模式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "图层特效开关",
+            "function": "SetLayerEffectEnabled",
+            "description": "开启/关闭图层<%1>的特效<%3>",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "enum",
+                    "name": "flag",
+                    "enums": ["关闭", "开启"],
+                    "description": "开启状态"
+                },
+                {
+                    "type": "string",
+                    "name": "effect",
+                    "description": "特效名"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "场景特效开关",
+            "function": "SetLayoutEffectEnabled",
+            "description": "开启/关闭场景的特效<%3>",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "flag",
+                    "enums": ["关闭", "开启"],
+                    "description": "开启状态"
+                },
+                {
+                    "type": "string",
+                    "name": "effect",
+                    "description": "特效名"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "设置图层特效参数",
+            "function": "SetLayoutEffectParam",
+            "description": "设置层<%1>的特效<%2>的参数<%3>为<%4>",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "effect",
+                    "description": "特效名"
+                },
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "参数索引"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "参数值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "设置场景特效参数",
+            "function": "SetLayoutEffectParam",
+            "description": "设置场景的特效<%1>的参数<%2>为<%3>",
+            "parameters": [
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "string",
+                    "name": "effect",
+                    "description": "特效名"
+                },
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "参数索引"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "参数值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "设置场景旋转角度",
+            "function": "SetLayoutAngle",
+            "description": "设置场景旋转角度为<%2>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "angle",
+                    "description": "旋转角度，右为0度，顺时针旋转"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "设置场景缩放",
+            "function": "SetLayoutScale",
+            "description": "设置场景<%1>缩放比例为<%2>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "zoom",
+                    "description": "缩放比例"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "滚动到目标对象",
+            "function": "ScrollToObject",
+            "description": "场景滚动到目标对象<%1>的位置",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "目标对象"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "滚动到X坐标",
+            "function": "ScrollX",
+            "description": "场景滚动到X坐标处",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "X坐标"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "场景",
+            "name": "滚动到Y坐标",
+            "function": "ScrollY",
+            "description": "场景滚动到Y坐标处",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "变量",
+            "name": "变量减值",
+            "function": "SubVar",
+            "description": "将变量<%1>减去<%2>",
+            "parameters": [
+                {
+                    "type": "event",
+                    "name": "v",
+                    "description": "变量值"
+                },
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "减值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "变量",
+            "name": "变量增值",
+            "function": "AddVar",
+            "description": "将变量<%1>加上<%2>",
+            "parameters": [
+                {
+                    "type": "event",
+                    "name": "v",
+                    "description": "变量值"
+                },
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "增值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "变量",
+            "name": "变量赋值",
+            "function": "SetVar",
+            "description": "给变量<%1>赋值<%2>",
+            "parameters": [
+                {
+                    "type": "event",
+                    "name": "v",
+                    "description": "变量值"
+                },
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "数值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "对象",
+            "name": "创建对象",
+            "function": "CreateObject",
+            "description": "在图层<%2>的位置<%3,%4>创建对象<%1>",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "对象类型"
+                },
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "图层名"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "设置事件组状态",
+            "function": "SetGroupActive",
+            "description": "设置事件组<%1>活动状态为<%2>",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "group",
+                    "description": "时间组"
+                },
+                {
+                    "type": "enum",
+                    "name": "active",
+                    "enums": ["不活动", "活动", "反转"],
+                    "description": "数值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "设置游戏时间比例",
+            "function": "SetTimescale",
+            "description": "设置游戏的逻辑时间比例为<%1>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "scale",
+                    "description": "与墙钟比例（大于等于0）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "设置对象的时间比例",
+            "function": "SetObjectTimescale",
+            "description": "设置对象<%1>的逻辑时间比例为<%2>",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "对象类型"
+                },
+                {
+                    "type": "float",
+                    "name": "scale",
+                    "description": "与墙钟比例（大于等于0）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "恢复对象的时间比例",
+            "function": "RestoreObjectTimescale",
+            "description": "设置对象<%1>的逻辑时间比例为正常比例",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "对象类型"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "初始化全局变量",
+            "function": "ResetGlobals",
+            "description": "将全局变量设为初始值",
+            "parameters": [
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "跳出循环",
+            "function": "StopLoop",
+            "description": "从当前循环中跳出",
+            "parameters": [
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "截屏",
+            "function": "SnapshotCanvas",
+            "description": "截取当前屏幕画面",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "format",
+                    "enums": ["PNG", "JPEG"],
+                    "description": "图片格式"
+                },
+                {
+                    "type": "int",
+                    "name": "quality",
+                    "description": "图片质量"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "设置画布大小",
+            "function": "SetCanvasSize",
+            "description": "设置Canvas的大小",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "width",
+                    "description": "宽度"
+                },
+                {
+                    "type": "float",
+                    "name": "height",
+                    "description": "高度"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "保存游戏状态",
+            "function": "SaveState",
+            "description": "保存当前的游戏运行状态",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "slot",
+                    "description": "保存ID"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "读取游戏状态",
+            "function": "LoadState",
+            "description": "读取ID为<%1>游戏运行状态数据",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "slot",
+                    "description": "保存ID"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "读取JSON格式游戏状态",
+            "function": "LoadStateJSON",
+            "description": "从JSON数据中读取游戏运行状态数据",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "json",
+                    "description": "JSON格式游戏数据"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "跳帧模式开关",
+            "function": "SetHalfFramerateMode",
+            "description": "开启/关闭帧率减半模式",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "flag",
+                    "enums": ["关闭", "开启"],
+                    "description": "开关标志"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "设置全屏画面质量",
+            "function": "SetFullscreenQuality",
+            "description": "设置全屏模式画面质量为<%1>",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "quality",
+                    "enums": ["低画质", "高画质"],
+                    "description": "画面质量"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "通用",
+            "name": "设置像素取整",
+            "function": "SetPixelRounding",
+            "description": "设置像素取整",
+            "parameters": [
+                {
+                    "type": "bool",
+                    "name": "mode",
+                    "description": "像素取整"
+                }
+            ]
+        }
+    ],
+    "expresses": [
+        {
+            "flags": ["return_int"],
+            "category": "数学",
+            "name": "转换为整型",
+            "function": "int",
+            "description": "将输入数据转换为整型",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "输入数据(数值或字符串)"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "转换为浮点数",
+            "function": "float",
+            "description": "将输入数据转换为浮点数",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "输入数据(数值或字符串)"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "数学",
+            "name": "转换为字符串",
+            "function": "str",
+            "description": "将输入数据转换为字符串",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "输入数据(数值或字符串)"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "数学",
+            "name": "取长度",
+            "function": "len",
+            "description": "求输入数组的长度，获取失败返回0",
+            "parameters": [
+                {
+                    "type": "any",
+                    "name": "x",
+                    "description": "输入数据必须包含length属性"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "生成随机数",
+            "function": "random",
+            "description": "生成在区间[a,b]内的随机数；如果没有指定b则生成在区间[0,a]内的随机数",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "a",
+                    "default": "0.0",
+                    "description": "随机数区间下限"
+                },
+                {
+                    "type": "float",
+                    "name": "b",
+                    "default": "1.0",
+                    "description": "随机数区间上限"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "平方根",
+            "function": "sqrt",
+            "description": "求数值<%1>的平方根",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "数值（不能为0）"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "绝对值",
+            "function": "abs",
+            "description": "求数值<%1>的绝对值",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "数值"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "数学",
+            "name": "取整（四舍五入）",
+            "function": "round",
+            "description": "数值<%1>取整",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "数值"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "数学",
+            "name": "向下取整",
+            "function": "floor",
+            "description": "数值<%1>向下取整",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "数值"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "数学",
+            "name": "向上取整",
+            "function": "ceil",
+            "description": "数值<%1>向上取整",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "数值"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "正弦",
+            "function": "sin",
+            "description": "求数值<%1>的正弦值",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "角度值"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "余弦",
+            "function": "cos",
+            "description": "求数值<%1>的余弦值",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "角度值"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "正切",
+            "function": "tan",
+            "description": "求数值<%1>的正切值",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "角度值"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "反正弦",
+            "function": "asin",
+            "description": "求数值<%1>的反正弦值",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "正弦值"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "反余弦",
+            "function": "acos",
+            "description": "求数值<%1>的反余弦值",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "余弦值"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "反正切",
+            "function": "atan",
+            "description": "求数值<%1>的反正切值",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "正切值"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "e指数",
+            "function": "exp",
+            "description": "求数值<%1>的e指数",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "数值"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "对数（2为底）",
+            "function": "ln",
+            "description": "求数值<%1>的对数",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "数值"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "对数（10为底）",
+            "function": "log10",
+            "description": "求数值<%1>的对数",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "数值"
+                }
+
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "场景",
+            "name": "窗口宽度",
+            "function": "windowwidth",
+            "description": "获取当前显示窗口的宽度",
+            "parameters": []
+        },
+        {
+            "flags": ["return_int"],
+            "category": "场景",
+            "name": "窗口高度",
+            "function": "windowheight",
+            "description": "获取当前显示窗口的高度",
+            "parameters": []
+        },
+        {
+            "flags": ["return_float"],
+            "category": "时间",
+            "name": "逻辑时间",
+            "function": "time",
+            "description": "获取当前游戏逻辑时间",
+            "parameters": []
+        },
+        {
+            "flags": ["return_float"],
+            "category": "时间",
+            "name": "墙钟时间",
+            "function": "wallclocktime",
+            "description": "获取当前墙钟时间",
+            "parameters": []
+        },
+        {
+            "flags": ["return_int"],
+            "category": "时间",
+            "name": "Tick次数",
+            "function": "tickcount",
+            "description": "获取目前为止Tick的次数",
+            "parameters": []
+        },
+        {
+            "flags": ["return_int"],
+            "category": "时间",
+            "name": "对象数目",
+            "function": "objectcount",
+            "description": "获取当前游戏中的对象数目",
+            "parameters": []
+        },
+        {
+            "flags": ["return_int"],
+            "category": "时间",
+            "name": "FPS",
+            "function": "fps",
+            "description": "获取当前游戏帧数",
+            "parameters": []
+        },
+        {
+            "flags": ["return_float"],
+            "category": "时间",
+            "name": "时间间隔",
+            "function": "dt",
+            "description": "获取当前帧与上一帧的时间间隔",
+            "parameters": []
+        },
+        {
+            "flags": ["return_float"],
+            "category": "时间",
+            "name": "时间比例",
+            "function": "timescale",
+            "description": "获取当前游戏时间比例",
+            "parameters": []
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "求距离",
+            "function": "distance",
+            "description": "计算A点<%1,%2>与B点<%3,%4>的距离",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x1",
+                    "description": "A点的X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y1",
+                    "description": "A点的Y坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "x2",
+                    "description": "B点的X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y2",
+                    "description": "B点的Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "求角度",
+            "function": "angle",
+            "description": "计算A点<%1,%2>与B点<%3,%4>的方位角（右方为0度，顺时针）",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x1",
+                    "description": "A点的X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y1",
+                    "description": "A点的Y坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "x2",
+                    "description": "B点的X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y2",
+                    "description": "B点的Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "图层",
+            "name": "图层左边界X坐标",
+            "function": "viewportleft",
+            "description": "获取图层<%1>左边的X坐标",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "图层",
+            "name": "图层右边界X坐标",
+            "function": "viewportright",
+            "description": "获取图层<%1>右边的X坐标",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "图层",
+            "name": "图层顶部Y坐标",
+            "function": "viewporttop",
+            "description": "获取图层<%1>顶部的Y坐标",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "图层",
+            "name": "图层底部Y坐标",
+            "function": "viewportbottom",
+            "description": "获取图层<%1>底部的Y坐标",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "循环",
+            "name": "循环索引",
+            "function": "loopindex",
+            "description": "获取循环当前索引",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "循环名（如果为空，则为当前循环）"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "X轴滚动位移",
+            "function": "scrollx",
+            "description": "获取当前场景X轴的滚动位移",
+            "parameters": [
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "Y轴滚动位移",
+            "function": "scrolly",
+            "description": "获取当前场景Y轴的滚动位移",
+            "parameters": [
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "线性插值",
+            "function": "lerp",
+            "description": "线性插值",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "a",
+                    "description": "最小值"
+                },
+                {
+                    "type": "float",
+                    "name": "b",
+                    "description": "最大值"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "插值"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "二次插值",
+            "function": "qarp",
+            "description": "二次插值",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "a",
+                    "description": "最小值"
+                },
+                {
+                    "type": "float",
+                    "name": "b",
+                    "description": "控制点"
+                },
+                {
+                    "type": "float",
+                    "name": "c",
+                    "description": "最大值"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "插值"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "三次插值",
+            "function": "cubic",
+            "description": "三次插值",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "a",
+                    "description": "最小值"
+                },
+                {
+                    "type": "float",
+                    "name": "b",
+                    "description": "控制点1"
+                },
+                {
+                    "type": "float",
+                    "name": "c",
+                    "description": "控制点2"
+                },
+                {
+                    "type": "float",
+                    "name": "d",
+                    "description": "最大值"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "插值"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "余弦插值",
+            "function": "cosp",
+            "description": "余弦插值",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "a",
+                    "description": "最小值"
+                },
+                {
+                    "type": "float",
+                    "name": "b",
+                    "description": "最大值"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "插值"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "字符串",
+            "name": "转换大写",
+            "function": "uppercase",
+            "description": "将字符串<%1>转换为大写",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "str",
+                    "description": "字符串"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "字符串",
+            "name": "转换小写",
+            "function": "lowercase",
+            "description": "将字符串<%1>转换为小写",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "str",
+                    "description": "字符串"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "Clamp",
+            "function": "clamp",
+            "description": "将数值<%1>限制在区间[<%2>,<%3>]",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "数值"
+                },
+                {
+                    "type": "float",
+                    "name": "low",
+                    "description": "下限"
+                },
+                {
+                    "type": "float",
+                    "name": "high",
+                    "description": "上限"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "图层缩放比例",
+            "function": "layerscale",
+            "description": "图层<%1>的缩放比例",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "图层透明度",
+            "function": "layeropacity",
+            "description": "图层<%1>的透明度",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "图层缩放速率",
+            "function": "layerscalerate",
+            "description": "图层<%1>的缩放速率",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "图层X轴滚动速度",
+            "function": "layerparallaxx",
+            "description": "图层<%1>的X轴滚动速度",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "图层Y轴滚动速度",
+            "function": "layerparallaxy",
+            "description": "图层<%1>的Y轴滚动速度",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "图层的旋转角度",
+            "function": "layerangle",
+            "description": "图层<%1>的旋转角度",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "场景",
+            "name": "图层索引",
+            "function": "layerindex",
+            "description": "图层<%1>的Y轴滚动速度",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "场景缩放比例",
+            "function": "layoutscale",
+            "description": "场景的缩放比例"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "场景旋转角度",
+            "function": "layoutangle",
+            "description": "场景的旋转角度"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "场景",
+            "name": "场景宽度",
+            "function": "layoutwidth",
+            "description": "场景的宽度"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "场景",
+            "name": "场景高度",
+            "function": "layoutheight",
+            "description": "场景的高度"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "字符串",
+            "name": "字符串查找",
+            "function": "find",
+            "description": "从字符串<%1>查找字符串<%2>出现的位置",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "字符串"
+                },
+                {
+                    "type": "string",
+                    "name": "substr",
+                    "description": "搜素字符串"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "字符串",
+            "name": "取字符串左边N个字符",
+            "function": "left",
+            "description": "从字符串<%1>左边取出长度为<%2>的字符串",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "字符串"
+                },
+                {
+                    "type": "int",
+                    "name": "num",
+                    "description": "长度"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "字符串",
+            "name": "取字符串右边N个字符",
+            "function": "right",
+            "description": "从字符串<%1>右边取出长度为<%2>的字符串",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "字符串"
+                },
+                {
+                    "type": "int",
+                    "name": "num",
+                    "description": "长度"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "字符串",
+            "name": "取字符串中间N个字符",
+            "function": "mid",
+            "description": "从字符串<%1>中间取出长度为<%2>的字符串",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "字符串"
+                },
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "起始索引"
+                },
+                {
+                    "type": "int",
+                    "name": "num",
+                    "description": "长度"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "字符串",
+            "name": "替换字符串",
+            "function": "replace",
+            "description": "从字符串<%1>中将字符串<%2>替换为<%3>",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "字符串"
+                },
+                {
+                    "type": "string",
+                    "name": "find",
+                    "description": "查找字符串"
+                },
+                {
+                    "type": "string",
+                    "name": "replace",
+                    "description": "替换字符串"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "字符串",
+            "name": "去掉空格",
+            "function": "trim",
+            "description": "从字符串<%1>中去掉首尾空格",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "字符串"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "字符串",
+            "name": "圆周率",
+            "function": "pi",
+            "description": "圆周率"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "场景",
+            "name": "场景名",
+            "function": "layoutname",
+            "description": "当前场景名"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "通用",
+            "name": "渲染器类型",
+            "function": "renderer",
+            "description": "当前使用的渲染器类型"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "夹角",
+            "function": "anglediff",
+            "description": "求角度<%1>与角度<%2>的夹角",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "a",
+                    "description": "角度1"
+                },
+                {
+                    "type": "float",
+                    "name": "b",
+                    "description": "角度2"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "通用",
+            "name": "RGB颜色",
+            "function": "rgb",
+            "description": "使用<%1><%2><%3>构建RGB颜色值",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "red",
+                    "description": "红色分量"
+                },
+                {
+                    "type": "int",
+                    "name": "green",
+                    "description": "绿色分量"
+                },
+                {
+                    "type": "int",
+                    "name": "blue",
+                    "description": "蓝色分量"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "通用",
+            "name": "项目版本",
+            "function": "projectversion",
+            "description": "当前项目的版本号",
+            "parameters": [
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "通用",
+            "name": "项目名",
+            "function": "projectname",
+            "description": "当前项目名称",
+            "parameters": [
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "角度线性插值",
+            "function": "anglelerp",
+            "description": "角度线性插值",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "a",
+                    "description": "最小值"
+                },
+                {
+                    "type": "float",
+                    "name": "b",
+                    "description": "最大值"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "插值"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "角度旋转",
+            "function": "anglerotate",
+            "description": "角度旋转",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "a",
+                    "description": "角度1"
+                },
+                {
+                    "type": "float",
+                    "name": "b",
+                    "description": "角度2"
+                },
+                {
+                    "type": "float",
+                    "name": "c",
+                    "description": "角度3"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "通用",
+            "name": "加载进度",
+            "function": "loadingprogress",
+            "description": "加载进度"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "反线性插件",
+            "function": "unlerp",
+            "description": "反向线性插件",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "a",
+                    "description": "最小值"
+                },
+                {
+                    "type": "float",
+                    "name": "b",
+                    "description": "最大值"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "插值"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "画布X坐标转换到图层",
+            "function": "canvastolayerx",
+            "description": "将画布X坐标转换到图层<%1>",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "画布X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "画布Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "画布Y坐标转换到图层",
+            "function": "canvastolayery",
+            "description": "将画布Y坐标转换到图层<%1>",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "画布X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "画布Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "图层X坐标转换到画布",
+            "function": "layertocanvasx",
+            "description": "将图层<%1>X坐标转换到画布",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "图层X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "图层Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "场景",
+            "name": "图层Y坐标转换到画布",
+            "function": "layertocanvasy",
+            "description": "将图层<%1>Y坐标转换到画布",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "layer",
+                    "description": "图层"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "图层X坐标"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "图层Y坐标"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "数学",
+            "name": "无穷大值",
+            "function": "infinity",
+            "description": "无穷大值",
+            "parameters": [
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "数学",
+            "name": "设置比特位",
+            "function": "setbit",
+            "description": "设置整数的比特位",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "n",
+                    "description": "整数"
+                },
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "位索引"
+                },
+                {
+                    "type": "int",
+                    "name": "v",
+                    "description": "值（0或1）"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "数学",
+            "name": "反转比特位",
+            "function": "togglebit",
+            "description": "反转整数的比特位",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "n",
+                    "description": "整数"
+                },
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "位索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "数学",
+            "name": "获取比特位",
+            "function": "togglebit",
+            "description": "获取整数<%1>的比特位",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "n",
+                    "description": "整数"
+                },
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "位索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "通用",
+            "name": "原始窗口宽度",
+            "function": "originalwindowwidth",
+            "description": "获取原始窗口宽度"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "通用",
+            "name": "原始窗口高度",
+            "function": "originalwindowheight",
+            "description": "获取原始窗口高度"
+        }
+    ]
+
+}
+

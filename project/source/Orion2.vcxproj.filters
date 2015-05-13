@@ -1,0 +1,2486 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;cxx;c;def</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>moc;h;cpp</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Debug">
+      <UniqueIdentifier>{15e2ab61-0c2a-494f-ae4d-a487cc849d00}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="Generated Files\Release">
+      <UniqueIdentifier>{03589c96-fbbf-4a4f-943b-a4afcb666876}</UniqueIdentifier>
+      <Extensions>cpp;moc</Extensions>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{99316ab4-f792-4b8d-902f-0a061b2ed114}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level">
+      <UniqueIdentifier>{e6d92b46-af9a-4de0-8183-9b3f89a2ead6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sprite">
+      <UniqueIdentifier>{ae9e5ab6-d6bd-459c-8961-d0761bee06a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{30273948-d6a5-4404-b7d7-93e255b38bee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tools">
+      <UniqueIdentifier>{ae4c4430-900a-4b8b-84fb-3ba268e2ef21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{36aa0647-7fdd-444d-9b50-4bf9ac0e313a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Gallery">
+      <UniqueIdentifier>{68153159-969a-460e-a989-7b6b42f7f450}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BluePrint">
+      <UniqueIdentifier>{65afba6a-92be-4a7c-a0d7-16e303b72f27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sprite\Tools">
+      <UniqueIdentifier>{3bb9a0d0-1909-4ce6-ab2f-6c0c89178641}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sprite\Items">
+      <UniqueIdentifier>{251e2b3a-517b-4183-bcc3-d61c2a27d481}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity">
+      <UniqueIdentifier>{4a86d9d2-489b-4f3f-9297-ade1068a4d88}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Items">
+      <UniqueIdentifier>{2501d641-162d-4288-a46c-6aa9f75809ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Entity\Tools">
+      <UniqueIdentifier>{783e9802-19d1-4e71-b569-f35200db410a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BluePrint\Items">
+      <UniqueIdentifier>{9201ca98-d85f-477b-9a2f-03f475833777}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BluePrint\Tools">
+      <UniqueIdentifier>{036c7251-59b1-4efb-8609-c318e24bdd27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\Items">
+      <UniqueIdentifier>{ffeec1e0-d496-40ba-ad63-533d147c7c7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Level\Tools">
+      <UniqueIdentifier>{a798999c-59be-462d-9379-dbcbdc988e3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSON">
+      <UniqueIdentifier>{a4ac78bb-126a-4465-b958-7c9a01e389b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSON\Plugin">
+      <UniqueIdentifier>{7ff9d5b0-098e-43dc-abda-64b65e1ca818}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Exporter">
+      <UniqueIdentifier>{a5e905c2-eecc-43ca-b1d0-ce156a0892bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\minizip">
+      <UniqueIdentifier>{cf156981-f561-4de0-8ac2-9be50bd041d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\zlib">
+      <UniqueIdentifier>{e8ab3b36-7fda-4171-8c91-d840e2a378d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSON\Effect">
+      <UniqueIdentifier>{300d24a6-389e-4605-8089-789ce9e7e7f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSON\Behavior">
+      <UniqueIdentifier>{3aa0b738-3778-4cec-bac4-903c4c34c6b4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_orion2.cpp">
+      <Filter>Generated Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_mainmanagerframe.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_mainmanagerframe.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_aboutwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_aboutwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_menumanager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_menumanager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_framemanager.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_framemanager.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_inputloginwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_inputloginwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_loginwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_loginwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="lockwidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_lockwidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_lockwidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="levelscene.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_levelscene.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_levelscene.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="levelview.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_levelview.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_levelview.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="macdockpanelitem.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="commondefine.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="aboutwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="mimemanager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="menumanager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="framemanager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="configmanager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="loginwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="inputloginwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="imagehelper.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="resourcelinker.cpp">
+      <Filter>Gallery</Filter>
+    </ClCompile>
+    <ClCompile Include="resourceobject.cpp">
+      <Filter>Gallery</Filter>
+    </ClCompile>
+    <ClCompile Include="resourcertti.cpp">
+      <Filter>Gallery</Filter>
+    </ClCompile>
+    <ClCompile Include="gallerylistwidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_gallerylistwidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_gallerylistwidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="gallerytreewidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="gallerycategorywindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_gallerycategorywindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_gallerycategorywindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="gallerydefinewindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_gallerydefinewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_gallerydefinewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="pathwidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_pathwidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_pathwidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="welcomewindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_welcomewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_welcomewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="projectmanager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="devicemanager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="importgallerywindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_importgallerywindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_importgallerywindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="addaudiowindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_addaudiowindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_addaudiowindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="addpicturewindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_addpicturewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_addpicturewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="picturewidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_picturewidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_picturewidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_spritedefinewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_spritedefinewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_importspritewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_importspritewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="workspacewindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_workspacewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_workspacewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="projecttreewidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_projecttreewidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_projecttreewidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="layerwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_layerwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_layerwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="tilebrushwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_tilebrushwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_tilebrushwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="mainspriteframe.cpp">
+      <Filter>Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_mainspriteframe.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_mainspriteframe.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="spritescene.cpp">
+      <Filter>Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_spritescene.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_spritescene.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="spriteview.cpp">
+      <Filter>Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_spriteview.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_spriteview.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_spritegallerywindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_spritegallerywindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_spritestructwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_spritestructwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_tilesetwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_tilesetwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="spritegallerywindow.cpp">
+      <Filter>Sprite\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="spritedefinewindow.cpp">
+      <Filter>Sprite\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="importspritewindow.cpp">
+      <Filter>Sprite\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="spritestructwindow.cpp">
+      <Filter>Sprite\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="tilesetwindow.cpp">
+      <Filter>Sprite\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="selecttilesetwindow.cpp">
+      <Filter>Sprite\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_selecttilesetwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_selecttilesetwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="mergeimagewindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_mergeimagewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_mergeimagewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="tilelistwidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_tilelistwidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_tilelistwidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_gallerytreewidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_gallerytreewidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="animationcontrolwindow.cpp">
+      <Filter>Sprite\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_animationcontrolwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_animationcontrolwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="spriteanimationcontrol.cpp">
+      <Filter>Sprite\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="spriteobject.cpp">
+      <Filter>Sprite\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_spriteobject.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_spriteobject.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="spritesequence.cpp">
+      <Filter>Sprite\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_spritesequence.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_spritesequence.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="renamewindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_renamewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_renamewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="addanimationanchorwindow.cpp">
+      <Filter>Sprite\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_addanimationanchorwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_addanimationanchorwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="resourcereferencecheckwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_resourcereferencecheckwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_resourcereferencecheckwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="editorviewport.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="editorregion.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="editorlogo.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="macdockpanel.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="addstaticspritewindow.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_addstaticspritewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_addstaticspritewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="entitycomponentwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_entitycomponentwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_entitycomponentwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="componentlistwidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_componentlistwidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_componentlistwidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="logmanager.cpp">
+      <Filter>Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="oriontreewidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_oriontreewidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_oriontreewidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="editorlevel.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="editoritem.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="editorsprite.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="editortext.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="editorlayer.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="pluginmanagewindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_pluginmanagewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_pluginmanagewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="addpluginpropertywindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_addpluginpropertywindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_addpluginpropertywindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="addpropertyparameterwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_addpropertyparameterwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_addpropertyparameterwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="instanceeditwindow.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_instanceeditwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_instanceeditwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="propertytreewidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_propertytreewidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_propertytreewidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="objecttreewidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_objecttreewidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_objecttreewidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="mainkismetframe.cpp">
+      <Filter>BluePrint</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_mainkismetframe.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_mainkismetframe.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetstructwindow.cpp">
+      <Filter>BluePrint\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_kismetstructwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_kismetstructwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="kismeteventwindow.cpp">
+      <Filter>BluePrint\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_kismeteventwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_kismeteventwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetinstancewindow.cpp">
+      <Filter>BluePrint\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_kismetinstancewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_kismetinstancewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetscene.cpp">
+      <Filter>BluePrint</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_kismetscene.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_kismetscene.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetview.cpp">
+      <Filter>BluePrint</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_kismetview.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_kismetview.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetcomment.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetgroup.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetlink.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetlinkarray.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetlinksingle.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetobject.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetmodelport.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetcommenteditwindow.cpp">
+      <Filter>BluePrint\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_kismetcommenteditwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_kismetcommenteditwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetgroupeditwindow.cpp">
+      <Filter>BluePrint\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_kismetgroupeditwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_kismetgroupeditwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="eventtreewidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_eventtreewidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_eventtreewidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetvariable.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetinstance.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="variabletreewidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_variabletreewidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_variabletreewidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="spritetreewidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_spritetreewidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_spritetreewidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="mainmanagerframe.cpp">
+      <Filter>Level</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetflowcontrol.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetmodel.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_kismetmodel.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_kismetmodel.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="plugintypeeditwindow.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_plugintypeeditwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_plugintypeeditwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="addinstancebehaviorwindow.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_addinstancebehaviorwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_addinstancebehaviorwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="addinstanceeffectwindow.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_addinstanceeffectwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_addinstanceeffectwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="addinstancevariablewindow.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_addinstancevariablewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_addinstancevariablewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="colorselectwindow.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_colorselectwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_colorselectwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="fontselectwindow.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_fontselectwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_fontselectwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetarithmetic.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="screenshotwindow.cpp">
+      <Filter>BluePrint\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_screenshotwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_screenshotwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="selectspritewindow.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_selectspritewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_selectspritewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="spriteimageeditwindow.cpp">
+      <Filter>Sprite\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_spriteimageeditwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_spriteimageeditwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="imagescene.cpp">
+      <Filter>Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_imagescene.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_imagescene.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="imageview.cpp">
+      <Filter>Sprite</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_imageview.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_imageview.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="imagestructure.cpp">
+      <Filter>Sprite\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="imageanchor.cpp">
+      <Filter>Sprite\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="imagecollision.cpp">
+      <Filter>Sprite\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetcollection.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="publishprojectwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_publishprojectwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_publishprojectwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="exporterfactory.cpp">
+      <Filter>Exporter</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Unzip\1.1\ioapi.c">
+      <Filter>Common\minizip</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Unzip\1.1\iowin32.c">
+      <Filter>Common\minizip</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Unzip\1.1\unzip.c">
+      <Filter>Common\minizip</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Unzip\1.1\zip.c">
+      <Filter>Common\minizip</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\adler32.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\compress.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\crc32.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\deflate.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\gzclose.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\gzlib.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\gzread.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\gzwrite.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\infback.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\inffast.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\inflate.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\inftrees.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\trees.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\uncompr.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Support\Zlib\1.2.8\zutil.c">
+      <Filter>Common\zlib</Filter>
+    </ClCompile>
+    <ClCompile Include="exporter.cpp">
+      <Filter>Exporter</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_exporter.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_exporter.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="exporth5.cpp">
+      <Filter>Exporter</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_exporth5.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_exporth5.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="leveldefinewindow.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_leveldefinewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_leveldefinewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="layerdefinewindow.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_layerdefinewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_layerdefinewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="debugsetupwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_debugsetupwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_debugsetupwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetvalidatewindow.cpp">
+      <Filter>BluePrint\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_kismetvalidatewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_kismetvalidatewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetgroupsortwindow.cpp">
+      <Filter>BluePrint\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_kismetgroupsortwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_kismetgroupsortwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="editortilebg.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetinstancevar.cpp">
+      <Filter>BluePrint\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="editorshadowlight.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="editorninepatch.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="editorparticle.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="editortilemap.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="tilemapwidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_tilemapwidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_tilemapwidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="tilemapeditwindow.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_tilemapeditwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_tilemapeditwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="objectpropertywindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_objectpropertywindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_objectpropertywindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="moviedefinewindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_moviedefinewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_moviedefinewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="sounddefinewindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_sounddefinewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_sounddefinewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="selectsoundwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_selectsoundwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_selectsoundwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="soundtreewidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_soundtreewidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_soundtreewidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="selectaudiowindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_selectaudiowindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_selectaudiowindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="selectvideowindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_selectvideowindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_selectvideowindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="videowidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_videowidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_videowidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="addvideowindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_addvideowindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_addvideowindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="scripttreewidget.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_scripttreewidget.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_scripttreewidget.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="exportnw.cpp">
+      <Filter>Exporter</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_exportnw.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_exportnw.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="editorundocommand.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="recyclelevelwindow.cpp">
+      <Filter>Level\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_recyclelevelwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_recyclelevelwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="kismetundocommand.cpp">
+      <Filter>BluePrint\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="selectobjecttypewindow.cpp">
+      <Filter>BluePrint\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_selectobjecttypewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_selectobjecttypewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="cordovasettingwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_cordovasettingwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_cordovasettingwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="nwjssettingwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_nwjssettingwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_nwjssettingwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="exportcordova.cpp">
+      <Filter>Exporter</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_exportcordova.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_exportcordova.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="splitimagewindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_splitimagewindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_splitimagewindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="editorobject.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="editormap.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+    <ClCompile Include="pluginfilelinkwindow.cpp">
+      <Filter>Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Debug\moc_pluginfilelinkwindow.cpp">
+      <Filter>Generated Files\Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_pluginfilelinkwindow.cpp">
+      <Filter>Generated Files\Release</Filter>
+    </ClCompile>
+    <ClCompile Include="editorinput.cpp">
+      <Filter>Level\Items</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="orion2.qrc">
+      <Filter>Resource Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="aboutwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="inputloginwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="loginwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="lockwidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="levelscene.h">
+      <Filter>Level</Filter>
+    </CustomBuild>
+    <CustomBuild Include="levelview.h">
+      <Filter>Level</Filter>
+    </CustomBuild>
+    <CustomBuild Include="aboutwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="framemanager.h">
+      <Filter>Manager</Filter>
+    </CustomBuild>
+    <CustomBuild Include="menumanager.h">
+      <Filter>Manager</Filter>
+    </CustomBuild>
+    <CustomBuild Include="loginwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="inputloginwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gallerylistwidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gallerytreewidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gallerycategorywindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gallerydefinewindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pathwidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gallerydefinewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="gallerycategorywindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="welcomewindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="welcomewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="importgallerywindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="importgallerywindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addaudiowindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addpicturewindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addpicturewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addaudiowindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="picturewidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="spritedefinewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="importspritewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="workspacewindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="workspacewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="projecttreewidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="layerwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="layerwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tilebrushwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tilebrushwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mainspriteframe.h">
+      <Filter>Sprite</Filter>
+    </CustomBuild>
+    <CustomBuild Include="spritescene.h">
+      <Filter>Sprite</Filter>
+    </CustomBuild>
+    <CustomBuild Include="spriteview.h">
+      <Filter>Sprite</Filter>
+    </CustomBuild>
+    <CustomBuild Include="spritestructwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="spritegallerywindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tilesetwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="spritegallerywindow.h">
+      <Filter>Sprite\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="spritedefinewindow.h">
+      <Filter>Sprite\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="importspritewindow.h">
+      <Filter>Sprite\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="spritestructwindow.h">
+      <Filter>Sprite\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tilesetwindow.h">
+      <Filter>Sprite\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="selecttilesetwindow.h">
+      <Filter>Sprite\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="selecttilesetwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mergeimagewindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mergeimagewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tilelistwidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="animationcontrolwindow.h">
+      <Filter>Sprite\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="animationcontrolwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="spriteobject.h">
+      <Filter>Sprite\Items</Filter>
+    </CustomBuild>
+    <CustomBuild Include="spritesequence.h">
+      <Filter>Sprite\Items</Filter>
+    </CustomBuild>
+    <CustomBuild Include="renamewindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="renamewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addanimationanchorwindow.h">
+      <Filter>Sprite\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addanimationanchorwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="resourcereferencecheckwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="resourcereferencecheckwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addstaticspritewindow.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addstaticspritewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="entitycomponentwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="entitycomponentwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="componentlistwidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="oriontreewidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pluginmanagewindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pluginmanagewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addpluginpropertywindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addpluginpropertywindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addpropertyparameterwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addpropertyparameterwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="instanceeditwindow.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="instanceeditwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="propertytreewidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="objecttreewidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mainkismetframe.h">
+      <Filter>BluePrint</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetstructwindow.h">
+      <Filter>BluePrint\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismeteventwindow.h">
+      <Filter>BluePrint\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetinstancewindow.h">
+      <Filter>BluePrint\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetstructwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetinstancewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismeteventwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetscene.h">
+      <Filter>BluePrint</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetview.h">
+      <Filter>BluePrint</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetcommenteditwindow.h">
+      <Filter>BluePrint\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetgroupeditwindow.h">
+      <Filter>BluePrint\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetgroupeditwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetcommenteditwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="eventtreewidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="variabletreewidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="spritetreewidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="mainmanagerframe.h">
+      <Filter>Level</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetmodel.h">
+      <Filter>BluePrint\Items</Filter>
+    </CustomBuild>
+    <CustomBuild Include="plugintypeeditwindow.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="plugintypeeditwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addinstancebehaviorwindow.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addinstanceeffectwindow.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addinstancevariablewindow.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addinstancevariablewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addinstanceeffectwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addinstancebehaviorwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="colorselectwindow.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="fontselectwindow.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="fontselectwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="colorselectwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="screenshotwindow.h">
+      <Filter>BluePrint\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="screenshotwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="selectspritewindow.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="selectspritewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="spriteimageeditwindow.h">
+      <Filter>Sprite\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="spriteimageeditwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="imagescene.h">
+      <Filter>Sprite</Filter>
+    </CustomBuild>
+    <CustomBuild Include="imageview.h">
+      <Filter>Sprite</Filter>
+    </CustomBuild>
+    <CustomBuild Include="publishprojectwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="publishprojectwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="exporter.h">
+      <Filter>Exporter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="exporth5.h">
+      <Filter>Exporter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="leveldefinewindow.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="leveldefinewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="layerdefinewindow.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="layerdefinewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="debugsetupwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="debugsetupwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetvalidatewindow.h">
+      <Filter>BluePrint\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetvalidatewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetgroupsortwindow.h">
+      <Filter>BluePrint\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="kismetgroupsortwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tilemapwidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tilemapeditwindow.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="tilemapeditwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="objectpropertywindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="objectpropertywindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="moviedefinewindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="sounddefinewindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="sounddefinewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="moviedefinewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="selectsoundwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="selectsoundwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="soundtreewidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="selectaudiowindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="selectvideowindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="selectvideowindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="selectaudiowindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="videowidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addvideowindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="addvideowindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="scripttreewidget.h">
+      <Filter>GUI</Filter>
+    </CustomBuild>
+    <CustomBuild Include="exportnw.h">
+      <Filter>Exporter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="editorundocommand.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="recyclelevelwindow.h">
+      <Filter>Level\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="recyclelevelwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="selectobjecttypewindow.h">
+      <Filter>BluePrint\Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="selectobjecttypewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="cordovasettingwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="cordovasettingwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="nwjssettingwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="nwjssettingwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="exportcordova.h">
+      <Filter>Exporter</Filter>
+    </CustomBuild>
+    <CustomBuild Include="splitimagewindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="splitimagewindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pluginfilelinkwindow.h">
+      <Filter>Tools</Filter>
+    </CustomBuild>
+    <CustomBuild Include="pluginfilelinkwindow.ui">
+      <Filter>Form Files</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_aboutwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_inputloginwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_loginwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="macdockpanelitem.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="commondefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="configmanager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="mimemanager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="tooldefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="imagehelper.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcelinker.h">
+      <Filter>Gallery</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceobject.h">
+      <Filter>Gallery</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcertti.h">
+      <Filter>Gallery</Filter>
+    </ClInclude>
+    <ClInclude Include="resourceversion.h">
+      <Filter>Gallery</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_gallerycategorywindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_gallerydefinewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_welcomewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="projectmanager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="devicemanager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_importgallerywindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_addaudiowindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_addpicturewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_spritedefinewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_importspritewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_workspacewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_layerwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_tilebrushwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="spritedefine.h">
+      <Filter>Sprite</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_spritegallerywindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_spritestructwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_tilesetwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_selecttilesetwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_mergeimagewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_animationcontrolwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="spriteanimationcontrol.h">
+      <Filter>Sprite\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_renamewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_addanimationanchorwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_resourcereferencecheckwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="editorviewport.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="editorregion.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="editorlogo.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="macdockpanel.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="editordefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="leveldefine.h">
+      <Filter>Level</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_addstaticspritewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_entitycomponentwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="componentdefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="logmanager.h">
+      <Filter>Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="editorlevel.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="editoritem.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="editorsprite.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="editortext.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="editorlayer.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_pluginmanagewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_addpluginpropertywindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_addpropertyparameterwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_instanceeditwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_kismetstructwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_kismeteventwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_kismetinstancewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetcomment.h">
+      <Filter>BluePrint\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetgroup.h">
+      <Filter>BluePrint\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetlink.h">
+      <Filter>BluePrint\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetlinkarray.h">
+      <Filter>BluePrint\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetlinksingle.h">
+      <Filter>BluePrint\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetobject.h">
+      <Filter>BluePrint\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetdefine.h">
+      <Filter>BluePrint</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetmodelport.h">
+      <Filter>BluePrint\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_kismetcommenteditwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_kismetgroupeditwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetvariable.h">
+      <Filter>BluePrint\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetinstance.h">
+      <Filter>BluePrint\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="resourcedata.h">
+      <Filter>Gallery</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetflowcontrol.h">
+      <Filter>BluePrint\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_plugintypeeditwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_addinstancebehaviorwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_addinstanceeffectwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_addinstancevariablewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_colorselectwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_fontselectwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetarithmetic.h">
+      <Filter>BluePrint\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_screenshotwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_selectspritewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_spriteimageeditwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="imagestructure.h">
+      <Filter>Sprite\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="imageanchor.h">
+      <Filter>Sprite\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="imagecollision.h">
+      <Filter>Sprite\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetcollection.h">
+      <Filter>BluePrint\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_publishprojectwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="exporterfactory.h">
+      <Filter>Exporter</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Unzip\1.1\crypt.h">
+      <Filter>Common\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Unzip\1.1\ioapi.h">
+      <Filter>Common\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Unzip\1.1\iowin32.h">
+      <Filter>Common\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Unzip\1.1\unzip.h">
+      <Filter>Common\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Unzip\1.1\zip.h">
+      <Filter>Common\minizip</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Zlib\1.2.8\crc32.h">
+      <Filter>Common\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Zlib\1.2.8\deflate.h">
+      <Filter>Common\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Zlib\1.2.8\gzguts.h">
+      <Filter>Common\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Zlib\1.2.8\inffast.h">
+      <Filter>Common\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Zlib\1.2.8\inffixed.h">
+      <Filter>Common\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Zlib\1.2.8\inflate.h">
+      <Filter>Common\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Zlib\1.2.8\inftrees.h">
+      <Filter>Common\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Zlib\1.2.8\trees.h">
+      <Filter>Common\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Zlib\1.2.8\zconf.h">
+      <Filter>Common\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Zlib\1.2.8\zlib.h">
+      <Filter>Common\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Support\Zlib\1.2.8\zutil.h">
+      <Filter>Common\zlib</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_leveldefinewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_layerdefinewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_debugsetupwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_kismetvalidatewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_kismetgroupsortwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="editortilebg.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetinstancevar.h">
+      <Filter>BluePrint\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="editorshadowlight.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="editorninepatch.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="editorparticle.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="editortilemap.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_tilemapeditwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_objectpropertywindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_moviedefinewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_sounddefinewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_selectsoundwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_selectaudiowindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_selectvideowindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_addvideowindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_recyclelevelwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="kismetundocommand.h">
+      <Filter>BluePrint\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_selectobjecttypewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_cordovasettingwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_nwjssettingwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_splitimagewindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="editorobject.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="editormap.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+    <ClInclude Include="GeneratedFiles\ui_pluginfilelinkwindow.h">
+      <Filter>Generated Files</Filter>
+    </ClInclude>
+    <ClInclude Include="editorinput.h">
+      <Filter>Level\Items</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="json\plugin\entity\common.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\keyboard.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\keyboard.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\mouse.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\mouse.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\sprite.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\sprite.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\system.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\text.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\text.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\tilebg.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\tilebg.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\audio.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\audio.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\touch.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\touch.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\behavior\anchor.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\anchor.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\bound.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\bound.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\bullet.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\bullet.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\flash.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\flash.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\rotate.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\rotate.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\effect\alphaclamp.json">
+      <Filter>JSON\Effect</Filter>
+    </None>
+    <None Include="qss\default.qss">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="json\device.json">
+      <Filter>JSON</Filter>
+    </None>
+    <None Include="json\mime.json">
+      <Filter>JSON</Filter>
+    </None>
+    <None Include="json\project.json">
+      <Filter>JSON</Filter>
+    </None>
+    <None Include="json\plugin\effect\alphaclamp.fx">
+      <Filter>JSON\Effect</Filter>
+    </None>
+    <None Include="json\plugin\entity\array.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\array.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\dictionary.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\dictionary.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\webstorage.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\webstorage.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\xml.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\xml.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\behavior\destroy.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\destroy.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\entity\9patch.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\9patch.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\ajax.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\function.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\gamepad.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\geolocation.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\particle.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\particle.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\shadowlight.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\shadowlight.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\spritefont.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\tilemap.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\tilemap.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\video.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\websocket.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\effect\blacknwhite.json">
+      <Filter>JSON\Effect</Filter>
+    </None>
+    <None Include="json\plugin\effect\blurhorizontal.json">
+      <Filter>JSON\Effect</Filter>
+    </None>
+    <None Include="json\plugin\effect\blurvertical.json">
+      <Filter>JSON\Effect</Filter>
+    </None>
+    <None Include="json\plugin\effect\lens.json">
+      <Filter>JSON\Effect</Filter>
+    </None>
+    <None Include="json\plugin\effect\sharpen.json">
+      <Filter>JSON\Effect</Filter>
+    </None>
+    <None Include="json\plugin\entity\spriter.js">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\entity\spriter.json">
+      <Filter>JSON\Plugin</Filter>
+    </None>
+    <None Include="json\plugin\behavior\8direction.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\8direction.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\fade.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\fade.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\nosave.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\nosave.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\persist.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\persist.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\scrollto.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\scrollto.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\timer.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\timer.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\turret.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\turret.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\wrap.js">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\behavior\wrap.json">
+      <Filter>JSON\Behavior</Filter>
+    </None>
+    <None Include="json\plugin\effect\sharpen.fx">
+      <Filter>JSON\Effect</Filter>
+    </None>
+    <None Include="json\plugin\effect\lens.fx">
+      <Filter>JSON\Effect</Filter>
+    </None>
+    <None Include="json\plugin\effect\blurvertical.fx">
+      <Filter>JSON\Effect</Filter>
+    </None>
+    <None Include="json\plugin\effect\blurhorizontal.fx">
+      <Filter>JSON\Effect</Filter>
+    </None>
+    <None Include="json\plugin\effect\blacknwhite.fx">
+      <Filter>JSON\Effect</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="json\plugin\entity\system.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\tilebg.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\text.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\audio.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\keyboard.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\sprite.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\touch.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\anchor.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\bound.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\bullet.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\flash.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\rotate.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\webstorage.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\xml.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\destroy.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\9patch.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\array.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\dictionary.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\Icon128.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\mouse.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\particles.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\shadowlight.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\tilemap.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\entity\spriter.png">
+      <Filter>JSON\Plugin</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\8direction.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\fade.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\nosave.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\persist.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\scrollto.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\timer.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\turret.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+    <Image Include="json\plugin\behavior\wrap.png">
+      <Filter>JSON\Behavior</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

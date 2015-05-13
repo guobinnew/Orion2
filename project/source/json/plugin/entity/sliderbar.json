@@ -1,0 +1,254 @@
+{
+    "type": "Entity",
+    "id": "sliderbar",
+    "name":	"滑动条",
+    "version": "1.0",
+    "description": "滑动条控件",
+    "category":	"UI",
+    "attributes":["world","position","size"],
+    "variables": [
+        {
+            "name": "Value",
+            "title": "当前值",
+            "type": "float",
+            "default": "0",
+            "description": "当前值"
+        },
+        {
+            "name": "Minimum",
+            "title": "最小值",
+            "type": "float",
+            "default":"0",
+            "description": "最小值"
+        },
+        {
+            "name": "Maximum",
+            "title": "最大值",
+            "type": "float",
+            "default":"100",
+            "description": "最大值"
+        },
+        {
+            "name": "Step",
+            "title": "刻度间距",
+            "type": "float",
+            "default":"1",
+            "description": "刻度间距"
+        },
+        {
+            "name": "Tooltip",
+            "title": "提示文字",
+            "type": "string",
+            "description": "提示文字"
+        },
+        {
+            "name": "InitVisibility",
+            "title": "是否初始可见",
+            "type": "enum",
+            "enums":["不可见","可见"],
+            "default":"可见",
+            "description": "是否初始可见"
+        },
+        {
+            "name": "Enabled",
+            "title": "是否可用",
+            "type": "bool",
+            "default":"true",
+            "description": "是否可用"
+        },
+        {
+            "name": "ElementId",
+            "title": "ID",
+            "type": "string",
+            "description": "HTML元素ID"
+        }
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "点击滑动条",
+            "function": "OnClicked",
+            "description": "设当滑动条被点击时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "改变值",
+            "function": "OnChanged",
+            "description": "设当滑动条的值被改变时触发"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较值",
+            "function": "CompareValue",
+            "description": "比较当前值",
+            "parameters":[
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "value",
+                    "description": "用于比较的值"
+                }
+            ]
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置当前值",
+            "function": "SetValue",
+            "description": "设置当前值",
+            "parameters":[
+                {
+                    "type": "float",
+                    "name": "value",
+                    "description": "值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置最小值",
+            "function": "SetMinimum",
+            "description": "设置最小值",
+            "parameters":[
+                {
+                    "type": "float",
+                    "name": "value",
+                    "description": "最小值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置最大值",
+            "function": "SetMaximum",
+            "description": "设置最大值",
+            "parameters":[
+                {
+                    "type": "float",
+                    "name": "value",
+                    "description": "最大值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置刻度间距",
+            "function": "SetStep",
+            "description": "设置刻度间距",
+            "parameters":[
+                {
+                    "type": "float",
+                    "name": "value",
+                    "description": "刻度间距"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置提示文本",
+            "function": "SetTooltip",
+            "description": "设置滑动条的提示文字",
+            "parameters":[
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "提示文字"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置是否可见",
+            "function": "SetVisible",
+            "description": "设置滑动条是否可见",
+            "parameters":[
+                {
+                    "type": "enum",
+                    "name": "visibility",
+                    "enums":["隐藏","显示"],
+                    "description": "可见状态"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置CSS样式",
+            "function": "SetCSSStyle",
+            "description": "设置滑动条CSS样式",
+            "parameters":[
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "属性名"
+                },
+                {
+                    "type": "string",
+                    "name": "value",
+                    "description": "属性值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置是否可用",
+            "function": "SetEnabled",
+            "description": "设置滑动条是否可用",
+            "parameters":[
+                {
+                    "type": "enum",
+                    "name": "mode",
+                    "enums":["禁用","可用"],
+                    "description": "可用状态"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "当前值",
+            "function": "Value",
+            "description": "获取当前值"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "最小值",
+            "function": "Minimum",
+            "description": "获取最小值"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "最大值",
+            "function": "Maximum",
+            "description": "获取最大值"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "",
+            "name": "刻度间距",
+            "function": "Step",
+            "description": "获取刻度间距"
+        }
+    ]
+
+}
+

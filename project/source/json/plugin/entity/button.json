@@ -1,0 +1,201 @@
+{
+    "type": "Entity",
+    "id": "Button",
+    "name":	"按钮",
+    "version": "1.0",
+    "description": "按钮控件",
+    "category":	"UI",
+    "attributes":["world","position","size"],
+    "variables": [
+        {
+            "name": "Type",
+            "title": "类型",
+            "type": "enum",
+            "default": "按钮",
+            "enums": ["按钮","可选框"],
+            "description": "按钮类型"
+        },
+        {
+            "name": "Text",
+            "title": "按钮文字",
+            "type": "string",
+            "default":"确定",
+            "description": "按钮上显示的文字"
+        },
+        {
+            "name": "Tooltip",
+            "title": "提示文字",
+            "type": "string",
+            "description": "提示文字"
+        },
+        {
+            "name": "InitVisibility",
+            "title": "是否初始可见",
+            "type": "enum",
+            "enums":["不可见","可见"],
+            "default":"可见",
+            "description": "是否初始可见"
+        },
+        {
+            "name": "Enabled",
+            "title": "是否可用",
+            "type": "bool",
+            "default":"true",
+            "description": "是否可用"
+        },
+        {
+            "name": "AutoFont",
+            "title": "字体自动调整",
+            "type": "bool",
+            "default":"true",
+            "description": "自动调整字体大小"
+        },
+        {
+            "name": "ElementId",
+            "title": "ID",
+            "type": "string",
+            "description": "HTML元素ID"
+        },
+        {
+            "name": "Checked",
+            "title": "勾选状态",
+            "type": "bool",
+            "default":"false",
+            "description": "勾选状态"
+        }
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "点击按钮",
+            "function": "OnClicked",
+            "description": "当按钮被点击时触发"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "是否被勾选",
+            "function": "IsChecked",
+            "description": "检查按钮是否被勾选"
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置文本",
+            "function": "SetText",
+            "description": "设置按钮上的显示文字",
+            "parameters":[
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "按钮文字"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置提示文本",
+            "function": "SetTooltip",
+            "description": "设置按钮的提示文字",
+            "parameters":[
+                {
+                    "type": "string",
+                    "name": "text",
+                    "description": "提示文字"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置是否可见",
+            "function": "SetVisible",
+            "description": "设置按钮是否可见",
+            "parameters":[
+                {
+                    "type": "enum",
+                    "name": "visibility",
+                    "enums":["隐藏","显示"],
+                    "description": "可见状态"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置是否可用",
+            "function": "SetEnabled",
+            "description": "设置按钮是否可用",
+            "parameters":[
+                {
+                    "type": "enum",
+                    "name": "mode",
+                    "enums":["禁用","可用"],
+                    "description": "可用状态"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "获得输入焦点",
+            "function": "SetFocus",
+            "description": "设置按钮获得输入焦点"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置CSS样式",
+            "function": "SetCSSStyle",
+            "description": "设置按钮CSS样式",
+            "parameters":[
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "属性名"
+                },
+                {
+                    "type": "string",
+                    "name": "value",
+                    "description": "属性值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置勾选状态",
+            "function": "SetChecked",
+            "description": "设置按钮的勾选状态",
+            "parameters":[
+                {
+                    "type": "bool",
+                    "name": "state",
+                    "description": "勾选状态"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "切换勾选状态",
+            "function": "ToggleChecked",
+            "description": "切换按钮勾选状态"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "移除输入焦点",
+            "function": "SetBlur",
+            "description": "移除按钮的输入焦点"
+        }
+    ],
+    "expresses":[
+    ]
+
+}
+

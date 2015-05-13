@@ -1,0 +1,462 @@
+{
+    "type": "Entity",
+    "id": "Sprite",
+    "name":	"精灵",
+    "version": "1.0",
+    "description": "精灵实体",
+    "category":	"通用",
+    "attributes":["world","rotatable","animations","position","size","angle","appearance","zorder","effects","behaviors"],
+    "variables": [
+        {
+            "name":"InitVisibility",
+            "title": "是否初始可见",
+            "type": "enum",
+            "default": "可见",
+            "enums": ["可见","不可见"],
+            "description": "对象是否在界面启动时可见"
+        },
+        {
+            "name": "InitSequence",
+            "title": "初始动画序列",
+            "type": "string",
+            "default": "Default",
+            "description": "初始动画序列名"
+        },
+        {
+            "name": "InitFrame",
+            "title": "起始帧号",
+            "type": "int",
+            "default": "0",
+            "description": "初始动画帧"
+        },
+        {
+            "name": "Collisions",
+            "title": "碰撞检测",
+            "type": "enum",
+            "default": "开启",
+            "enums": ["关闭", "开启"],
+            "description": "是否开启碰撞检测"
+        },
+        {
+            "name": "Animation",
+            "title": "动画资源",
+            "type": "string",
+            "description": "关联的动画资源名",
+            "extend": true
+        },
+        {
+            "name": "StaticImage",
+            "title": "静态图片",
+            "type": "bool",
+            "default": "false",
+            "description": "是否为静态图片",
+            "extend": true
+        }
+    ],
+    "conditions":[
+        {
+            "flags": ["fake_trigger", "static"],
+            "category": "碰撞检测",
+            "name": "碰撞对象",
+            "function": "OnCollision",
+            "description": "当与其他物体<%1>发生碰撞时触发",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "用于检测碰撞的物体"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "碰撞检测",
+            "name": "检查对象重叠",
+            "function": "IsOverlapping",
+            "description": "检测是否与物体<%1>发生重叠",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "用于检测重叠的物体"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "碰撞检测",
+            "name": "检查对象重叠（带偏移）",
+            "function": "IsOverlappingOffset",
+            "description": "检测是否与物体<%1>发生重叠",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "用于检测重叠的物体"
+                },
+                {
+                    "type": "float",
+                    "name": "x",
+                    "description": "X坐标偏移"
+                },
+                {
+                    "type": "float",
+                    "name": "y",
+                    "description": "Y坐标偏移"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "动画",
+            "name": "是否正在播放动画",
+            "function": "IsAnimPlaying",
+            "description": "检测是否正在播放动画<%1>",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "animation",
+                    "description": "动画序列名"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "动画",
+            "name": "动画帧比较",
+            "function": "CompareFrame",
+            "description": "比较当前动画帧序号",
+            "parameters": [
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "int",
+                    "name": "number",
+                    "description": "帧序号（从0开始）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "动画",
+            "name": "动画速度比较",
+            "function": "CompareAnimSpeed",
+            "description": "比较当前动画播放速度",
+            "parameters": [
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "播放速度（0-1)"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "动画",
+            "name": "动画播放完成",
+            "function": "OnAnimFinished",
+            "description": "动画<%1>播放完成时触发",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "animation",
+                    "description": "动画序列名"
+                }
+            ]
+        },
+        {
+            "flags": ["trigger"],
+            "category": "动画",
+            "name": "任意动画播放完成",
+            "function": "OnAnyAnimFinished",
+            "description": "任意动画播放完成时触发"
+        },
+        {
+            "flags": ["trigger"],
+            "category": "动画",
+            "name": "动画帧改变",
+            "function": "OnFrameChanged",
+            "description": "当动画帧发生变化时触发"
+        },
+        {
+            "flags": [],
+            "category": "展现",
+            "name": "水平镜像模式检查",
+            "function": "IsMirrored",
+            "description": "是否处于镜像模式"
+        },
+        {
+            "flags": [],
+            "category": "展现",
+            "name": "垂直镜像模式检查",
+            "function": "IsFlipped",
+            "description": "是否处于垂直镜像模式"
+        },
+        {
+            "flags": [],
+            "category": "动画",
+            "name": "碰撞检测状态检查",
+            "function": "IsCollisionEnabled",
+            "description": "是否开启碰撞检测"
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "其他",
+            "name": "创建对象",
+            "function": "Spawn",
+            "description": "在图层<%2>的位置<%3>上创建对象<%1>",
+            "parameters": [
+                {
+                    "type": "object",
+                    "name": "object",
+                    "description": "创建对象的类型"
+                },
+                {
+                    "type": "layer",
+                    "name": "layer",
+                    "description": "对象所在的图层"
+                },
+                {
+                    "type": "any",
+                    "name": "imagePoint",
+                    "description": "0 表示对象的原点，或者是图像点名称"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "动画",
+            "name": "切换到动画",
+            "function": "SetAnim",
+            "description": "切换到动画<%1>，起始位置设为<%2>",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "animation",
+                    "description": "动画序列名"
+                },
+                {
+                    "type": "enum",
+                    "name": "from",
+                    "enums": ["当前帧","起始帧"],
+                    "description": "开始播放的位置"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "动画",
+            "name": "设置动画播放速度",
+            "function": "SetAnimSpeed",
+            "description": "设置动画播放速度为<%1>",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "speed",
+                    "description": "动画播放速度（0-1，1代表60FPS）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "动画",
+            "name": "设置当前动画帧",
+            "function": "SetAnimFrame",
+            "description": "设置当前动画帧为<%1>",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "frameNumber",
+                    "description": "动画帧索引（从0开始）"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "动画",
+            "name": "设置混合模式效果",
+            "function": "SetEffect",
+            "description": "设置混合模式效果为<%1>",
+            "parameters": [
+                {
+                    "type": "blend",
+                    "name": "mode",
+                    "description": "混合模式"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "动画",
+            "name": "停止动画",
+            "function": "StopAnim",
+            "description": "停止当前动画播放",
+            "parameters": [
+            ]
+        },
+        {
+            "flags": [],
+            "category": "动画",
+            "name": "开始动画",
+            "function": "StartAnim",
+            "description": "从第<%1>帧开始播放动画",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "frame",
+                    "description": "动画帧索引"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "展现",
+            "name": "设置水平镜像",
+            "function": "SetMirrored",
+            "description": "开启/关闭水平镜像模式",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "flag",
+                    "enums":["开启","关闭"],
+                    "description": "开关标志"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "展现",
+            "name": "设置垂直镜像模式",
+            "function": "SetFlipped",
+            "description": "开启/关闭垂直镜像模式",
+            "parameters": [
+                {
+                    "type": "enum",
+                    "name": "flag",
+                    "enums":["开启","关闭"],
+                    "description": "开关标志"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "展现",
+            "name": "设置缩放比例",
+            "function": "SetScale",
+            "description": "设置缩放比例",
+            "parameters": [
+                {
+                    "type": "float",
+                    "name": "zoom",
+                    "description": "缩放比例"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "展现",
+            "name": "设置碰撞检测",
+            "function": "SetCollisions",
+            "description": "开启/关闭碰撞检测",
+            "parameters": [
+                {
+                    "type": "bool",
+                    "name": "flag",
+                    "description": "开关标志"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_int"],
+            "category": "动画",
+            "name": "当前动画帧序号",
+            "function": "AnimationFrame",
+            "description": "获取当前的动画帧序号（从0开始）"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "动画",
+            "name": "动画帧数目",
+            "function": "AnimationFrameCount",
+            "description": "获取当前的动画序列的帧数目"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "动画",
+            "name": "动画序列名",
+            "function": "AnimationName",
+            "description": "获取当前的动画序列的名称"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "动画",
+            "name": "动画播放速度",
+            "function": "AnimationSpeed",
+            "description": "获取当前的动画序列的播放速度"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "通用",
+            "name": "锚点X坐标",
+            "function": "ImagePointX",
+            "description": "获取锚点<%1>X坐标",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "锚点名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_float"],
+            "category": "通用",
+            "name": "锚点Y坐标",
+            "function": "ImagePointY",
+            "description": "获取锚点<%1>Y坐标",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "锚点名"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "通用",
+            "name": "锚点数目",
+            "function": "ImagePointCount",
+            "description": "获取锚点数目"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "通用",
+            "name": "动画帧宽度",
+            "function": "ImageWidth",
+            "description": "获取当前动画帧的宽度"
+        },
+        {
+            "flags": ["return_float"],
+            "category": "通用",
+            "name": "动画帧高度",
+            "function": "ImageHeight",
+            "description": "获取当前动画帧的高度"
+        }
+
+    ]
+
+}
+

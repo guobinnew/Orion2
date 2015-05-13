@@ -1,0 +1,112 @@
+{
+    "type": "Entity",
+    "id": "CSV2Array",
+    "name":	"CSV转换Array",
+    "version": "1.0",
+    "description": "将CSV格式文件数据转换为Array格式",
+    "category":	"数据存储",
+    "attributes":["singleglobal"],
+    "variables": [
+        {
+            "name": "Delimiter",
+            "title":"分隔符",
+            "type": "string",
+            "default": ",",
+            "description": "数据文本的分隔符"
+        },
+        {
+            "name": "EvalMode",
+            "title":"表达式解析模式",
+            "type": "enum",
+            "default": "不执行",
+            "enums":["不执行","执行"],
+            "description": "解析模式"
+        }
+    ],
+    "conditions":[
+        {
+            "flags": ["looping","invertible"],
+            "category": "",
+            "name": "遍历数据单元",
+            "function": "ForEachCell",
+            "description": "遍历CSV数据表中每个单元指",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "data",
+                    "description": "CSV文本"
+                }
+            ]
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "CSV转换为数组",
+            "function": "CSV2Array",
+            "description": "清空数组中的所有数据",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "csv",
+                    "description": "csv数据文本"
+                },
+                {
+                    "type": "object",
+                    "name": "arr",
+                    "description": "arr对象"
+                },
+                {
+                    "type": "enum",
+                    "name": "mode",
+                    "enums":["行对应X","行对应Y"],
+                    "description": "映射模式"
+                },
+                {
+                    "type": "int",
+                    "name": "z",
+                    "description": "z索引"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "当前X索引",
+            "function": "CurX",
+            "description": "获取Foreach循环中的当前X索引"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "当前Y索引",
+            "function": "CurY",
+            "description": "获取Foreach循环中的当前Y索引"
+        },
+        {
+            "flags": ["return_any"],
+            "category": "",
+            "name": "当前单元数据",
+            "function": "CurValue",
+            "description": "获取Foreach循环中的当前数据"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "数组宽度",
+            "function": "Width",
+            "description": "获取Foreach循环中的数组宽度"
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "数组高度",
+            "function": "Height",
+            "description": "获取Foreach循环中的数组高度"
+        }
+    ]
+}
+

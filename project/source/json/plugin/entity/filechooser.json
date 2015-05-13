@@ -1,0 +1,165 @@
+{
+    "type": "Entity",
+    "id": "filechooser",
+    "name":	"选择文件",
+    "version": "1.0",
+    "description": "从本地选择文件",
+    "category":	"UI",
+    "attributes":["world","position","size"],
+    "variables": [
+        {
+            "name": "Accept",
+            "title": "文件类型",
+            "type": "string",
+            "description": "文件类型"
+        },
+        {
+            "name": "Select",
+            "title": "选择模式",
+            "type": "enum",
+            "enums":["单选","多选"],
+            "default":"单选",
+            "description": "选择模式"
+        },
+        {
+            "name": "InitVisibility",
+            "title": "是否初始可见",
+            "type": "enum",
+            "enums":["不可见","可见"],
+            "default":"可见",
+            "description": "是否初始可见"
+        },
+        {
+            "name": "ElementId",
+            "title": "ID",
+            "type": "string",
+            "description": "HTML元素ID"
+        }
+    ],
+    "conditions":[
+        {
+            "flags": ["trigger"],
+            "category": "",
+            "name": "选择文件",
+            "function": "OnChanged",
+            "description": "当选中的文件改变时触发"
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "释放文件",
+            "function": "ReleaseFile",
+            "description": "释放文件",
+            "parameters":[
+                {
+                    "type": "string",
+                    "name": "url",
+                    "description": "文件URL"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置是否可见",
+            "function": "SetVisible",
+            "description": "设置按钮是否可见",
+            "parameters":[
+                {
+                    "type": "enum",
+                    "name": "visibility",
+                    "enums":["隐藏","显示"],
+                    "description": "可见状态"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "设置CSS样式",
+            "function": "SetCSSStyle",
+            "description": "设置按钮CSS样式",
+            "parameters":[
+                {
+                    "type": "string",
+                    "name": "name",
+                    "description": "属性名"
+                },
+                {
+                    "type": "string",
+                    "name": "value",
+                    "description": "属性值"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "文件数目",
+            "function": "FileCount",
+            "description": "获取选中的文件数目"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "文件名",
+            "function": "FileNameAt",
+            "description": "获取指定索引的文件名",
+            "parameters":[
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "文件大小",
+            "function": "FileSizeAt",
+            "description": "获取指定索引的文件大小",
+            "parameters":[
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "文件类型",
+            "function": "FileTypeAt",
+            "description": "获取指定索引的文件类型",
+            "parameters":[
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引"
+                }
+            ]
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "文件URL",
+            "function": "FileURLAt",
+            "description": "获取指定索引的文件URL",
+            "parameters":[
+                {
+                    "type": "int",
+                    "name": "index",
+                    "description": "索引"
+                }
+            ]
+        }
+    ]
+
+}
+

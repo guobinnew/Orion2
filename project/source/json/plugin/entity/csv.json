@@ -1,0 +1,167 @@
+{
+    "type": "Entity",
+    "id": "CSV",
+    "name":	"CSV文件",
+    "version": "1.0",
+    "description": "处理CSV格式文件数据访问",
+    "category":	"数据存储",
+    "attributes":[],
+    "variables": [
+        {
+            "name": "Delimiter",
+            "title":"分隔符",
+            "type": "string",
+            "default": ",",
+            "description": "数据文本的分隔符"
+        },
+        {
+            "name": "EvalMode",
+            "title":"表达式解析模式",
+            "type": "enum",
+            "default": "不执行",
+            "enums":["不执行","执行"],
+            "description": "解析模式"
+        }
+    ],
+    "conditions":[
+        {
+            "flags": ["looping","invertible"],
+            "category": "",
+            "name": "遍历列",
+            "function": "ForEachCol",
+            "description": "遍历2维数组的每一列"
+        },
+        {
+            "flags": ["looping","invertible"],
+            "category": "",
+            "name": "遍历指定列的每一行",
+            "function": "ForEachRowInCol",
+            "description": "遍历2维数组指定列的每一行",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "y",
+                    "description": "列下标"
+                }
+            ]
+        },
+        {
+            "flags": ["looping","invertible"],
+            "category": "",
+            "name": "遍历页",
+            "function": "ForEachPage",
+            "description": "遍历2维数组的每一页"
+        },
+        {
+            "flags": ["looping","invertible"],
+            "category": "",
+            "name": "遍历行",
+            "function": "ForEachRow",
+            "description": "遍历2维数组的每一行"
+        },
+        {
+            "flags": ["looping","invertible"],
+            "category": "",
+            "name": "遍历指定行的每一列",
+            "function": "ForEachColInRow",
+            "description": "遍历2维数组指定行的每一列",
+            "parameters": [
+                {
+                    "type": "int",
+                    "name": "y",
+                    "description": "列下标"
+                }
+            ]
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "清空数据",
+            "function": "Clear",
+            "description": "清空数组中的所有数据"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "加载CSV文本",
+            "function": "LoadCSV",
+            "description": "清空数组数据",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "csv",
+                    "description": "csv数据文本"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "从JSON加载数据表",
+            "function": "StringToPage",
+            "description": "从JSON加载数据表",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "json",
+                    "description": "JSON字符串"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "从JSON加载所有数据表",
+            "function": "StringToAllTables",
+            "description": "从JSON加载所有数据表",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "json",
+                    "description": "JSON字符串"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "换页",
+            "function": "TurnPage",
+            "description": "切换到指定索引的页",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "index",
+                    "description": "页索引"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "分隔符",
+            "function": "Delimiter",
+            "description": "获取分隔符"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "当前数据表转换为CSV文本",
+            "function": "TableToCSV",
+            "description": "将当前数据表转换为CSV文本"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "转换为JSON",
+            "function": "AllTalbesToString",
+            "description": "将所有数据表转换为JSON字符串"
+        }
+    ]
+
+}
+

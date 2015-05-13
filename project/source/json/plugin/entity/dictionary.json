@@ -1,0 +1,226 @@
+{
+    "type": "Entity",
+    "id": "Dictionary",
+    "name":	"字典",
+    "version": "1.0",
+    "description": "处理键盘输入",
+    "category":	"数据存储",
+    "attributes":[],
+    "variables": [
+    ],
+    "conditions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "比较值",
+            "function": "CompareValue",
+            "description": "比较元素值",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "键值"
+                },
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "比较的值"
+                }
+            ]
+        },
+        {
+            "flags": ["looping"],
+            "category": "",
+            "name": "遍历字典",
+            "function": "ForEachKey",
+            "description": "遍历字典所有键值",
+            "parameters": [
+            ]
+        },
+        {
+            "flags": ["looping"],
+            "category": "",
+            "name": "比较当前值",
+            "function": "CompareCurrentValue",
+            "description": "在循环中比较当前值",
+            "parameters": [
+                {
+                    "type": "cmp",
+                    "name": "cmp",
+                    "description": "比较类型"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "比较的值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "包含键值",
+            "function": "HasKey",
+            "description": "在循环中比较当前值",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "待查找的键值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "是否为空",
+            "function": "IsEmpty",
+            "description": "检查字典是否为空"
+        }
+    ],
+    "actions":[
+        {
+            "flags": [],
+            "category": "",
+            "name": "添加键值",
+            "function": "AddKey",
+            "description": "向字典中添加新键值",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "键值"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "更新键值",
+            "function": "SetKey",
+            "description": "更新字典中已有键值（如果没有，则什么也不做）",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "键值"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "删除键值",
+            "function": "DeleteKey",
+            "description": "向字典中删除键值",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "键值"
+                },
+                {
+                    "type": "any",
+                    "name": "value",
+                    "description": "值"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "清空字典",
+            "function": "Clear",
+            "description": "删除字典中所有数据"
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "读取JSON数据",
+            "function": "JSONLoad",
+            "description": "从JSON中读取数组数据",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "json",
+                    "description": "JSON格式文本"
+                }
+            ]
+        },
+        {
+            "flags": [],
+            "category": "",
+            "name": "保存为JSON文件",
+            "function": "JSONDownload",
+            "description": "将数据保存为JSON文件",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "filename",
+                    "description": "JSON文件名"
+                }
+            ]
+        }
+    ],
+    "expresses":[
+        {
+            "flags": ["return_any"],
+            "category": "",
+            "name": "根据Key查找值",
+            "function": "Get",
+            "description": "获取键值对应的值",
+            "parameters": [
+                {
+                    "type": "string",
+                    "name": "key",
+                    "description": "键值"
+                }
+            ]
+        },
+        {
+            "flags": ["return_int"],
+            "category": "",
+            "name": "键值数目",
+            "function": "KeyCount",
+            "description": "字典的键值数目"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "当前键值",
+            "function": "CurrentKey",
+            "description": "当遍历字典中当前键值"
+        },
+        {
+            "flags": ["return_any"],
+            "category": "",
+            "name": "当前值",
+            "function": "CurrentValue",
+            "description": "当遍历字典中当前键值对应的值"
+        },
+        {
+            "flags": ["return_string"],
+            "category": "",
+            "name": "转换为JSON格式",
+            "function": "AsJSON",
+            "description": "将字典数据转换为JSON格式"
+        }
+    ]
+
+}
+

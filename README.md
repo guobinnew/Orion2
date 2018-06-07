@@ -5,3 +5,4 @@ HTML5-based game editor, use Construct2 Engine
 游戏引擎采用Construct2 引擎（https://www.scirra.com）
 
 相关介绍：https://blog.csdn.net/wangnan8015/article/details/49071405
+百度网盘 链接:https://pan.baidu.com/s/1v2fHeCPdNSqwUz1q7B3-Lg  密码:irc2
